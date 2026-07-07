@@ -1,267 +1,370 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>見積りシミュレーション｜GHG削減量・参考価格シミュレーター｜サステオ</title>
-<meta name="description" content="月間の燃料使用量を入力するだけで、CO₂削減量と参考費用を自動計算します。登録不要・無料でお試しください。">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>見積りシミュレーション | SUSTEO Green Journey</title>
+  <meta name="description" content="燃料の使用量と種類を入力するだけで、GHG削減量と参考価格を自動計算。無料・登録不要でご利用いただけます。">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    .sim-page {
+      background: linear-gradient(135deg, #E0F5F2 0%, #F5FFFE 50%, #FDEEF4 100%);
+      min-height: 100vh;
+      padding-top: 72px;
+    }
+    .sim-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+    .sim-header { text-align: center; margin-bottom: 48px; }
+    .sim-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
+    .range-input { width: 100%; accent-color: var(--main); height: 6px; cursor: pointer; }
+    .range-value { color: var(--main); font-weight: 700; font-size: 1.1rem; }
+    .form-hint { font-size: 0.8rem; color: var(--gray-dark); margin-top: 4px; }
+    .sim-step {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 4px;
+    }
+    .step-num {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: var(--main);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .result-card {
+      background: linear-gradient(135deg, var(--main), var(--main-dark));
+      border-radius: var(--radius);
+      padding: 40px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .result-card::before {
+      content: '';
+      position: absolute;
+      width: 300px; height: 300px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 50%;
+      right: -100px; bottom: -100px;
+    }
+    .result-metric { background: rgba(255,255,255,0.15); border-radius: var(--radius-sm); padding: 20px; text-align: center; }
+    .result-big { font-size: 2.2rem; font-weight: 900; line-height: 1; margin-bottom: 4px; }
+    .result-label { font-size: 0.8rem; opacity: 0.85; }
+    .result-disclaimer { font-size: 0.75rem; opacity: 0.65; margin-top: 16px; }
+    .fuel-selector { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .fuel-option {
+      border: 2px solid rgba(0,158,138,0.2);
+      border-radius: var(--radius-sm);
+      padding: 14px 10px;
+      cursor: pointer;
+      text-align: center;
+      transition: var(--transition);
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--gray-dark);
+    }
+    .fuel-option:hover { border-color: var(--main); color: var(--main); background: var(--main-light); }
+    .fuel-option.selected { border-color: var(--main); color: var(--main); background: var(--main-light); }
+    .fuel-option .fuel-icon { font-size: 1.5rem; display: block; margin-bottom: 6px; }
+    .vehicle-selector { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .vehicle-option {
+      border: 2px solid rgba(0,158,138,0.2);
+      border-radius: var(--radius-sm);
+      padding: 12px;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.875rem;
+      color: var(--gray-dark);
+    }
+    .vehicle-option:hover, .vehicle-option.selected { border-color: var(--main); color: var(--main); background: var(--main-light); }
+    .calculate-btn {
+      width: 100%;
+      padding: 18px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      background: var(--main);
+      color: white;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 24px;
+    }
+    .calculate-btn:hover { background: var(--main-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,158,138,0.35); }
+    @media (max-width: 768px) {
+      .sim-grid { grid-template-columns: 1fr; }
+      .fuel-selector { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
 </head>
 <body>
 
-<header class="site-header">
+<header id="header">
   <div class="header-inner">
-    <a class="brand" href="index.html">
-      <span class="brand-logo">SUSTEO<span>.</span></span>
-      <span class="brand-sub">次世代バイオ燃料 サステオ</span>
-    </a>
-    <button class="nav-toggle" aria-expanded="false" aria-label="メニュー">☰</button>
-    <nav class="global-nav">
-      <ul>
-        <li><a href="index.html">TOP</a></li>
-        <li><a href="market.html">市場・環境</a></li>
-        <li><a href="products.html">製品</a></li>
-        <li><a href="supply.html">供給体制</a></li>
-        <li><a href="quality.html">品質データ</a></li>
-        <li><a href="cases.html">導入事例</a></li>
-        <li><a href="future.html">特徴</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="simulation.html" class="nav-cta is-active">見積りシミュレーション</a></li>
-      </ul>
+    <a href="index.html" class="logo"><div class="logo-icon">🌿</div>SUSTEO <span>Green Journey</span></a>
+    <nav id="nav">
+      <a href="market.html">市場・環境</a>
+      <a href="products.html">製品</a>
+      <a href="supply.html">供給体制</a>
+      <a href="quality.html">品質データ</a>
+      <a href="cases.html">導入事例</a>
+      <a href="future.html">特徴</a>
+      <a href="faq.html">FAQ</a>
+      <a href="simulation.html" class="nav-cta active">見積りシミュレーション</a>
     </nav>
+    <div class="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></div>
   </div>
 </header>
 
-<section class="page-hero">
-  <div class="container">
-    <p class="breadcrumb"><a href="index.html">TOP</a> ／ 見積りシミュレーション</p>
-    <p class="hero-eyebrow">Simulation</p>
-    <h1>GHG削減量・参考価格シミュレーター</h1>
-    <p>月間の燃料使用量を入力するだけで、CO₂削減量と参考費用を自動計算します。登録不要・無料でお試しください。</p>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="sim-panel">
-
-      <!-- ① 製品選択 -->
-      <div class="sim-step">
-        <div class="sim-step-label">
-          <span class="sim-step-num">1</span>
-          <h3>導入したいサステオの種類を選択</h3>
-        </div>
-        <div class="sim-options">
-          <div class="sim-option">
-            <input type="radio" name="product" id="p-hvo100" value="hvo100">
-            <label for="p-hvo100">
-              <span class="opt-name">サステオ（HVO100%）</span>
-              <span class="opt-desc" style="display:block;">最大84%削減</span>
-            </label>
-          </div>
-          <div class="sim-option">
-            <input type="radio" name="product" id="p-s51" value="s51" checked>
-            <label for="p-s51">
-              <span class="opt-name">サステオ51（混合燃料）</span>
-              <span class="opt-desc" style="display:block;">約50%削減</span>
-            </label>
-          </div>
-          <div class="sim-option">
-            <input type="radio" name="product" id="p-bioa" value="bioa">
-            <label for="p-bioa">
-              <span class="opt-name">バイオA重油</span>
-              <span class="opt-desc" style="display:block;">約20%削減</span>
-            </label>
-          </div>
-        </div>
-        <p class="field-hint" style="font-size:12.5px; color:var(--ink-500); margin-top:8px;">迷う場合は「サステオ51」からお試しください。</p>
-      </div>
-
-      <!-- ② 用途 -->
-      <div class="sim-step">
-        <div class="sim-step-label">
-          <span class="sim-step-num">2</span>
-          <h3>主な使用用途</h3>
-        </div>
-        <div class="sim-field">
-          <select id="usage">
-            <option value="truck">大型トラック</option>
-            <option value="bus">路線バス</option>
-            <option value="construction">建設重機</option>
-            <option value="generator">発電機</option>
-            <option value="ship">船舶</option>
-            <option value="other">その他</option>
-          </select>
-        </div>
-      </div>
-
-      <!-- ③ 使用量 -->
-      <div class="sim-step">
-        <div class="sim-step-label">
-          <span class="sim-step-num">3</span>
-          <h3>月間燃料使用量（軽油ベース）</h3>
-        </div>
-        <div class="sim-field">
-          <div class="sim-range-row">
-            <input type="range" id="volume" min="500" max="50000" step="500" value="5000">
-            <span class="sim-range-value" id="volume-label">5,000 L/月</span>
-          </div>
-          <p class="field-hint">500L（小規模）〜50,000L（大規模）。現在の軽油月間消費量の伝票・請求書を参考に入力してください。</p>
-        </div>
-      </div>
-
-      <!-- ④ 台数 -->
-      <div class="sim-step">
-        <div class="sim-step-label">
-          <span class="sim-step-num">4</span>
-          <h3>台数／設備数</h3>
-        </div>
-        <div class="sim-field">
-          <select id="units">
-            <option value="1">1台</option>
-            <option value="5" selected>2〜5台</option>
-            <option value="10">6〜10台</option>
-            <option value="30">11〜30台</option>
-            <option value="100">31〜100台</option>
-            <option value="200">100〜200台以上</option>
-          </select>
-          <p class="field-hint">※月間燃料使用量は全台数の合計値としてご入力ください。</p>
-        </div>
-      </div>
-
-      <!-- 結果 -->
-      <div class="sim-results">
-        <div class="sim-step-label" style="margin-bottom:16px;">
-          <span class="sim-step-num" style="background:var(--blue-600);">✓</span>
-          <h3>シミュレーション結果</h3>
-        </div>
-        <div class="sim-result-grid">
-          <div class="sim-result">
-            <div class="r-value" id="r-monthly">—</div>
-            <div class="r-label">月間GHG削減量（CO₂換算）</div>
-          </div>
-          <div class="sim-result">
-            <div class="r-value" id="r-yearly">—</div>
-            <div class="r-label">年間GHG削減量（CO₂換算）</div>
-          </div>
-          <div class="sim-result">
-            <div class="r-value" id="r-cost">—</div>
-            <div class="r-label">月間参考費用（税別・概算）</div>
-          </div>
-          <div class="sim-result">
-            <div class="r-value" id="r-trees">—</div>
-            <div class="r-label">削減量相当の杉の木本数（年間）</div>
-          </div>
-        </div>
-        <p style="margin-top:18px; font-size:12.5px; color:var(--ink-500);">注記：本シミュレーションの結果は概算参考値です。実際の価格・削減量は使用条件・エリア・数量等によって異なります。正確な見積りは営業担当までお問い合わせください。</p>
-      </div>
-
+<div class="sim-page">
+  <div class="sim-container">
+    <div class="sim-header">
+      <span class="section-label">9. 見積りシミュレーション</span>
+      <h1 class="section-title" style="margin-top:8px;">GHG削減量・参考価格<br>シミュレーター</h1>
+      <p style="color:var(--gray-dark); font-size:1.05rem;">月間の燃料使用量を入力するだけで、CO₂削減量と参考費用を自動計算します。<br>登録不要・無料でお試しください。</p>
     </div>
 
-    <div class="info-box" style="margin-top:30px;">
-      <strong>補助金の活用：</strong>東京都のバイオ燃料導入支援補助金など、利用できる制度があります。補助金の活用可否や申請方法について、担当者が無料でアドバイスします。
+    <div class="sim-grid">
+      <!-- 入力フォーム -->
+      <div class="sim-form">
+
+        <!-- STEP 1: 燃料種類 -->
+        <div style="margin-bottom:32px;">
+          <div class="sim-step">
+            <div class="step-num">1</div>
+            <h3 style="font-size:1rem; color:var(--dark);">導入したいサステオの種類を選択</h3>
+          </div>
+          <div class="form-hint" style="margin-left:40px; margin-bottom:16px;">※ どれを選べばよいか迷う場合は「サステオ51」からお試しください</div>
+          <div class="fuel-selector">
+            <div class="fuel-option selected" onclick="selectFuel(this,'hvo100',0.84,1.8)" data-rate="0.84" data-price="1.8">
+              <span class="fuel-icon">🌿</span>
+              サステオ<br>（HVO100%）
+              <div style="font-size:0.7rem; margin-top:4px; color:var(--main);">最大84%削減</div>
+            </div>
+            <div class="fuel-option" onclick="selectFuel(this,'susteo51',0.5,1.3)" data-rate="0.5" data-price="1.3">
+              <span class="fuel-icon">⚡</span>
+              サステオ51<br>（混合燃料）
+              <div style="font-size:0.7rem; margin-top:4px; color:var(--gray-dark);">約50%削減</div>
+            </div>
+            <div class="fuel-option" onclick="selectFuel(this,'bioa',0.2,1.15)" data-rate="0.2" data-price="1.15">
+              <span class="fuel-icon">🛢️</span>
+              バイオA重油
+              <div style="font-size:0.7rem; margin-top:4px; color:var(--gray-dark);">約20%削減</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 2: 用途 -->
+        <div style="margin-bottom:32px;">
+          <div class="sim-step">
+            <div class="step-num">2</div>
+            <h3 style="font-size:1rem; color:var(--dark);">主な使用用途</h3>
+          </div>
+          <div class="vehicle-selector" style="margin-top:12px;">
+            <div class="vehicle-option selected" onclick="selectVehicle(this,'truck')">🚛 大型トラック</div>
+            <div class="vehicle-option" onclick="selectVehicle(this,'bus')">🚌 路線バス</div>
+            <div class="vehicle-option" onclick="selectVehicle(this,'construction')">🏗️ 建設重機</div>
+            <div class="vehicle-option" onclick="selectVehicle(this,'generator')">⚡ 発電機</div>
+            <div class="vehicle-option" onclick="selectVehicle(this,'ship')">⛵ 船舶</div>
+            <div class="vehicle-option" onclick="selectVehicle(this,'other')">🔧 その他</div>
+          </div>
+        </div>
+
+        <!-- STEP 3: 使用量 -->
+        <div style="margin-bottom:32px;">
+          <div class="sim-step">
+            <div class="step-num">3</div>
+            <h3 style="font-size:1rem; color:var(--dark);">月間燃料使用量（軽油ベース）</h3>
+          </div>
+          <div style="margin-top:16px; margin-left:40px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <span style="font-size:0.9rem; color:var(--gray-dark);">月間使用量</span>
+              <span class="range-value"><span id="volumeValue">5,000</span> L</span>
+            </div>
+            <input type="range" class="range-input" id="volumeRange" min="500" max="50000" step="500" value="5000" oninput="updateVolume(this.value)">
+            <div style="display:flex; justify-content:space-between; font-size:0.75rem; color:var(--gray); margin-top:4px;">
+              <span>500L（小規模）</span>
+              <span>50,000L（大規模）</span>
+            </div>
+            <div class="form-hint" style="margin-top:8px;">💡 現在の軽油月間消費量の伝票・請求書を参考にご入力ください</div>
+          </div>
+        </div>
+
+        <!-- STEP 4: 台数 -->
+        <div style="margin-bottom:32px;">
+          <div class="sim-step">
+            <div class="step-num">4</div>
+            <h3 style="font-size:1rem; color:var(--dark);">台数 / 設備数</h3>
+          </div>
+          <div style="margin-top:16px; margin-left:40px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <span style="font-size:0.9rem; color:var(--gray-dark);">台数・設備数</span>
+              <span class="range-value"><span id="unitValue">10</span> 台</span>
+            </div>
+            <input type="range" class="range-input" id="unitRange" min="1" max="200" step="1" value="10" oninput="updateUnit(this.value)">
+            <div style="display:flex; justify-content:space-between; font-size:0.75rem; color:var(--gray); margin-top:4px;">
+              <span>1台</span>
+              <span>200台以上</span>
+            </div>
+          </div>
+        </div>
+
+        <button class="calculate-btn" onclick="calculate()">
+          🧮 CO₂削減量・参考価格を計算する
+        </button>
+      </div>
+
+      <!-- 結果表示 -->
+      <div>
+        <div class="result-card" id="resultCard">
+          <h3 style="color:white; margin-bottom:24px; font-size:1.2rem;">📊 シミュレーション結果</h3>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:24px;">
+            <div class="result-metric">
+              <div class="result-big" id="ghgResult">—</div>
+              <div class="result-label">月間GHG削減量<br>（CO₂換算）</div>
+            </div>
+            <div class="result-metric">
+              <div class="result-big" id="annualGhg">—</div>
+              <div class="result-label">年間GHG削減量<br>（CO₂換算）</div>
+            </div>
+            <div class="result-metric">
+              <div class="result-big" id="priceResult">—</div>
+              <div class="result-label">月間参考費用<br>（税別・概算）</div>
+            </div>
+            <div class="result-metric">
+              <div class="result-big" id="treesResult">—</div>
+              <div class="result-label">削減量相当の<br>杉の木本数</div>
+            </div>
+          </div>
+          <div id="resultMessage" style="background:rgba(255,255,255,0.12); border-radius:var(--radius-sm); padding:16px; font-size:0.875rem; opacity:0.9;">
+            ← 左のフォームに入力して「計算する」を押してください。
+          </div>
+          <p class="result-disclaimer">※ 本シミュレーションの結果は概算参考値です。実際の価格・削減量は使用条件・エリア・数量等によって異なります。正確な見積りは営業担当までお問い合わせください。</p>
+        </div>
+
+        <!-- お問い合わせ -->
+        <div style="background:white; border-radius:var(--radius); padding:32px; box-shadow:var(--shadow); margin-top:24px;">
+          <h3 style="margin-bottom:16px; color:var(--dark);">次のステップ</h3>
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            <a href="mailto:contact@euglena.jp?subject=サステオ導入のご相談&body=シミュレーション結果をもとにご相談したいです。" class="btn btn-primary" style="justify-content:center; text-decoration:none;">
+              ✉️ 見積りを正式に依頼する
+            </a>
+            <a href="products.html" class="btn btn-outline" style="justify-content:center; text-decoration:none;">
+              ⛽ 製品の詳細を確認する
+            </a>
+            <a href="faq.html" style="text-align:center; color:var(--main); font-size:0.9rem; margin-top:4px;">疑問がある方はFAQへ →</a>
+          </div>
+        </div>
+
+        <!-- 補足 -->
+        <div style="background:var(--pink-light); border-radius:var(--radius); padding:24px; margin-top:16px; border:1px solid rgba(238,138,170,0.2);">
+          <h4 style="color:var(--dark); margin-bottom:8px;">🤝 補助金の活用で、コストを抑えられます</h4>
+          <p style="font-size:0.875rem; color:var(--gray-dark);">東京都のバイオ燃料導入支援補助金など、利用できる制度があります。補助金の活用可否や申請方法について、担当者が無料でアドバイスします。</p>
+          <a href="mailto:contact@euglena.jp" style="color:var(--pink); font-weight:700; font-size:0.875rem; margin-top:8px; display:block;">補助金について相談する →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- よくある質問リンク -->
+    <div style="margin-top:64px; text-align:center; border-top:1px solid rgba(0,158,138,0.15); padding-top:48px;">
+      <h2 style="margin-bottom:8px;">シミュレーションについてのご質問</h2>
+      <p style="color:var(--gray-dark); margin-bottom:24px;">入力方法や結果の見方がわからない場合は、FAQまたはお問い合わせからご相談ください。</p>
+      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+        <a href="faq.html" class="btn btn-outline">💬 FAQを見る</a>
+        <a href="mailto:contact@euglena.jp" class="btn btn-primary">✉️ 担当者に相談する</a>
+      </div>
     </div>
   </div>
-</section>
+</div>
 
-<section class="cta-band">
-  <div class="container">
-    <h2>正確なお見積り・ご相談はお気軽に</h2>
-    <p>使用条件・エリア・数量に応じた正式なお見積りは、営業担当が個別にご案内します。</p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="products.html">製品を見る</a>
-      <a class="btn btn-outline" href="faq.html">よくあるご質問</a>
-    </div>
-  </div>
-</section>
-
-<footer class="site-footer">
+<footer>
   <div class="container">
     <div class="footer-grid">
-      <div>
-        <div class="footer-brand">SUSTEO<span>.</span></div>
-        <p class="footer-desc">次世代バイオ燃料「サステオ」。地域・企業・行政の共創による、バイオ燃料での脱炭素社会を実現します。</p>
-      </div>
-      <div>
-        <h4>CONTENTS</h4>
-        <ul>
-          <li><a href="market.html">市場・環境</a></li>
-          <li><a href="products.html">製品</a></li>
-          <li><a href="supply.html">供給体制</a></li>
-          <li><a href="quality.html">品質データ</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>SUPPORT</h4>
-        <ul>
-          <li><a href="cases.html">導入事例</a></li>
-          <li><a href="future.html">特徴</a></li>
-          <li><a href="faq.html">よくあるご質問</a></li>
-          <li><a href="simulation.html">見積りシミュレーション</a></li>
-        </ul>
-      </div>
+      <div class="footer-brand"><div class="logo" style="margin-bottom:16px;"><div class="logo-icon">🌿</div>SUSTEO <span style="color:var(--main);">Green Journey</span></div><p>ユーグレナが提供する次世代バイオ燃料「サステオ」。</p><div class="sns-links"><a href="#" class="sns-link">𝕏</a><a href="#" class="sns-link">in</a><a href="#" class="sns-link">▶</a></div></div>
+      <div class="footer-col"><h4>サイトマップ</h4><ul><li><a href="market.html">市場・環境</a></li><li><a href="products.html">製品</a></li><li><a href="supply.html">供給体制</a></li><li><a href="quality.html">品質データ</a></li><li><a href="cases.html">導入事例</a></li><li><a href="future.html">特徴</a></li></ul></div>
+      <div class="footer-col"><h4>サポート</h4><ul><li><a href="faq.html">FAQ</a></li><li><a href="simulation.html">シミュレーション</a></li><li><a href="mailto:contact@euglena.jp">お問い合わせ</a></li></ul></div>
+      <div class="footer-col"><h4>会社情報</h4><ul><li><a href="#">株式会社ユーグレナ</a></li><li><a href="#">プライバシーポリシー</a></li></ul></div>
     </div>
-    <div class="footer-bottom">© SUSTEO Green Journey. All rights reserved.</div>
+    <div class="footer-bottom"><div>© 2025 Euglena Co., Ltd. All Rights Reserved.</div><div class="footer-links"><a href="#">プライバシーポリシー</a><a href="#">お問い合わせ</a></div></div>
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<a href="mailto:contact@euglena.jp" class="floating-cta">✉️ お問い合わせ</a>
+
 <script>
-(function () {
-  // 製品パラメータ（概算参考値）
-  // reduction: ライフサイクルCO₂削減率／price: 参考単価（円/L・税別）
-  var PRODUCTS = {
-    hvo100: { reduction: 0.84, price: 250 },
-    s51:    { reduction: 0.50, price: 190 },
-    bioa:   { reduction: 0.20, price: 130 }
-  };
-  var CO2_PER_LITER = 2.62;   // 軽油1Lあたりの燃焼CO₂排出量（kg-CO₂）
-  var CO2_PER_TREE  = 14;     // 杉1本あたりの年間CO₂吸収量（kg-CO₂／林野庁公表値ベース）
+  function toggleNav() { document.getElementById('nav').classList.toggle('open'); }
+  window.addEventListener('scroll', () => { document.getElementById('header').style.boxShadow = window.scrollY > 50 ? '0 4px 24px rgba(0,0,0,0.08)' : 'none'; });
 
-  var volumeInput = document.getElementById('volume');
-  var volumeLabel = document.getElementById('volume-label');
-  var rMonthly = document.getElementById('r-monthly');
-  var rYearly  = document.getElementById('r-yearly');
-  var rCost    = document.getElementById('r-cost');
-  var rTrees   = document.getElementById('r-trees');
+  let currentFuelRate = 0.84;
+  let currentPriceMultiplier = 1.8;
+  const dieselPricePerLiter = 155; // 軽油参考単価（円/L）
+  const co2PerLiter = 2.58; // 軽油燃焼時CO2排出係数（kg/L）
+  const treeCo2PerYear = 14; // 杉1本が年間吸収するCO2（kg）
 
-  function selectedProduct() {
-    var el = document.querySelector('input[name="product"]:checked');
-    return PRODUCTS[el ? el.value : 's51'];
+  function selectFuel(el, type, rate, priceMult) {
+    document.querySelectorAll('.fuel-option').forEach(e => e.classList.remove('selected'));
+    el.classList.add('selected');
+    currentFuelRate = rate;
+    currentPriceMultiplier = priceMult;
   }
 
-  function fmt(n, digits) {
-    return n.toLocaleString('ja-JP', { maximumFractionDigits: digits, minimumFractionDigits: 0 });
+  function selectVehicle(el, type) {
+    document.querySelectorAll('.vehicle-option').forEach(e => e.classList.remove('selected'));
+    el.classList.add('selected');
   }
 
-  function calc() {
-    var liters = parseInt(volumeInput.value, 10) || 0;
-    var p = selectedProduct();
-
-    volumeLabel.textContent = fmt(liters, 0) + ' L/月';
-
-    var monthlyKg = liters * CO2_PER_LITER * p.reduction; // kg-CO2/月
-    var yearlyKg  = monthlyKg * 12;
-    var monthlyCost = liters * p.price;                   // 円/月
-    var trees = yearlyKg / CO2_PER_TREE;
-
-    rMonthly.innerHTML = fmt(monthlyKg / 1000, 1) + ' <small>t-CO₂</small>';
-    rYearly.innerHTML  = fmt(yearlyKg / 1000, 1) + ' <small>t-CO₂</small>';
-    rCost.innerHTML    = '約 ' + fmt(Math.round(monthlyCost / 10000), 0) + ' <small>万円</small>';
-    rTrees.innerHTML   = '約 ' + fmt(Math.round(trees), 0) + ' <small>本</small>';
+  function updateVolume(val) {
+    document.getElementById('volumeValue').textContent = Number(val).toLocaleString();
   }
 
-  volumeInput.addEventListener('input', calc);
-  document.querySelectorAll('input[name="product"]').forEach(function (el) {
-    el.addEventListener('change', calc);
-  });
-  document.getElementById('usage').addEventListener('change', calc);
-  document.getElementById('units').addEventListener('change', calc);
+  function updateUnit(val) {
+    document.getElementById('unitValue').textContent = Number(val).toLocaleString();
+  }
 
-  calc();
-})();
+  function calculate() {
+    const volume = parseInt(document.getElementById('volumeRange').value);
+
+    // GHG削減量計算
+    const monthlyGhgReduction = volume * co2PerLiter * currentFuelRate; // kg
+    const annualGhgReduction = monthlyGhgReduction * 12;
+    const equivalentTrees = Math.round(annualGhgReduction / treeCo2PerYear);
+
+    // 価格計算
+    const monthlyPrice = volume * dieselPricePerLiter * currentPriceMultiplier;
+
+    document.getElementById('ghgResult').textContent = formatCo2(monthlyGhgReduction);
+    document.getElementById('annualGhg').textContent = formatCo2(annualGhgReduction);
+    document.getElementById('priceResult').textContent = '約 ' + Math.round(monthlyPrice / 10000).toLocaleString() + '万円';
+    document.getElementById('treesResult').textContent = equivalentTrees.toLocaleString() + '本分';
+
+    const annualTons = (annualGhgReduction / 1000).toFixed(1);
+    document.getElementById('resultMessage').innerHTML =
+      `✅ 年間で <strong style="font-size:1.2em;">${annualTons}トン</strong> のCO₂削減が見込まれます。<br>これは杉の木 <strong>${equivalentTrees.toLocaleString()}本</strong> が1年間に吸収するCO₂に相当します。<br><br>正確な見積りは、担当者が詳細をヒアリングの上ご提案します。`;
+
+    document.getElementById('resultCard').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  function formatCo2(kg) {
+    if (kg >= 1000) return (kg / 1000).toFixed(1) + 't';
+    return Math.round(kg).toLocaleString() + 'kg';
+  }
 </script>
 </body>
 </html>

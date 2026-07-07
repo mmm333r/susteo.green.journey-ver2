@@ -1,182 +1,304 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>製品｜サステオの製品ラインナップ｜サステオ</title>
-<meta name="description" content="既存の設備・車両をそのままに、燃料を切り替えるだけで脱炭素を実現。サステオ（HVO100%）、サステオ51混合燃料、バイオA重油の3種類からお選びいただけます。">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>製品 | SUSTEO Green Journey</title>
+  <meta name="description" content="ユーグレナが提供するHVO100%のサステオ、サステオ51混合燃料、バイオA重油の製品詳細をご紹介します。">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header class="site-header">
+<header id="header">
   <div class="header-inner">
-    <a class="brand" href="index.html">
-      <span class="brand-logo">SUSTEO<span>.</span></span>
-      <span class="brand-sub">次世代バイオ燃料 サステオ</span>
+    <a href="index.html" class="logo">
+      <div class="logo-icon">🌿</div>
+      SUSTEO <span>Green Journey</span>
     </a>
-    <button class="nav-toggle" aria-expanded="false" aria-label="メニュー">☰</button>
-    <nav class="global-nav">
-      <ul>
-        <li><a href="index.html">TOP</a></li>
-        <li><a href="market.html">市場・環境</a></li>
-        <li><a href="products.html" class="is-active">製品</a></li>
-        <li><a href="supply.html">供給体制</a></li>
-        <li><a href="quality.html">品質データ</a></li>
-        <li><a href="cases.html">導入事例</a></li>
-        <li><a href="future.html">特徴</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="simulation.html" class="nav-cta">見積りシミュレーション</a></li>
-      </ul>
+    <nav id="nav">
+      <a href="market.html">市場・環境</a>
+      <a href="products.html" class="active">製品</a>
+      <a href="supply.html">供給体制</a>
+      <a href="quality.html">品質データ</a>
+      <a href="cases.html">導入事例</a>
+      <a href="future.html">特徴</a>
+      <a href="faq.html">FAQ</a>
+      <a href="simulation.html" class="nav-cta">見積りシミュレーション</a>
     </nav>
+    <div class="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></div>
   </div>
 </header>
 
-<section class="page-hero">
+<div class="page-hero">
   <div class="container">
-    <p class="breadcrumb"><a href="index.html">TOP</a> ／ 製品</p>
-    <p class="hero-eyebrow">Products</p>
-    <h1>製品ラインナップ</h1>
+    <div class="page-hero-label">製品</div>
+    <h1>次世代バイオ燃料<br>製品ラインナップ</h1>
     <p>既存の設備・車両をそのままに、燃料を切り替えるだけで脱炭素を実現。用途に合わせて3種類からお選びいただけます。</p>
-    <nav class="anchor-nav">
-      <a href="#features">サステオの特徴</a>
-      <a href="#hvo100">サステオ（HVO100%）</a>
-      <a href="#susteo51">サステオ51混合燃料</a>
-      <a href="#bio-a">バイオA重油</a>
-      <a href="#compare">製品比較表</a>
-    </nav>
   </div>
-</section>
+</div>
 
-<!-- 3-1 特徴 -->
-<section class="section section-alt" id="features">
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="index.html">TOP</a><span>›</span>製品
+  </div>
+</div>
+
+<div class="anchor-nav">
+  <div class="anchor-nav-inner">
+    <a href="#susteo">サステオ（HVO100%）</a>
+    <a href="#susteo51">サステオ51混合燃料</a>
+    <a href="#bioa">バイオA重油</a>
+  </div>
+</div>
+
+<!-- ===== OVERVIEW ===== -->
+<section class="section">
   <div class="container">
-    <div class="section-head">
-      <p class="section-eyebrow">Brand</p>
-      <h2>サステオの特徴</h2>
-      <p class="section-lead">ユーグレナが開発・販売する次世代バイオ燃料ブランド。廃食油や植物油を原料に、水素化精製技術（HVO製法）で製造された高品質なバイオ燃料です。</p>
+    <div class="text-center" style="margin-bottom:16px;">
+      <span class="section-label">3-1. サステオの特徴</span>
     </div>
+    <h2 class="section-title text-center">「サステオ」とは</h2>
+    <p class="section-subtitle">ユーグレナが開発・販売する次世代バイオ燃料ブランド。廃食油や植物油を原料に、水素化精製技術（HVO製法）で製造された高品質なバイオ燃料です。</p>
 
-    <div class="card-grid cols-3">
-      <div class="card">
-        <div class="card-icon">🔄</div>
+    <div class="grid-3" style="margin-bottom:64px;">
+      <div class="card" style="text-align:center;">
+        <div class="card-icon" style="margin:0 auto 20px; background:var(--main-light); font-size:2.5rem;">🔄</div>
         <h3>ドロップイン燃料</h3>
         <p>エンジンや設備の改造・交換は不要。今すぐ、今の設備で脱炭素を始められます。</p>
       </div>
-      <div class="card">
-        <div class="card-icon">📉</div>
+      <div class="card" style="text-align:center;">
+        <div class="card-icon" style="margin:0 auto 20px; background:var(--pink-light); font-size:2.5rem;">🌱</div>
         <h3>最大約80%のCO₂削減</h3>
         <p>ライフサイクル全体（原料調達〜燃焼まで）で評価した削減効果。化石燃料と比較した場合の目安値です。</p>
       </div>
-      <div class="card">
-        <div class="card-icon">🏅</div>
+      <div class="card" style="text-align:center;">
+        <div class="card-icon" style="margin:0 auto 20px; background:var(--main-light); font-size:2.5rem;">🛡️</div>
         <h3>品質保証・認証取得済み</h3>
         <p>ISCC認証取得。海事検定協会・JARIなど第三者機関による品質確認も完了しています。</p>
       </div>
     </div>
 
-    <div class="card-grid cols-2" style="margin-top:26px;">
-      <div class="card">
-        <h3>HVO（水素化植物油）とは</h3>
-        <p>HVO（Hydrotreated Vegetable Oil）は、廃食油・植物油・動物性油脂などを原料に、水素を使って精製した次世代バイオ燃料です。軽油とほぼ同じ分子構造を持つため、既存のディーゼルエンジンにそのまま使用できます。従来のFAMEと異なり、低温でも固まらず、水分を含まないため、保管・取り扱いが化石燃料と同様で非常に簡単です。</p>
-        <p style="margin-top:10px;">欧州では「HVO100」として広く普及しており、スウェーデン・フィンランドでは市場シェア30%以上を誇ります。</p>
+    <!-- HVO/SAF説明 -->
+    <div class="grid-2">
+      <div>
+        <h3 style="margin-bottom:16px; color:var(--main);">HVO（水素化植物油）とは</h3>
+        <p style="color:var(--gray-dark); margin-bottom:16px;">HVO（Hydrotreated Vegetable Oil）は、廃食油・植物油・動物性油脂などを原料に、水素を使って精製した次世代バイオ燃料です。軽油とほぼ同じ分子構造を持つため、既存のディーゼルエンジンにそのまま使用できます。</p>
+        <p style="color:var(--gray-dark); margin-bottom:16px;">従来のバイオ燃料（FAME）と異なり、低温でも固まらず、水分を含まないため、保管・取り扱いが化石燃料と同様で非常に簡単です。</p>
+        <div class="highlight-box">
+          <p>✅ 欧州では「HVO100」として広く普及しており、スウェーデン・フィンランドでは市場シェア30%以上を誇ります。</p>
+        </div>
       </div>
-      <div class="card">
-        <h3>SAF（持続可能な航空燃料）とは</h3>
-        <p>SAF（Sustainable Aviation Fuel）は、航空機に使用するジェット燃料の代替として開発されたバイオ燃料です。同じくHVO製法で製造され、廃食油・植物油・動物性油脂などを原料の一部とした独自開発品です。国際航空業界では、2050年のCO₂ネットゼロ達成に向け、SAFの使用義務化が各国で進んでいます。</p>
-        <p style="margin-top:10px;">ユーグレナのSAFは、国産バイオジェット燃料の実用化に向けた実証飛行にも使用されました。</p>
+      <div>
+        <h3 style="margin-bottom:16px; color:var(--main);">SAF（持続可能な航空燃料）とは</h3>
+        <p style="color:var(--gray-dark); margin-bottom:16px;">SAF（Sustainable Aviation Fuel）は、航空機に使用するジェット燃料の代替として開発されたバイオ燃料です。同じくHVO製法で製造され、廃食油・植物油・動物性油脂などを原料の一部とした独自開発品です。</p>
+        <p style="color:var(--gray-dark); margin-bottom:16px;">国際航空業界では、2050年のCO₂ネットゼロ達成に向け、SAFの使用義務化が各国で進んでいます。</p>
+        <div class="highlight-box">
+          <p>✅ ユーグレナのSAFは、国産バイオジェット燃料の実用化に向けた実証飛行にも使用されました。</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- サステオ HVO100 -->
-<section class="section" id="hvo100">
+<!-- ===== SUSTEO 100% ===== -->
+<section class="section section-alt" id="susteo">
   <div class="container">
-    <div class="section-head">
-      <p class="section-eyebrow">Product 01</p>
-      <h2>サステオ（HVO100%）</h2>
-      <p class="section-lead">廃食油などを原料に水素化精製したHVOを100%使用したバイオ燃料。軽油とほぼ同じ性状のため、既存のディーゼルエンジンや設備をそのまま使用できます。</p>
+    <span class="section-label">3-1. サステオ（HVO100%）</span>
+    <div class="grid-2" style="margin-top:16px;">
+      <div class="product-hero-card">
+        <div style="font-size:0.85rem; opacity:0.75; margin-bottom:8px;">次世代バイオ燃料</div>
+        <h2>サステオ<br><span style="font-size:1.2rem; opacity:0.85;">（HVO100%）</span></h2>
+        <p style="margin-top:16px;">廃食油などを原料に水素化精製したHVO（水素化植物油）を100%使用したバイオ燃料。軽油とほぼ同じ性状のため、既存のディーゼルエンジンや設備をそのまま使用できます。</p>
+        <div class="product-feature-list" style="margin-top:24px;">
+          <div class="product-feature-item">
+            <span class="product-feature-icon">🌱</span>
+            <div>
+              <strong>CO₂削減率：最大約80%以上</strong><br>
+              <span style="opacity:0.8; font-size:0.9rem;">ライフサイクル全体での削減効果（化石燃料比）</span>
+            </div>
+          </div>
+          <div class="product-feature-item">
+            <span class="product-feature-icon">🔧</span>
+            <div>
+              <strong>設備改造：不要</strong><br>
+              <span style="opacity:0.8; font-size:0.9rem;">既存のディーゼル設備・車両にそのまま使用可能</span>
+            </div>
+          </div>
+          <div class="product-feature-item">
+            <span class="product-feature-icon">🌡️</span>
+            <div>
+              <strong>寒冷地対応：◎</strong><br>
+              <span style="opacity:0.8; font-size:0.9rem;">低温性能が高く、冬季でも安定して使用できます</span>
+            </div>
+          </div>
+          <div class="product-feature-item">
+            <span class="product-feature-icon">📋</span>
+            <div>
+              <strong>ISCC認証取得済み</strong><br>
+              <span style="opacity:0.8; font-size:0.9rem;">持続可能性の国際認証を取得済みです</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin-bottom:24px;">サステオ（HVO100%）の主な用途</h3>
+        <p style="color:var(--gray-dark); margin-bottom:20px;">燃料品質としては軽油の代替として、ディーゼルエンジン車両にご利用いただけます。ただし税法上の観点から、HVO100%は灯油扱いとなるため、公道走行車両には現在ご利用いただけない点にご注意ください。</p>
+        <div style="display:flex; flex-direction:column; gap:16px;">
+          <div class="card" style="padding:20px 24px; display:flex; align-items:center; gap:16px;">
+            <div style="font-size:2rem;">🏗️</div>
+            <div>
+              <div style="font-weight:700; margin-bottom:4px;">建設重機</div>
+              <div style="font-size:0.875rem; color:var(--gray-dark);">建設現場の重機でのご利用実績があります。清水建設・竹中工務店での導入実績。</div>
+            </div>
+          </div>
+          <div class="card" style="padding:20px 24px; display:flex; align-items:center; gap:16px;">
+            <div style="font-size:2rem;">⚡</div>
+            <div>
+              <div style="font-weight:700; margin-bottom:4px;">発電機・仮設電源</div>
+              <div style="font-size:0.875rem; color:var(--gray-dark);">建設現場の仮設発電機など、構内で使用するディーゼル設備に対応。</div>
+            </div>
+          </div>
+          <div class="card" style="padding:20px 24px; display:flex; align-items:center; gap:16px;">
+            <div style="font-size:2rem;">🏭</div>
+            <div>
+              <div style="font-weight:700; margin-bottom:4px;">構内車両・産業機械</div>
+              <div style="font-size:0.875rem; color:var(--gray-dark);">工場・港湾など構内で走行する車両・フォークリフト等（公道走行を除く）。</div>
+            </div>
+          </div>
+        </div>
+        <div class="note-box" style="margin-top:20px;">
+          📌 <strong>ご注意：</strong>税法上、HVO100%は灯油扱いとなるため、公道走行車両には現在ご利用いただけません。公道走行車両（トラック・バス・自動車等）には「サステオ51混合燃料」をご検討ください。
+        </div>
+      </div>
     </div>
-
-    <ul class="check-list">
-      <li><strong>CO₂削減率：</strong>最大約80%以上（ライフサイクル全体での削減効果・化石燃料比）</li>
-      <li><strong>設備改造：</strong>不要（既存のディーゼル設備・車両にそのまま使用可能）</li>
-      <li><strong>寒冷地対応：</strong>◎（低温性能が高く、冬季でも安定して使用できる）</li>
-      <li><strong>ISCC認証取得済み</strong>（持続可能性の国際認証）</li>
-    </ul>
-
-    <h4 class="minor-title">主な用途</h4>
-    <p>燃料品質としては軽油の代替として、ディーゼルエンジン車両にご利用いただけます。ただし税法上の観点から、HVO100%は灯油扱いとなるため、公道走行車両には現在ご利用いただけない点にご注意ください。具体的なご利用実績としては、建設重機や発電機など、建設現場でのご利用がございます。</p>
-    <div class="note-box"><strong>ご注意：</strong>HVO100%は税法上灯油扱いとなるため、公道走行車両には現在ご利用いただけません。公道走行車両には「サステオ51混合燃料」をご検討ください。</div>
   </div>
 </section>
 
-<!-- サステオ51 -->
-<section class="section section-green" id="susteo51">
+<!-- ===== SUSTEO 51 ===== -->
+<section class="section" id="susteo51">
   <div class="container">
-    <div class="section-head">
-      <p class="section-eyebrow">Product 02</p>
-      <h2>サステオ51混合燃料</h2>
-      <p class="section-lead">HVOを51%、軽油を49%配合した混合燃料です。HVO100%に比べてコストを抑えながら、確実なCO₂削減効果を実現します。さらに軽油混合のため、公道走行車両（トラック・バス・自動車等）にご利用いただけます。</p>
+    <span class="section-label">3-2. サステオ51混合燃料</span>
+    <div class="grid-2" style="margin-top:16px; gap:48px;">
+      <div>
+        <h2 class="section-title">サステオ51<br><span style="font-size:1.4rem; color:var(--gray-dark);">混合燃料</span></h2>
+        <p style="color:var(--gray-dark); margin-bottom:20px;">HVOを51%、軽油を49%配合した混合燃料です。HVO100%に比べてコストを抑えながら、確実なCO₂削減効果を実現します。さらに軽油混合のため、公道走行車両（トラック・バス・自動車等）にご利用いただけます。</p>
+        <div class="highlight-box" style="margin-bottom:24px;">
+          <p>💡 <strong>改正省エネ法への対応油種：</strong>バイオ燃料などの混合割合が過半（51%以上）を占める燃料の場合、「非化石エネルギー自動車」としての報告・評価が可能となります。</p>
+        </div>
+        <h4 style="margin-bottom:16px;">主な特徴</h4>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <div style="display:flex; align-items:center; gap:12px; padding:12px 16px; background:var(--main-light); border-radius:var(--radius-sm);">
+            <span style="color:var(--main); font-weight:700;">✓</span>
+            <span>CO₂削減率：約45〜50%（化石燃料比）</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:12px; padding:12px 16px; background:var(--main-light); border-radius:var(--radius-sm);">
+            <span style="color:var(--main); font-weight:700;">✓</span>
+            <span>既存設備への適合性：◎（改造不要）</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:12px; padding:12px 16px; background:var(--main-light); border-radius:var(--radius-sm);">
+            <span style="color:var(--main); font-weight:700;">✓</span>
+            <span>Scope3排出量の削減実績として報告可能</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:12px; padding:12px 16px; background:var(--main-light); border-radius:var(--radius-sm);">
+            <span style="color:var(--main); font-weight:700;">✓</span>
+            <span>公道走行車両（トラック・バス・自動車等）に利用可能</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div style="background:linear-gradient(135deg, #F5FFFE, var(--main-light)); border-radius:var(--radius); padding:40px; text-align:center;">
+          <div style="position:relative; width:200px; height:200px; margin:0 auto 24px;">
+            <svg viewBox="0 0 200 200" width="200" height="200">
+              <circle cx="100" cy="100" r="90" fill="none" stroke="#E0F0EE" stroke-width="20"/>
+              <circle cx="100" cy="100" r="90" fill="none" stroke="var(--main)" stroke-width="20"
+                stroke-dasharray="283 566" stroke-dashoffset="0" stroke-linecap="round" transform="rotate(-90 100 100)"/>
+              <circle cx="100" cy="100" r="90" fill="none" stroke="var(--gray-light)" stroke-width="20"
+                stroke-dasharray="276 566" stroke-dashoffset="-284" stroke-linecap="round" transform="rotate(-90 100 100)"/>
+              <text x="100" y="90" text-anchor="middle" font-size="36" font-weight="900" fill="var(--main)">51%</text>
+              <text x="100" y="115" text-anchor="middle" font-size="12" fill="var(--gray-dark)">HVO含有率</text>
+            </svg>
+          </div>
+          <div style="display:flex; gap:16px; justify-content:center;">
+            <div style="display:flex; align-items:center; gap:8px; font-size:0.9rem;">
+              <div style="width:16px; height:16px; background:var(--main); border-radius:4px;"></div>
+              <span>HVO 51%</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:8px; font-size:0.9rem;">
+              <div style="width:16px; height:16px; background:var(--gray-light); border-radius:4px; border:1px solid var(--gray);"></div>
+              <span>軽油 49%</span>
+            </div>
+          </div>
+          <div style="margin-top:24px; background:white; border-radius:var(--radius-sm); padding:20px;">
+            <div style="font-size:2rem; font-weight:900; color:var(--main);">約45〜50%</div>
+            <div style="color:var(--gray-dark); font-size:0.9rem;">CO₂削減効果（化石燃料比）</div>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div class="info-box"><strong>改正省エネ法への対応油種：</strong>バイオ燃料などの混合割合が過半（51％以上）を占める燃料の場合、「非化石エネルギー自動車」としての報告・評価が可能となります。</div>
-
-    <h4 class="minor-title">主な特徴</h4>
-    <ul class="check-list">
-      <li><strong>CO₂削減率：</strong>約45〜50%（化石燃料比）</li>
-      <li><strong>既存設備への適合性：</strong>◎（改造不要）</li>
-      <li><strong>Scope3排出量の削減実績として報告可能</strong></li>
-    </ul>
   </div>
 </section>
 
-<!-- バイオA重油 -->
-<section class="section" id="bio-a">
+<!-- ===== BIO A HEAVY OIL ===== -->
+<section class="section section-alt" id="bioa">
   <div class="container">
-    <div class="section-head">
-      <p class="section-eyebrow">Product 03</p>
-      <h2>バイオA重油</h2>
-      <p class="section-lead">A重油（農業・漁業・建設業などで広く使われる燃料）にFAME系バイオ燃料を混合した製品です。船舶の燃料や、ボイラー・暖房用途にも対応しています。バイオ混合率・CO₂削減効果はともに〜20%が目安です。</p>
+    <span class="section-label">3-3. バイオA重油</span>
+    <div class="grid-2" style="margin-top:16px; gap:48px;">
+      <div>
+        <div style="background:linear-gradient(135deg, #2D3D3A, #1A2E2B); border-radius:var(--radius); padding:40px; color:white; text-align:center;">
+          <div style="font-size:5rem; margin-bottom:16px;">🛢️</div>
+          <h3 style="color:white; font-size:1.4rem; margin-bottom:12px;">バイオA重油</h3>
+          <p style="opacity:0.8; font-size:0.9rem; margin-bottom:24px;">FAME系バイオ燃料をA重油に混合</p>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; text-align:left;">
+            <div style="background:rgba(255,255,255,0.1); border-radius:var(--radius-sm); padding:16px;">
+              <div style="font-size:1.4rem; font-weight:900; color:var(--main);">〜20%</div>
+              <div style="font-size:0.8rem; opacity:0.75; margin-top:4px;">バイオ混合率</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.1); border-radius:var(--radius-sm); padding:16px;">
+              <div style="font-size:1.4rem; font-weight:900; color:var(--main);">〜20%</div>
+              <div style="font-size:0.8rem; opacity:0.75; margin-top:4px;">CO₂削減効果</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2 class="section-title">バイオA重油</h2>
+        <p style="color:var(--gray-dark); margin-bottom:20px;">A重油（農業・漁業・建設業などで広く使われる燃料）にFAME系バイオ燃料を混合した製品です。船舶の燃料や、ボイラー・暖房用途にも対応しています。バイオ混合率・CO₂削減効果はともに〜20%が目安です。</p>
+        <p style="color:var(--gray-dark); margin-bottom:24px;">HVOと比較すると混合率やCO₂削減率は低めですが、A重油をすでに使用している設備にそのまま使えるため、導入のハードルが非常に低い製品です。</p>
+
+        <h4 style="margin-bottom:16px;">主な用途・特徴</h4>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <div class="card" style="padding:16px 20px; display:flex; align-items:center; gap:12px;">
+            <span style="font-size:1.5rem;">⛵</span>
+            <div><strong>内航船・港湾船舶の燃料として</strong><br><span style="font-size:0.85rem; color:var(--gray-dark);">港内での作業船など、既存のA重油使用船舶に対応</span></div>
+          </div>
+          <div class="card" style="padding:16px 20px; display:flex; align-items:center; gap:16px;">
+            <span style="font-size:1.5rem;">🔥</span>
+            <div><strong>ボイラー・暖房・農業用機械</strong><br><span style="font-size:0.85rem; color:var(--gray-dark);">農業・漁業・工場のボイラー燃料として使用可能</span></div>
+          </div>
+          <div class="card" style="padding:16px 20px; display:flex; align-items:center; gap:16px;">
+            <span style="font-size:1.5rem;">💰</span>
+            <div><strong>コスト重視の企業に</strong><br><span style="font-size:0.85rem; color:var(--gray-dark);">HVOより廉価で、まずは脱炭素の第一歩を踏み出したい場合に</span></div>
+          </div>
+        </div>
+
+        <div class="note-box" style="margin-top:24px;">
+          📌 バイオA重油は、HVOへの移行ステップとして位置づけることも可能です。段階的な脱炭素戦略について、お気軽にご相談ください。
+        </div>
+      </div>
     </div>
-
-    <p>HVOと比較すると混合率やCO₂削減率は低めですが、A重油をすでに使用している設備にそのまま使えるため、導入のハードルが非常に低い製品です。</p>
-
-    <h4 class="minor-title">主な用途・特徴</h4>
-    <div class="card-grid cols-3" style="margin-top:16px;">
-      <div class="card">
-        <div class="card-icon">🚢</div>
-        <h3>内航船・港湾船舶の燃料として</h3>
-        <p>既存のA重油使用船舶に対応。</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">🔥</div>
-        <h3>ボイラー・暖房・農業用機械</h3>
-        <p>農業・漁業・工場のボイラー燃料に。</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">💰</div>
-        <h3>コスト重視の企業に</h3>
-        <p>HVOより廉価で、まず脱炭素の第一歩を。</p>
-      </div>
-    </div>
-
-    <div class="point-box"><strong>ポイント：</strong>バイオA重油は、HVOへの移行ステップとして位置づけることも可能です。段階的な脱炭素戦略について、お気軽にご相談ください。</div>
   </div>
 </section>
 
-<!-- 比較表 -->
-<section class="section section-alt" id="compare">
+<!-- ===== 製品比較表 ===== -->
+<section class="section">
   <div class="container">
-    <div class="section-head">
-      <p class="section-eyebrow">Comparison</p>
-      <h2>製品比較表</h2>
+    <div class="text-center" style="margin-bottom:48px;">
+      <span class="section-label">製品比較</span>
+      <h2 class="section-title">3製品を比較する</h2>
     </div>
-    <div class="table-wrap">
-      <table class="data">
+    <div style="overflow-x:auto;">
+      <table class="quality-table" style="min-width:700px;">
         <thead>
           <tr>
             <th>項目</th>
@@ -187,43 +309,43 @@
         </thead>
         <tbody>
           <tr>
-            <td>CO₂削減率</td>
-            <td><span class="badge-best">最大90%以上</span></td>
-            <td>約45〜50%</td>
-            <td>〜20%</td>
+            <td><strong>CO₂削減率</strong></td>
+            <td><span class="badge badge-green">最大90%以上</span></td>
+            <td><span class="badge badge-green">約45〜50%</span></td>
+            <td><span class="badge badge-pink">〜20%</span></td>
           </tr>
           <tr>
-            <td>設備改造</td>
+            <td><strong>設備改造</strong></td>
             <td>不要</td>
             <td>不要</td>
             <td>不要（A重油使用設備のみ）</td>
           </tr>
           <tr>
-            <td>主な原料</td>
+            <td><strong>主な原料</strong></td>
             <td>廃食油・植物油（HVO）</td>
-            <td>HVO51%＋軽油49%</td>
-            <td>HVO系バイオ＋A重油</td>
+            <td>HVO51% + 軽油49%</td>
+            <td>HVO系バイオ + A重油</td>
           </tr>
           <tr>
-            <td>寒冷地対応</td>
+            <td><strong>寒冷地対応</strong></td>
             <td>－30℃まで（特3相当）</td>
             <td>－30℃まで（特3相当）</td>
             <td>△ 要確認</td>
           </tr>
           <tr>
-            <td>主な用途</td>
+            <td><strong>主な用途</strong></td>
             <td>トラック・建機・バス・航空</td>
             <td>トラック・建機・バス</td>
             <td>船舶・ボイラー・農業機械</td>
           </tr>
           <tr>
-            <td>ISCC認証</td>
-            <td><span class="badge-ok">取得済み</span></td>
-            <td><span class="badge-ok">取得済み</span></td>
+            <td><strong>ISCC認証</strong></td>
+            <td>取得済み</td>
+            <td>取得済み</td>
             <td>要確認</td>
           </tr>
           <tr>
-            <td>おすすめ対象</td>
+            <td><strong>おすすめ対象</strong></td>
             <td>最大限の削減を目指す企業</td>
             <td>公道走行車での利用</td>
             <td>A重油使用中の事業者</td>
@@ -231,50 +353,34 @@
         </tbody>
       </table>
     </div>
-  </div>
-</section>
 
-<section class="cta-band">
-  <div class="container">
-    <h2>あなたの設備に最適な製品を、シミュレーションで確認</h2>
-    <p>燃料の使用量と種類を入力するだけで、GHG削減量と参考価格を自動計算します。</p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="simulation.html">見積りシミュレーションを試す</a>
-      <a class="btn btn-outline" href="quality.html">品質データを見る</a>
+    <div style="text-align:center; margin-top:48px; display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+      <a href="simulation.html" class="btn btn-primary">🧮 導入コストをシミュレーションする</a>
+      <a href="mailto:contact@euglena.jp" class="btn btn-outline">✉️ 製品について問い合わせる</a>
     </div>
   </div>
 </section>
 
-<footer class="site-footer">
+<footer>
   <div class="container">
     <div class="footer-grid">
-      <div>
-        <div class="footer-brand">SUSTEO<span>.</span></div>
-        <p class="footer-desc">次世代バイオ燃料「サステオ」。地域・企業・行政の共創による、バイオ燃料での脱炭素社会を実現します。</p>
+      <div class="footer-brand">
+        <div class="logo" style="margin-bottom:16px;"><div class="logo-icon">🌿</div>SUSTEO <span style="color:var(--main);">Green Journey</span></div>
+        <p>ユーグレナが提供する次世代バイオ燃料「サステオ」。</p>
+        <div class="sns-links"><a href="#" class="sns-link">𝕏</a><a href="#" class="sns-link">in</a><a href="#" class="sns-link">▶</a></div>
       </div>
-      <div>
-        <h4>CONTENTS</h4>
-        <ul>
-          <li><a href="market.html">市場・環境</a></li>
-          <li><a href="products.html">製品</a></li>
-          <li><a href="supply.html">供給体制</a></li>
-          <li><a href="quality.html">品質データ</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>SUPPORT</h4>
-        <ul>
-          <li><a href="cases.html">導入事例</a></li>
-          <li><a href="future.html">特徴</a></li>
-          <li><a href="faq.html">よくあるご質問</a></li>
-          <li><a href="simulation.html">見積りシミュレーション</a></li>
-        </ul>
-      </div>
+      <div class="footer-col"><h4>サイトマップ</h4><ul><li><a href="market.html">市場・環境</a></li><li><a href="products.html">製品</a></li><li><a href="supply.html">供給体制</a></li><li><a href="quality.html">品質データ</a></li><li><a href="cases.html">導入事例</a></li><li><a href="future.html">特徴</a></li></ul></div>
+      <div class="footer-col"><h4>サポート</h4><ul><li><a href="faq.html">よくあるご質問</a></li><li><a href="simulation.html">見積りシミュレーション</a></li><li><a href="mailto:contact@euglena.jp">お問い合わせ</a></li></ul></div>
+      <div class="footer-col"><h4>会社情報</h4><ul><li><a href="#">株式会社ユーグレナ</a></li><li><a href="#">プライバシーポリシー</a></li><li><a href="#">利用規約</a></li></ul></div>
     </div>
-    <div class="footer-bottom">© SUSTEO Green Journey. All rights reserved.</div>
+    <div class="footer-bottom"><div>© 2025 Euglena Co., Ltd. All Rights Reserved.</div><div class="footer-links"><a href="#">プライバシーポリシー</a><a href="#">利用規約</a><a href="#">お問い合わせ</a></div></div>
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<a href="mailto:contact@euglena.jp" class="floating-cta">✉️ お問い合わせ</a>
+<script>
+  function toggleNav() { document.getElementById('nav').classList.toggle('open'); }
+  window.addEventListener('scroll', () => { document.getElementById('header').style.boxShadow = window.scrollY > 50 ? '0 4px 24px rgba(0,0,0,0.08)' : 'none'; });
+</script>
 </body>
 </html>

@@ -1,216 +1,383 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>よくあるご質問（FAQ）｜サステオ</title>
-<meta name="description" content="「既存設備に使えるか」「コストは？」「CO₂削減効果は？」など、サステオ導入前の疑問をすっきり解消します。">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>よくあるご質問 | SUSTEO Green Journey</title>
+  <meta name="description" content="サステオ（バイオ燃料）の導入に関するよくあるご質問をまとめました。設備改造・CO₂削減効果・コスト・供給体制などについて解説します。">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header class="site-header">
+<header id="header">
   <div class="header-inner">
-    <a class="brand" href="index.html">
-      <span class="brand-logo">SUSTEO<span>.</span></span>
-      <span class="brand-sub">次世代バイオ燃料 サステオ</span>
-    </a>
-    <button class="nav-toggle" aria-expanded="false" aria-label="メニュー">☰</button>
-    <nav class="global-nav">
-      <ul>
-        <li><a href="index.html">TOP</a></li>
-        <li><a href="market.html">市場・環境</a></li>
-        <li><a href="products.html">製品</a></li>
-        <li><a href="supply.html">供給体制</a></li>
-        <li><a href="quality.html">品質データ</a></li>
-        <li><a href="cases.html">導入事例</a></li>
-        <li><a href="future.html">特徴</a></li>
-        <li><a href="faq.html" class="is-active">FAQ</a></li>
-        <li><a href="simulation.html" class="nav-cta">見積りシミュレーション</a></li>
-      </ul>
+    <a href="index.html" class="logo"><div class="logo-icon">🌿</div>SUSTEO <span>Green Journey</span></a>
+    <nav id="nav">
+      <a href="market.html">市場・環境</a>
+      <a href="products.html">製品</a>
+      <a href="supply.html">供給体制</a>
+      <a href="quality.html">品質データ</a>
+      <a href="cases.html">導入事例</a>
+      <a href="future.html">特徴</a>
+      <a href="faq.html" class="active">FAQ</a>
+      <a href="simulation.html" class="nav-cta">見積りシミュレーション</a>
     </nav>
+    <div class="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></div>
   </div>
 </header>
 
-<section class="page-hero">
+<div class="page-hero">
   <div class="container">
-    <p class="breadcrumb"><a href="index.html">TOP</a> ／ よくあるご質問</p>
-    <p class="hero-eyebrow">FAQ</p>
+    <div class="page-hero-label">FAQ</div>
     <h1>よくあるご質問</h1>
-    <p>「既存設備に使えるか」「コストは？」「CO₂削減効果は？」など、導入前の疑問をすっきり解消します。</p>
-    <nav class="anchor-nav">
-      <a href="#equipment">設備・車両</a>
-      <a href="#co2">CO₂削減効果</a>
-      <a href="#cost">コスト・価格</a>
-      <a href="#supply">調達・供給</a>
-      <a href="#quality">品質・安全性</a>
-      <a href="#esg">排出量報告・ESG対応</a>
-    </nav>
+    <p>導入前の不安や疑問を解消します。ご不明な点があれば、お気軽にお問い合わせください。</p>
   </div>
-</section>
+</div>
+<div class="breadcrumb"><div class="breadcrumb-inner"><a href="index.html">TOP</a><span>›</span>FAQ</div></div>
 
-<section class="section section-alt" id="equipment">
-  <div class="container">
-    <div class="section-head">
-      <p class="section-eyebrow">Category 01</p>
-      <h2>設備・車両について</h2>
+<div class="anchor-nav">
+  <div class="anchor-nav-inner">
+    <a href="#equipment">設備・車両について</a>
+    <a href="#effect">CO₂削減効果</a>
+    <a href="#cost">コスト・価格</a>
+    <a href="#supply">調達・供給</a>
+    <a href="#quality">品質・安全性</a>
+    <a href="#reporting">排出量報告</a>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container" style="max-width:860px;">
+
+    <!-- 設備・車両 -->
+    <div style="margin-bottom:56px;" id="equipment">
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:24px;">
+        <div style="width:40px; height:40px; background:var(--main); border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-size:1.2rem; flex-shrink:0;">🔧</div>
+        <h2 style="font-size:1.4rem;">設備・車両について</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <div style="display:flex; gap:12px; align-items:flex-start;">
+              <div class="faq-q-label">Q</div>
+              <span>既存のディーゼル設備・車両をそのまま使えますか？設備改造は必要ですか？</span>
+            </div>
+            <div class="faq-chevron">▼</div>
+          </div>
+          <div class="faq-answer">
+            <strong style="color:var(--main);">A. はい、基本的に改造は不要です。</strong><br><br>
+            サステオ（HVO）は、軽油とほぼ同じ分子構造を持つバイオ燃料です。そのため、既存のディーゼルエンジン・建設機械・発電機・船舶などに、改造・交換なしでそのままご使用いただけます。<br><br>
+            ただし、FAME系バイオ燃料（旧型のバイオ軽油）の場合は、一部設備でのゴムパーツへの影響が報告されています。サステオ（HVO）はこの問題がなく、従来の軽油と同様に扱えます。<br><br>
+            <div class="note-box" style="margin-top:0;">
+              📌 念のため、ご使用予定の設備・車両メーカーへの確認をお勧めします。ご不明な場合は、弊社担当者がサポートします。
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <div style="display:flex; gap:12px; align-items:flex-start;">
+              <div class="faq-q-label">Q</div>
+              <span>ガソリン車やHVカー（ハイブリッド車）でも使えますか？</span>
+            </div>
+            <div class="faq-chevron">▼</div>
+          </div>
+          <div class="faq-answer">
+            <strong style="color:var(--main);">A. サステオはディーゼル（軽油）系エンジン向けの製品です。</strong><br><br>
+            ガソリン車やHV・EVには使用できません。軽油を燃料とするディーゼルエンジン搭載の車両・機械・船舶が対象となります。<br><br>
+            主な対象：大型・中型・小型トラック、路線バス、建設重機、船舶、農業機械、発電機、フォークリフト（ディーゼル式）など。
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <div style="display:flex; gap:12px; align-items:flex-start;">
+              <div class="faq-q-label">Q</div>
+              <span>軽油と混ぜて使うことはできますか？完全に切り替えなければいけませんか？</span>
+            </div>
+            <div class="faq-chevron">▼</div>
+          </div>
+          <div class="faq-answer">
+            <strong style="color:var(--main);">A. 段階的な導入も可能です。</strong><br><br>
+            サステオ（HVO）は、軽油と任意の割合で混合して使用できます。いきなり100%に切り替えなくても、まずはサステオ51混合燃料（HVO51%+軽油49%）から始め、段階的に比率を上げていくことも可能です。<br><br>
+            タンクに軽油が残った状態にサステオを補給しても問題ありません（混合しても性能に影響なし）。
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <div style="display:flex; gap:12px; align-items:flex-start;">
+              <div class="faq-q-label">Q</div>
+              <span>冬季の寒冷地でも問題なく使えますか？</span>
+            </div>
+            <div class="faq-chevron">▼</div>
+          </div>
+          <div class="faq-answer">
+            <strong style="color:var(--main);">A. はい、サステオ（HVO）は寒冷地での使用に優れています。</strong><br><br>
+            HVOの流動点は-12℃前後（1号軽油以上の性能）で、北海道・東北の厳冬期でも問題なくご使用いただけます。従来のFAME系バイオ燃料（旧型バイオ軽油）は低温で固まりやすい問題がありましたが、HVOはこの点が大幅に改善されています。<br><br>
+            北海道の札幌拠点でも冬季の供給・使用実績があります。
+          </div>
+        </div>
+      </div>
     </div>
 
-    <details class="faq-item" open>
-      <summary>既存のディーゼル設備・車両をそのまま使えますか？設備改造は必要ですか？</summary>
-      <div class="faq-a"><p>基本的に改造は不要です。サステオ（HVO）は軽油とほぼ同じ分子構造を持つため、既存のディーゼルエンジン・建設機械・発電機・船舶などに改造・交換なしでそのまま使用できます。FAME系（旧型バイオ軽油）では一部設備でゴムパーツへの影響が報告されていますが、HVOはこの問題がありません。念のため設備・車両メーカーへの確認を推奨します。</p></div>
-    </details>
-    <details class="faq-item">
-      <summary>ガソリン車やHVカー（ハイブリッド車）でも使えますか？</summary>
-      <div class="faq-a"><p>サステオはディーゼル（軽油）系エンジン向けの製品です。ガソリン車やHV・EVには使用できません。対象は大型・中型・小型トラック、路線バス、建設重機、船舶、農業機械、発電機、フォークリフト（ディーゼル式）などです。</p></div>
-    </details>
-    <details class="faq-item">
-      <summary>軽油と混ぜて使うことはできますか？完全に切り替えなければいけませんか？</summary>
-      <div class="faq-a"><p>段階的な導入も可能です。サステオ（HVO）は軽油と任意の割合で混合して使用できます。まずはサステオ51混合燃料から始め、段階的に比率を上げることも可能です。タンクに軽油が残った状態に補給しても性能に影響はありません。</p></div>
-    </details>
-    <details class="faq-item">
-      <summary>冬季の寒冷地でも問題なく使えますか？</summary>
-      <div class="faq-a"><p>サステオ（HVO）は寒冷地での使用に優れています。流動点は-12℃前後（1号軽油以上の性能）で、北海道・東北の厳冬期でも問題なく使用できます。札幌拠点でも冬季の供給・使用実績があります。</p></div>
-    </details>
-  </div>
-</section>
+    <!-- CO₂削減効果 -->
+    <div style="margin-bottom:56px;" id="effect">
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:24px;">
+        <div style="width:40px; height:40px; background:var(--main); border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-size:1.2rem; flex-shrink:0;">🌱</div>
+        <h2 style="font-size:1.4rem;">CO₂削減効果について</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <div style="display:flex; gap:12px; align-items:flex-start;">
+              <div class="faq-q-label">Q</div>
+              <span>どのくらいCO₂削減につながりますか？「最大90%削減」とはどういう意味ですか？</span>
+            </div>
+            <div class="faq-chevron">▼</div>
+          </div>
+          <div class="faq-answer">
+            <strong style="color:var(--main);">A. ライフサイクル全体での削減率です。</strong><br><br>
+            「最大90%」という数字は、燃料の原料調達→製造→輸送→燃焼というライフサイクル全体（Well to Wheel）でのCO₂削減率を指します。ISCC認証に基づく計算では83.8%の削減が確認されています。<br><br>
+            ただし、「燃やした瞬間のCO₂量」は軽油と大差ありません（分子構造が似ているため）。バイオ燃料の利点は、原料が成長段階でCO₂を吸収しているため、トータルの排出量が大幅に少なくなることです。<br><br>
+            <div class="highlight-box" style="margin-top:0;">
+              <p>💡 <strong>一言ポイント：</strong>「燃料を燃やした後」ではなく「燃料を作り始めた時から」考えるのがライフサイクル評価の考え方です。</p>
+            </div>
+          </div>
+        </div>
 
-<section class="section" id="co2">
-  <div class="container">
-    <div class="section-head">
-      <p class="section-eyebrow">Category 02</p>
-      <h2>CO₂削減効果について</h2>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <div style="display:flex; gap:12px; align-items:flex-start;">
+              <div class="faq-q-label">Q</div>
+              <span>Scope1・Scope3のどちらの削減実績として報告できますか？</span>
+            </div>
+            <div class="faq-chevron">▼</div>
+          </div>
+          <div class="faq-answer">
+            <strong style="color:var(--main);">A. 自社での使用はScope1、サプライチェーン利用はScope3（カテゴリ4）として報告できます。</strong><br><br>
+            <ul style="margin-left:24px; margin-top:8px; display:flex; flex-direction:column; gap:8px;">
+              <li><strong>Scope1：</strong>自社のトラック・建機・発電機など、直接使用した燃料のCO₂削減分</li>
+              <li><strong>Scope3（カテゴリ4）：</strong>物流委託先がサステオを使用した場合の削減分（輸送・配送のScope3削減）</li>
+            </ul>
+            <br>
+            GHGプロトコル（国際基準）に準拠した削減量の計算・レポートの作成支援も行っています。お気軽にご相談ください。
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <div style="display:flex; gap:12px; align-items:flex-start;">
+              <div class="faq-q-label">Q</div>
+              <span>CO₂削減量を数値化・証明する書類はもらえますか？</span>
+            </div>
+            <div class="faq-chevron">▼</div>
+          </div>
+          <div class="faq-answer">
+            <strong style="color:var(--main);">A. はい、削減量の証明書類を発行できます。</strong><br><br>
+            ISCC認証に基づいたGHG削減量を計算し、サステナビリティレポート・ESG開示・省エネ法報告への活用に使用できる証明書類を発行しています。<br><br>
+            また、各企業のサステナビリティ担当者・経営企画担当者向けに、GHG削減量の算定支援・報告書作成支援サービスも提供しています。詳しくはお問い合わせください。
+          </div>
+        </div>
+      </div>
     </div>
 
-    <details class="faq-item">
-      <summary>どのくらいCO₂削減につながりますか？「最大90%削減」とはどういう意味ですか？</summary>
-      <div class="faq-a"><p>ライフサイクル全体（原料調達→製造→輸送→燃焼／Well to Wheel）での削減率です。ISCC認証に基づく計算では83.8%の削減が確認されています。燃やした瞬間のCO₂量は軽油と大差ありませんが、原料が成長段階でCO₂を吸収しているため、トータルの排出量が大幅に少なくなります。</p></div>
-    </details>
-    <details class="faq-item">
-      <summary>Scope1・Scope3のどちらの削減実績として報告できますか？</summary>
-      <div class="faq-a"><p>自社での使用はScope1、サプライチェーン利用はScope3（カテゴリ4）として報告できます。GHGプロトコル（国際基準）に準拠した削減量の計算・レポート作成支援も行っています。</p></div>
-    </details>
-    <details class="faq-item">
-      <summary>CO₂削減量を数値化・証明する書類はもらえますか？</summary>
-      <div class="faq-a"><p>はい、削減量の証明書類を発行できます。ISCC認証に基づいたGHG削減量を計算し、サステナビリティレポート・ESG開示・省エネ法報告に活用できる証明書類を発行しています。算定支援・報告書作成支援サービスも提供しています。</p></div>
-    </details>
-  </div>
-</section>
+    <!-- コスト -->
+    <div style="margin-bottom:56px;" id="cost">
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:24px;">
+        <div style="width:40px; height:40px; background:var(--main); border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-size:1.2rem; flex-shrink:0;">💰</div>
+        <h2 style="font-size:1.4rem;">コスト・価格について</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <div style="display:flex; gap:12px; align-items:flex-start;">
+              <div class="faq-q-label">Q</div>
+              <span>軽油と比べてどのくらい価格が高いですか？</span>
+            </div>
+            <div class="faq-chevron">▼</div>
+          </div>
+          <div class="faq-answer">
+            <strong style="color:var(--main);">A. 現状、軽油より割高ですが、規模拡大とともに価格差は縮まっています。</strong><br><br>
+            HVO（サステオ100%）の価格は、原料・市況・数量によって変動しますが、現在は軽油の1.5〜2倍程度が目安です。サステオ51混合燃料は、HVO100%より経済的です。<br><br>
+            ただし、設備改造コストが不要なこと、および東京都などの助成金が活用できる場合は実質負担を大幅に抑えられます。詳しくは見積りシミュレーターをご利用いただくか、お問い合わせください。<br><br>
+            <div class="note-box" style="margin-top:0;">
+              📌 炭素税・カーボンプライシングの導入が進めば、化石燃料のコストが上昇するため、相対的な価格差は縮まる見込みです。
+            </div>
+          </div>
+        </div>
 
-<section class="section section-alt" id="cost">
-  <div class="container">
-    <div class="section-head">
-      <p class="section-eyebrow">Category 03</p>
-      <h2>コスト・価格について</h2>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <div style="display:flex; gap:12px; align-items:flex-start;">
+              <div class="faq-q-label">Q</div>
+              <span>補助金・助成金を活用できますか？</span>
+            </div>
+            <div class="faq-chevron">▼</div>
+          </div>
+          <div class="faq-answer">
+            <strong style="color:var(--main);">A. 活用できる場合があります。</strong><br><br>
+            現在、東京都の「バイオ燃料導入促進助成金」などが利用可能です。また、省エネ法・温対法に基づく各種補助制度についても、対象となる可能性があります。<br><br>
+            助成金・補助金の活用可否は自治体・年度によって変わるため、最新情報はお問い合わせにてご確認ください。弊社スタッフが申請サポートをご案内します。
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <div style="display:flex; gap:12px; align-items:flex-start;">
+              <div class="faq-q-label">Q</div>
+              <span>最低発注量・ロットはありますか？</span>
+            </div>
+            <div class="faq-chevron">▼</div>
+          </div>
+          <div class="faq-answer">
+            <strong style="color:var(--main);">A. 発注量は用途・拠点によって異なります。</strong><br><br>
+            ドラム缶（200L）単位から対応できる拠点もありますが、タンクローリー配送の場合は数千リットル単位が一般的です。まずは現在の軽油使用量・頻度をお知らせいただければ、最適な供給方式をご提案します。<br><br>
+            見積りシミュレーターでも月間燃料使用量を入力することで、概算費用を確認いただけます。
+          </div>
+        </div>
+      </div>
     </div>
 
-    <details class="faq-item">
-      <summary>軽油と比べてどのくらい価格が高いですか？</summary>
-      <div class="faq-a"><p>現状、軽油より割高ですが、規模拡大とともに価格差は縮まっています。HVO（サステオ100%）は現在、軽油の1.5〜2倍程度が目安です。サステオ51混合燃料はより経済的です。設備改造コストが不要なこと、東京都などの助成金が活用できる場合は実質負担を大幅に抑えられます。</p></div>
-    </details>
-    <details class="faq-item">
-      <summary>補助金・助成金を活用できますか？</summary>
-      <div class="faq-a"><p>活用できる場合があります。現在、東京都の「バイオ燃料導入促進助成金」などが利用可能です。省エネ法・温対法に基づく各種補助制度も対象となる可能性があります。活用可否は自治体・年度により変わるため最新情報はお問い合わせください。</p></div>
-    </details>
-    <details class="faq-item">
-      <summary>最低発注量・ロットはありますか？</summary>
-      <div class="faq-a"><p>用途・拠点によって異なります。ドラム缶（200L）単位から対応できる拠点もありますが、タンクローリー配送では数千リットル単位が一般的です。現在の軽油使用量・頻度をお知らせいただければ最適な供給方式をご提案します。</p></div>
-    </details>
-  </div>
-</section>
+    <!-- 調達・供給 -->
+    <div style="margin-bottom:56px;" id="supply">
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:24px;">
+        <div style="width:40px; height:40px; background:var(--main); border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-size:1.2rem; flex-shrink:0;">🗺️</div>
+        <h2 style="font-size:1.4rem;">調達・供給について</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <div style="display:flex; gap:12px; align-items:flex-start;">
+              <div class="faq-q-label">Q</div>
+              <span>一般的なガソリンスタンドで給油できますか？</span>
+            </div>
+            <div class="faq-chevron">▼</div>
+          </div>
+          <div class="faq-answer">
+            <strong style="color:var(--main);">A. 現在、一般のガソリンスタンドでの販売はしていません。</strong><br><br>
+            サステオは現在、企業・法人向けの直接供給（タンクローリー配送・ドラム缶配送）が主な流通経路です。既存の軽油タンクへの配送や、自社敷地内タンクへの補給が可能です。<br><br>
+            将来的には、一部特定スタンドでの供給展開も検討しています。現時点では、企業・事業者単位での契約供給となります。
+          </div>
+        </div>
 
-<section class="section" id="supply">
-  <div class="container">
-    <div class="section-head">
-      <p class="section-eyebrow">Category 04</p>
-      <h2>調達・供給について</h2>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <div style="display:flex; gap:12px; align-items:flex-start;">
+              <div class="faq-q-label">Q</div>
+              <span>全国どこでも供給できますか？</span>
+            </div>
+            <div class="faq-chevron">▼</div>
+          </div>
+          <div class="faq-answer">
+            <strong style="color:var(--main);">A. 主要都市・工業地帯への供給は可能です。離島・山間部は要相談です。</strong><br><br>
+            現在、北海道・東北・関東・中部・近畿・中国・九州エリアに供給拠点があります。各拠点から半径100〜200km程度の範囲への配送が可能です。<br><br>
+            拠点から遠い地域・離島・山間部については、個別でご相談ください。新たなエリア展開も随時検討しています。
+          </div>
+        </div>
+      </div>
     </div>
 
-    <details class="faq-item">
-      <summary>一般的なガソリンスタンドで給油できますか？</summary>
-      <div class="faq-a"><p>現在、一般のガソリンスタンドでの販売はしていません。企業・法人向けの直接供給（タンクローリー配送・ドラム缶配送）が主な流通経路です。既存の軽油タンクへの配送や自社敷地内タンクへの補給が可能です。</p></div>
-    </details>
-    <details class="faq-item">
-      <summary>全国どこでも供給できますか？</summary>
-      <div class="faq-a"><p>主要都市・工業地帯への供給は可能です。現在、北海道・東北・関東・中部・近畿・中国・九州エリアに供給拠点があり、各拠点から半径100〜200km程度の範囲へ配送可能です。離島・山間部は個別にご相談ください。</p></div>
-    </details>
-  </div>
-</section>
+    <!-- 品質・安全性 -->
+    <div style="margin-bottom:56px;" id="quality">
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:24px;">
+        <div style="width:40px; height:40px; background:var(--main); border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-size:1.2rem; flex-shrink:0;">🔬</div>
+        <h2 style="font-size:1.4rem;">品質・安全性について</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <div style="display:flex; gap:12px; align-items:flex-start;">
+              <div class="faq-q-label">Q</div>
+              <span>エンジンや設備にダメージを与えませんか？保証はどうなりますか？</span>
+            </div>
+            <div class="faq-chevron">▼</div>
+          </div>
+          <div class="faq-answer">
+            <strong style="color:var(--main);">A. JARI・三菱ふそう・いすゞの実証で、エンジンへの悪影響がないことが確認されています。</strong><br><br>
+            12ヶ月・15万km超の長期実証試験を経て、エンジン内部・燃料系部品・排気系統のいずれにも異常はないことが複数のメーカーにより確認されています。<br><br>
+            メーカー保証については、HVO適合車種であれば通常通りの保証が適用される場合がほとんどです。ただし、メーカー公式対応状況は車種・モデルによって異なるため、事前にご確認ください。弊社からメーカーへの確認代行も対応しています。
+          </div>
+        </div>
 
-<section class="section section-alt" id="quality">
-  <div class="container">
-    <div class="section-head">
-      <p class="section-eyebrow">Category 05</p>
-      <h2>品質・安全性について</h2>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <div style="display:flex; gap:12px; align-items:flex-start;">
+              <div class="faq-q-label">Q</div>
+              <span>長期保管しても品質は落ちませんか？</span>
+            </div>
+            <div class="faq-chevron">▼</div>
+          </div>
+          <div class="faq-answer">
+            <strong style="color:var(--main);">A. HVOは保管安定性に優れた燃料です。</strong><br><br>
+            従来のFAME系バイオ燃料は酸化しやすく、長期保管で品質劣化が起きやすいという問題がありました。HVO（サステオ）はこの点が大幅に改善されており、化石軽油とほぼ同等の保管安定性を持ちます。<br><br>
+            一般的な燃料タンク・ドラム缶での保管が可能です。推奨保管期間は製品ラベルをご確認ください（通常1〜2年程度）。
+          </div>
+        </div>
+      </div>
     </div>
 
-    <details class="faq-item">
-      <summary>エンジンや設備にダメージを与えませんか？保証はどうなりますか？</summary>
-      <div class="faq-a"><p>JARI・三菱ふそう・いすゞの実証で、エンジンへの悪影響がないことが確認されています。12ヶ月・15万km超の長期実証を経て、エンジン内部・燃料系部品・排気系統に異常がないことが複数メーカーにより確認されています。HVO適合車種であれば通常通りの保証が適用される場合がほとんどです（車種・モデルにより異なるため事前確認を推奨）。</p></div>
-    </details>
-    <details class="faq-item">
-      <summary>長期保管しても品質は落ちませんか？</summary>
-      <div class="faq-a"><p>HVOは保管安定性に優れた燃料です。FAME系は酸化しやすく長期保管で劣化しやすい問題がありましたが、HVO（サステオ）は化石軽油とほぼ同等の保管安定性を持ちます。推奨保管期間は製品ラベルをご確認ください（通常1〜2年程度）。</p></div>
-    </details>
-  </div>
-</section>
-
-<section class="section" id="esg">
-  <div class="container">
-    <div class="section-head">
-      <p class="section-eyebrow">Category 06</p>
-      <h2>排出量報告・ESG対応について</h2>
+    <!-- 排出量報告 -->
+    <div style="margin-bottom:40px;" id="reporting">
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:24px;">
+        <div style="width:40px; height:40px; background:var(--main); border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-size:1.2rem; flex-shrink:0;">📊</div>
+        <h2 style="font-size:1.4rem;">排出量報告・ESG対応について</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <div style="display:flex; gap:12px; align-items:flex-start;">
+              <div class="faq-q-label">Q</div>
+              <span>TCFDやGRIレポートへの記載に使用できますか？</span>
+            </div>
+            <div class="faq-chevron">▼</div>
+          </div>
+          <div class="faq-answer">
+            <strong style="color:var(--main);">A. はい、各種ESG・サステナビリティ報告に活用いただけます。</strong><br><br>
+            サステオによるGHG削減量は、GHGプロトコル・省エネ法・温対法に基づいた算定が可能で、TCFD・GRI・CDP・SBTi等の開示に活用いただけます。<br><br>
+            必要な証明書類の発行・削減量の算定支援を提供しています。サステナビリティ担当者・IR担当者の方は、ぜひお問い合わせください。
+          </div>
+        </div>
+      </div>
     </div>
 
-    <details class="faq-item">
-      <summary>TCFDやGRIレポートへの記載に使用できますか？</summary>
-      <div class="faq-a"><p>はい、各種ESG・サステナビリティ報告に活用いただけます。サステオによるGHG削減量はGHGプロトコル・省エネ法・温対法に基づいた算定が可能で、TCFD・GRI・CDP・SBTi等の開示に活用できます。証明書類の発行・算定支援を提供しています。</p></div>
-    </details>
-  </div>
-</section>
-
-<section class="cta-band">
-  <div class="container">
-    <h2>疑問が解消できたら、次はシミュレーションへ</h2>
-    <p>燃料の使用量と種類を入力するだけで、GHG削減量と参考価格を自動計算。無料・登録不要でご利用いただけます。</p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="simulation.html">見積りシミュレーションを試す</a>
+    <!-- お問い合わせCTA -->
+    <div style="background:linear-gradient(135deg, var(--main-light), #E8F9F7); border-radius:var(--radius); padding:48px; text-align:center;">
+      <div style="font-size:3rem; margin-bottom:16px;">💬</div>
+      <h3 style="margin-bottom:12px;">解決しない疑問は、直接ご相談ください</h3>
+      <p style="color:var(--gray-dark); margin-bottom:24px;">専任のスタッフが丁寧にお答えします。業種・規模を問わず、お気軽にどうぞ。</p>
+      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+        <a href="mailto:contact@euglena.jp" class="btn btn-primary">✉️ メールで問い合わせる</a>
+        <a href="simulation.html" class="btn btn-outline">🧮 見積りシミュレーション</a>
+      </div>
     </div>
   </div>
 </section>
 
-<footer class="site-footer">
+<footer>
   <div class="container">
     <div class="footer-grid">
-      <div>
-        <div class="footer-brand">SUSTEO<span>.</span></div>
-        <p class="footer-desc">次世代バイオ燃料「サステオ」。地域・企業・行政の共創による、バイオ燃料での脱炭素社会を実現します。</p>
-      </div>
-      <div>
-        <h4>CONTENTS</h4>
-        <ul>
-          <li><a href="market.html">市場・環境</a></li>
-          <li><a href="products.html">製品</a></li>
-          <li><a href="supply.html">供給体制</a></li>
-          <li><a href="quality.html">品質データ</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>SUPPORT</h4>
-        <ul>
-          <li><a href="cases.html">導入事例</a></li>
-          <li><a href="future.html">特徴</a></li>
-          <li><a href="faq.html">よくあるご質問</a></li>
-          <li><a href="simulation.html">見積りシミュレーション</a></li>
-        </ul>
-      </div>
+      <div class="footer-brand"><div class="logo" style="margin-bottom:16px;"><div class="logo-icon">🌿</div>SUSTEO <span style="color:var(--main);">Green Journey</span></div><p>ユーグレナが提供する次世代バイオ燃料「サステオ」。</p><div class="sns-links"><a href="#" class="sns-link">𝕏</a><a href="#" class="sns-link">in</a><a href="#" class="sns-link">▶</a></div></div>
+      <div class="footer-col"><h4>サイトマップ</h4><ul><li><a href="market.html">市場・環境</a></li><li><a href="products.html">製品</a></li><li><a href="supply.html">供給体制</a></li><li><a href="quality.html">品質データ</a></li><li><a href="cases.html">導入事例</a></li><li><a href="future.html">特徴</a></li></ul></div>
+      <div class="footer-col"><h4>サポート</h4><ul><li><a href="faq.html">FAQ</a></li><li><a href="simulation.html">シミュレーション</a></li><li><a href="mailto:contact@euglena.jp">お問い合わせ</a></li></ul></div>
+      <div class="footer-col"><h4>会社情報</h4><ul><li><a href="#">株式会社ユーグレナ</a></li><li><a href="#">プライバシーポリシー</a></li></ul></div>
     </div>
-    <div class="footer-bottom">© SUSTEO Green Journey. All rights reserved.</div>
+    <div class="footer-bottom"><div>© 2025 Euglena Co., Ltd. All Rights Reserved.</div><div class="footer-links"><a href="#">プライバシーポリシー</a><a href="#">お問い合わせ</a></div></div>
   </div>
 </footer>
+<a href="mailto:contact@euglena.jp" class="floating-cta">✉️ お問い合わせ</a>
 
-<script src="js/main.js"></script>
+<script>
+  function toggleNav() { document.getElementById('nav').classList.toggle('open'); }
+  window.addEventListener('scroll', () => { document.getElementById('header').style.boxShadow = window.scrollY > 50 ? '0 4px 24px rgba(0,0,0,0.08)' : 'none'; });
+
+  function toggleFaq(el) {
+    const item = el.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+</script>
 </body>
 </html>

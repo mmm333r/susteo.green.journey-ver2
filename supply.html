@@ -1,257 +1,354 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>供給体制｜全国ネットワークで安定供給を実現｜サステオ</title>
-<meta name="description" content="カメイ・シナネン・平野石油など大手エネルギー企業と連携し、北海道から九州まで全国各地にサステオを供給しています。">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>供給体制 | SUSTEO Green Journey</title>
+  <meta name="description" content="全国の供給拠点マップと、カメイ・シナネン・平野石油などの供給パートナー企業をご紹介します。">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    .map-container {
+      position: relative;
+      background: linear-gradient(135deg, #E0F5F2, #F5FFFE);
+      border-radius: var(--radius);
+      padding: 40px;
+      min-height: 520px;
+      overflow: hidden;
+    }
+    .japan-map-svg { width: 100%; max-width: 600px; margin: 0 auto; display: block; }
+    .pin-popup {
+      display: none;
+      position: absolute;
+      background: white;
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+      min-width: 260px;
+      z-index: 10;
+      border-top: 4px solid var(--main);
+      pointer-events: none;
+    }
+    .pin-popup h4 { color: var(--main); margin-bottom: 8px; font-size: 1rem; }
+    .pin-popup p { font-size: 0.85rem; color: var(--gray-dark); margin-bottom: 4px; }
+    .pin-popup strong { color: var(--dark); }
+    .pin-popup .popup-tag {
+      display: inline-block;
+      background: var(--main-light);
+      color: var(--main);
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 10px;
+      margin-bottom: 8px;
+    }
+    .map-pin {
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .map-pin:hover .pin-circle { transform: scale(1.3); fill: var(--pink); }
+    .pin-circle { transition: all 0.2s; transform-origin: center; }
+    .map-legend {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+      justify-content: center;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: var(--gray-dark);
+    }
+    .legend-dot {
+      width: 14px; height: 14px;
+      border-radius: 50%;
+    }
+  </style>
 </head>
 <body>
 
-<header class="site-header">
+<header id="header">
   <div class="header-inner">
-    <a class="brand" href="index.html">
-      <span class="brand-logo">SUSTEO<span>.</span></span>
-      <span class="brand-sub">次世代バイオ燃料 サステオ</span>
-    </a>
-    <button class="nav-toggle" aria-expanded="false" aria-label="メニュー">☰</button>
-    <nav class="global-nav">
-      <ul>
-        <li><a href="index.html">TOP</a></li>
-        <li><a href="market.html">市場・環境</a></li>
-        <li><a href="products.html">製品</a></li>
-        <li><a href="supply.html" class="is-active">供給体制</a></li>
-        <li><a href="quality.html">品質データ</a></li>
-        <li><a href="cases.html">導入事例</a></li>
-        <li><a href="future.html">特徴</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="simulation.html" class="nav-cta">見積りシミュレーション</a></li>
-      </ul>
+    <a href="index.html" class="logo"><div class="logo-icon">🌿</div>SUSTEO <span>Green Journey</span></a>
+    <nav id="nav">
+      <a href="market.html">市場・環境</a>
+      <a href="products.html">製品</a>
+      <a href="supply.html" class="active">供給体制</a>
+      <a href="quality.html">品質データ</a>
+      <a href="cases.html">導入事例</a>
+      <a href="future.html">特徴</a>
+      <a href="faq.html">FAQ</a>
+      <a href="simulation.html" class="nav-cta">見積りシミュレーション</a>
     </nav>
+    <div class="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></div>
   </div>
 </header>
 
-<section class="page-hero">
+<div class="page-hero">
   <div class="container">
-    <p class="breadcrumb"><a href="index.html">TOP</a> ／ 供給体制</p>
-    <p class="hero-eyebrow">Supply Network</p>
-    <h1>全国ネットワークで安定供給を実現</h1>
+    <div class="page-hero-label">供給体制</div>
+    <h1>全国ネットワークで<br>安定供給を実現</h1>
     <p>カメイ・シナネン・平野石油など大手エネルギー企業と連携し、北海道から九州まで全国各地にサステオを供給しています。</p>
-    <nav class="anchor-nav">
-      <a href="#partners">供給パートナー企業</a>
-      <a href="#depots">タンク拠点について</a>
-      <a href="#marine">船舶供給について</a>
-    </nav>
   </div>
-</section>
+</div>
+<div class="breadcrumb"><div class="breadcrumb-inner"><a href="index.html">TOP</a><span>›</span>供給体制</div></div>
+<div class="anchor-nav">
+  <div class="anchor-nav-inner">
+    <a href="#partners">供給パートナー企業</a>
+    <a href="#map">タンク拠点</a>
+    <a href="#ship">船舶供給</a>
+  </div>
+</div>
 
-<!-- 4-1 パートナー -->
-<section class="section section-alt" id="partners">
+<!-- ===== PARTNERS ===== -->
+<section class="section" id="partners">
   <div class="container">
-    <div class="section-head">
-      <p class="section-eyebrow">Section 01</p>
-      <h2>供給パートナー企業</h2>
-      <p class="section-lead">全国に展開する大手エネルギー企業と連携することで、安定的・継続的なバイオ燃料供給を実現しています。</p>
+    <div class="text-center" style="margin-bottom:16px;">
+      <span class="section-label">4-1. 供給パートナー企業</span>
     </div>
-
-    <div class="card-grid cols-3">
-      <div class="card">
-        <div class="card-icon">🏔️</div>
-        <h3>カメイ株式会社（北海道・東北）</h3>
+    <h2 class="section-title text-center">信頼の供給ネットワーク</h2>
+    <p class="section-subtitle">全国に展開する大手エネルギー企業と連携することで、安定的・継続的なバイオ燃料供給を実現しています。</p>
+    <div class="grid-3">
+      <div class="card" style="text-align:center;">
+        <div style="font-size:3rem; margin-bottom:16px;">🏢</div>
+        <h3>カメイ株式会社</h3>
+        <div class="badge badge-green" style="margin-bottom:12px;">北海道・東北エリア</div>
         <p>仙台本社の商社企業。石油製品の流通・販売において全国の供給ネットワークを持ちます。サステオの北海道・東北中心の供給を担っています。当社のサステオ51の製造を担っていただく製造拠点を仙台の塩釜に保有。</p>
-        <p style="margin-top:10px;"><strong>主要供給エリア：</strong>北海道・東北（全国要相談）</p>
+        <div style="margin-top:16px; padding-top:16px; border-top:1px solid var(--gray-light); text-align:left; font-size:0.85rem; color:var(--gray-dark);">
+          <div>📍 主要供給エリア：北海道・東北（全国要相談）</div>
+          <div style="margin-top:4px;">🏭 サステオ51製造拠点：仙台・塩釜</div>
+        </div>
       </div>
-      <div class="card">
-        <div class="card-icon">🗼</div>
-        <h3>シナネン株式会社（関東エリア）</h3>
+      <div class="card" style="text-align:center;">
+        <div style="font-size:3rem; margin-bottom:16px;">⚡</div>
+        <h3>シナネン株式会社</h3>
+        <div class="badge badge-green" style="margin-bottom:12px;">関東エリア</div>
         <p>エネルギー商社として、石油・LPG・電力など幅広いエネルギーを供給。東京・関東圏を中心に、中部エリアへのサステオ供給を担う主力パートナーです。</p>
-        <p style="margin-top:10px;"><strong>主要供給エリア：</strong>東京・神奈川・埼玉・千葉・茨城・栃木・群馬</p>
+        <div style="margin-top:16px; padding-top:16px; border-top:1px solid var(--gray-light); text-align:left; font-size:0.85rem; color:var(--gray-dark);">
+          <div>📍 主要供給エリア：東京・神奈川・埼玉・千葉・茨城・栃木・群馬</div>
+        </div>
       </div>
-      <div class="card">
-        <div class="card-icon">🏯</div>
-        <h3>平野石油株式会社（関東・関西エリア）</h3>
+      <div class="card" style="text-align:center;">
+        <div style="font-size:3rem; margin-bottom:16px;">🔵</div>
+        <h3>平野石油株式会社</h3>
+        <div class="badge badge-green" style="margin-bottom:12px;">関東・関西エリア</div>
         <p>東日本と一部西日本を中心に石油製品を供給する専門商社。関西エリアのきめ細かいネットワークを活かし、広域かつ迅速なサステオ供給を実現しています。</p>
-        <p style="margin-top:10px;"><strong>主要供給エリア：</strong>東京・神奈川・埼玉・千葉・大阪・兵庫</p>
+        <div style="margin-top:16px; padding-top:16px; border-top:1px solid var(--gray-light); text-align:left; font-size:0.85rem; color:var(--gray-dark);">
+          <div>📍 主要供給エリア：東京・神奈川・埼玉・千葉・大阪・兵庫</div>
+        </div>
       </div>
     </div>
-
-    <div class="point-box"><strong>パートナー連携の強み：</strong>各社が持つ地域密着のネットワークと、ユーグレナの製品・品質管理ノウハウを組み合わせることで、全国どこでも安定したサステオ供給を実現しています。新たなエリアへの展開も随時検討中です。</div>
+    <div class="highlight-box" style="margin-top:40px;">
+      <p>🤝 <strong>パートナー連携の強み：</strong>各社が持つ地域密着のネットワークと、ユーグレナの製品・品質管理ノウハウを組み合わせることで、全国どこでも安定したサステオ供給を実現しています。新たなエリアへの展開も随時検討中です。</p>
+    </div>
   </div>
 </section>
 
-<!-- 4-2 拠点 -->
-<section class="section" id="depots">
+<!-- ===== MAP ===== -->
+<section class="section section-alt" id="map">
   <div class="container">
-    <div class="section-head">
-      <p class="section-eyebrow">Section 02</p>
-      <h2>タンク拠点について</h2>
-      <p class="section-lead">各拠点にカーソルを合わせると、貯蔵規模・管理会社などの詳細情報が表示されます。種別は「製造・大型タンク（800KL以上）」「中型タンク（100〜800KL）」「ドラム缶・小規模拠点」に区分しています。</p>
+    <div class="text-center" style="margin-bottom:16px;">
+      <span class="section-label">4-2. タンク拠点について</span>
+    </div>
+    <h2 class="section-title text-center">全国供給拠点マップ</h2>
+    <p class="section-subtitle">各拠点にカーソルを合わせると、種別・管理会社などの詳細情報が表示されます。種別は「製造・大型タンク（800KL以上）」「中型タンク（100〜800KL）」「ドラム缶・小規模拠点」に区分しています。</p>
+
+    <div class="map-container" id="mapContainer">
+      <!-- 日本地図（簡略SVG） -->
+      <svg class="japan-map-svg" viewBox="0 0 500 600" xmlns="http://www.w3.org/2000/svg">
+        <!-- 本州・北海道・九州などの簡略形状 -->
+        <!-- 北海道 -->
+        <path d="M300,30 Q340,20 380,40 Q410,55 400,80 Q390,110 360,120 Q320,130 290,110 Q265,90 270,65 Z" fill="#C8EDE8" stroke="white" stroke-width="2"/>
+        <!-- 東北 -->
+        <path d="M290,130 Q310,125 330,140 Q345,160 340,190 Q335,215 315,225 Q295,230 280,215 Q265,195 270,170 Q275,145 290,130 Z" fill="#C8EDE8" stroke="white" stroke-width="2"/>
+        <!-- 関東 -->
+        <path d="M270,225 Q300,220 320,240 Q335,260 325,285 Q310,305 285,310 Q260,310 245,295 Q235,275 245,255 Q255,235 270,225 Z" fill="#C8EDE8" stroke="white" stroke-width="2"/>
+        <!-- 中部・北陸 -->
+        <path d="M230,255 Q260,250 285,270 Q295,295 280,320 Q260,340 235,340 Q210,335 200,315 Q195,290 210,270 Z" fill="#C8EDE8" stroke="white" stroke-width="2"/>
+        <!-- 近畿 -->
+        <path d="M195,320 Q225,315 245,335 Q255,355 240,375 Q220,390 195,385 Q170,375 165,355 Q162,335 180,320 Z" fill="#C8EDE8" stroke="white" stroke-width="2"/>
+        <!-- 中国 -->
+        <path d="M155,360 Q190,355 210,375 Q220,395 205,415 Q185,430 160,425 Q135,415 130,395 Q130,372 155,360 Z" fill="#C8EDE8" stroke="white" stroke-width="2"/>
+        <!-- 四国 -->
+        <path d="M195,400 Q225,395 245,415 Q255,435 240,450 Q220,460 195,455 Q170,445 165,425 Q165,407 195,400 Z" fill="#C8EDE8" stroke="white" stroke-width="2"/>
+        <!-- 九州 -->
+        <path d="M130,430 Q165,420 185,445 Q195,470 175,495 Q150,515 120,505 Q92,492 88,468 Q88,442 110,430 Z" fill="#C8EDE8" stroke="white" stroke-width="2"/>
+
+        <!-- 供給拠点ピン -->
+        <!-- 北海道（藻岩） -->
+        <g class="map-pin" onmouseenter="showPopup(event,'藻岩拠点','貯蔵タンク','カメイ株式会社')" onmouseleave="hidePopup()">
+          <circle class="pin-circle" cx="330" cy="75" r="10" fill="var(--main)" stroke="white" stroke-width="2"/>
+        </g>
+        <!-- 東北（仙台） -->
+        <g class="map-pin" onmouseenter="showPopup(event,'仙台拠点','製造・貯蔵大型タンク','カメイ株式会社')" onmouseleave="hidePopup()">
+          <circle class="pin-circle" cx="308" cy="170" r="12" fill="#007A6B" stroke="white" stroke-width="2"/>
+        </g>
+        <!-- 関東（鶴見） -->
+        <g class="map-pin" onmouseenter="showPopup(event,'鶴見拠点','貯蔵タンク','シナネン株式会社')" onmouseleave="hidePopup()">
+          <circle class="pin-circle" cx="293" cy="292" r="10" fill="var(--main)" stroke="white" stroke-width="2"/>
+        </g>
+        <!-- 関東（東村山） -->
+        <g class="map-pin" onmouseenter="showPopup(event,'東村山拠点','大型タンク','シナネン株式会社')" onmouseleave="hidePopup()">
+          <circle class="pin-circle" cx="278" cy="272" r="12" fill="#007A6B" stroke="white" stroke-width="2"/>
+        </g>
+        <!-- 関東（市原・千葉） -->
+        <g class="map-pin" onmouseenter="showPopup(event,'市原拠点（千葉）','中型タンク','平野石油株式会社')" onmouseleave="hidePopup()">
+          <circle class="pin-circle" cx="315" cy="280" r="10" fill="var(--main)" stroke="white" stroke-width="2"/>
+        </g>
+        <!-- 関西（大阪） -->
+        <g class="map-pin" onmouseenter="showPopup(event,'大阪拠点','中型タンク','平野石油株式会社')" onmouseleave="hidePopup()">
+          <circle class="pin-circle" cx="210" cy="360" r="10" fill="var(--main)" stroke="white" stroke-width="2"/>
+        </g>
+        <!-- 中部・四国（広島） -->
+        <g class="map-pin" onmouseenter="showPopup(event,'広島拠点','ドラム保管','綜合エナジー株式会社')" onmouseleave="hidePopup()">
+          <circle class="pin-circle" cx="168" cy="393" r="8" fill="var(--pink)" stroke="white" stroke-width="2"/>
+        </g>
+        <!-- 九州（福岡） -->
+        <g class="map-pin" onmouseenter="showPopup(event,'福岡拠点','ドラム保管','増田石油株式会社')" onmouseleave="hidePopup()">
+          <circle class="pin-circle" cx="133" cy="453" r="8" fill="var(--pink)" stroke="white" stroke-width="2"/>
+        </g>
+      </svg>
+
+      <!-- ポップアップ -->
+      <div class="pin-popup" id="pinPopup">
+        <div class="popup-tag" id="popupTag">大型タンク</div>
+        <h4 id="popupTitle">拠点名</h4>
+        <p>🏢 管理・運営：<strong id="popupCompany">-</strong></p>
+      </div>
+
+      <!-- 凡例 -->
+      <div class="map-legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#007A6B;"></div>製造・大型タンク（800KL以上）</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--main);"></div>中型タンク（100〜800KL）</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--pink);"></div>ドラム缶・小規模拠点</div>
+      </div>
     </div>
 
-    <div class="card-grid cols-4">
-      <div class="card depot-card" title="貯蔵タンク／管理：カメイ株式会社">
-        <p class="depot-area">北海道</p>
-        <h4>藻岩拠点</h4>
-        <span class="depot-type type-mid">貯蔵タンク</span>
-        <p class="depot-op">管理・運営：カメイ株式会社</p>
+    <!-- 拠点リスト -->
+    <div style="margin-top:48px;">
+      <h3 style="margin-bottom:24px;">全国拠点一覧</h3>
+      <div style="overflow-x:auto;">
+        <table class="quality-table" style="min-width:700px;">
+          <thead>
+            <tr><th>エリア</th><th>拠点名</th><th>種別</th><th>管理・運営</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>北海道</td><td>藻岩拠点</td><td><span class="badge badge-green">貯蔵タンク</span></td><td>カメイ株式会社</td></tr>
+            <tr><td>東北</td><td>仙台拠点</td><td><span class="badge badge-green">製造・貯蔵大型タンク</span></td><td>カメイ株式会社</td></tr>
+            <tr><td>関東</td><td>鶴見拠点</td><td><span class="badge badge-green">貯蔵タンク</span></td><td>シナネン株式会社</td></tr>
+            <tr><td>関東</td><td>東村山拠点</td><td><span class="badge badge-green">大型タンク</span></td><td>シナネン株式会社</td></tr>
+            <tr><td>関東</td><td>市原拠点（千葉）</td><td><span class="badge badge-pink">中型タンク</span></td><td>平野石油株式会社</td></tr>
+            <tr><td>関西</td><td>大阪拠点</td><td><span class="badge badge-pink">中型タンク</span></td><td>平野石油株式会社</td></tr>
+            <tr><td>中部・四国</td><td>広島拠点</td><td><span class="badge badge-pink">ドラム保管</span></td><td>綜合エナジー株式会社</td></tr>
+            <tr><td>九州</td><td>福岡拠点</td><td><span class="badge badge-pink">ドラム保管</span></td><td>増田石油株式会社</td></tr>
+          </tbody>
+        </table>
       </div>
-      <div class="card depot-card" title="製造・貯蔵大型タンク（800KL以上）／管理：カメイ株式会社">
-        <p class="depot-area">東北</p>
-        <h4>仙台拠点</h4>
-        <span class="depot-type type-large">製造・貯蔵大型タンク</span>
-        <p class="depot-op">管理・運営：カメイ株式会社</p>
-      </div>
-      <div class="card depot-card" title="貯蔵タンク／管理：シナネン株式会社">
-        <p class="depot-area">関東</p>
-        <h4>鶴見拠点</h4>
-        <span class="depot-type type-mid">貯蔵タンク</span>
-        <p class="depot-op">管理・運営：シナネン株式会社</p>
-      </div>
-      <div class="card depot-card" title="大型タンク（800KL以上）／管理：シナネン株式会社">
-        <p class="depot-area">関東</p>
-        <h4>東村山拠点</h4>
-        <span class="depot-type type-large">大型タンク</span>
-        <p class="depot-op">管理・運営：シナネン株式会社</p>
-      </div>
-      <div class="card depot-card" title="中型タンク（100〜800KL）／管理：平野石油株式会社">
-        <p class="depot-area">関東</p>
-        <h4>市原拠点（千葉）</h4>
-        <span class="depot-type type-mid">中型タンク</span>
-        <p class="depot-op">管理・運営：平野石油株式会社</p>
-      </div>
-      <div class="card depot-card" title="中型タンク（100〜800KL）／管理：平野石油株式会社">
-        <p class="depot-area">関西</p>
-        <h4>大阪拠点</h4>
-        <span class="depot-type type-mid">中型タンク</span>
-        <p class="depot-op">管理・運営：平野石油株式会社</p>
-      </div>
-      <div class="card depot-card" title="ドラム保管／管理：綜合エナジー株式会社">
-        <p class="depot-area">中部・四国</p>
-        <h4>広島拠点</h4>
-        <span class="depot-type type-drum">ドラム保管</span>
-        <p class="depot-op">管理・運営：綜合エナジー株式会社</p>
-      </div>
-      <div class="card depot-card" title="ドラム保管／管理：増田石油株式会社">
-        <p class="depot-area">九州</p>
-        <h4>福岡拠点</h4>
-        <span class="depot-type type-drum">ドラム保管</span>
-        <p class="depot-op">管理・運営：増田石油株式会社</p>
-      </div>
-    </div>
-
-    <h4 class="minor-title">全国拠点一覧</h4>
-    <div class="table-wrap">
-      <table class="data">
-        <thead>
-          <tr><th>エリア</th><th>拠点名</th><th>種別</th><th>管理・運営</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>北海道</td><td>藻岩拠点</td><td>貯蔵タンク</td><td>カメイ株式会社</td></tr>
-          <tr><td>東北</td><td>仙台拠点</td><td>製造・貯蔵大型タンク</td><td>カメイ株式会社</td></tr>
-          <tr><td>関東</td><td>鶴見拠点</td><td>貯蔵タンク</td><td>シナネン株式会社</td></tr>
-          <tr><td>関東</td><td>東村山拠点</td><td>大型タンク</td><td>シナネン株式会社</td></tr>
-          <tr><td>関東</td><td>市原拠点（千葉）</td><td>中型タンク</td><td>平野石油株式会社</td></tr>
-          <tr><td>関西</td><td>大阪拠点</td><td>中型タンク</td><td>平野石油株式会社</td></tr>
-          <tr><td>中部・四国</td><td>広島拠点</td><td>ドラム保管</td><td>綜合エナジー株式会社</td></tr>
-          <tr><td>九州</td><td>福岡拠点</td><td>ドラム保管</td><td>増田石油株式会社</td></tr>
-        </tbody>
-      </table>
     </div>
   </div>
 </section>
 
-<!-- 4-3 船舶供給 -->
-<section class="section section-green" id="marine">
+<!-- ===== SHIP SUPPLY ===== -->
+<section class="section" id="ship">
   <div class="container">
-    <div class="section-head">
-      <p class="section-eyebrow">Section 03</p>
-      <h2>船舶供給について</h2>
-      <p class="section-lead">港湾・沿岸部の内航船・作業船へのサステオ供給も対応しています。陸上と同様、既存設備をそのままご利用いただけます。</p>
+    <div class="text-center" style="margin-bottom:16px;">
+      <span class="section-label">4-3. 船舶供給について</span>
     </div>
+    <h2 class="section-title text-center">船舶へのバイオ燃料供給</h2>
+    <p class="section-subtitle">港湾・沿岸部の内航船・作業船へのサステオ供給も対応しています。陸上と同様、既存設備をそのままご利用いただけます。</p>
 
-    <p>国際海運は、世界のCO₂排出量の約2.9%を占める産業です。IMO（国際海事機関）は2050年までのGHGネットゼロを目標とし、各海運会社は脱炭素対応が急務となっています。サステオ（バイオA重油）は、現行の船舶エンジンをそのまま使用でき、今すぐ着手できる海運の脱炭素手段として注目されています。</p>
+    <div class="grid-2">
+      <div>
+        <h3 style="margin-bottom:20px;">船舶供給の概要</h3>
+        <p style="color:var(--gray-dark); margin-bottom:16px;">国際海運は、世界のCO₂排出量の約2.9%を占める産業です。IMO（国際海事機関）は2050年までのGHGネットゼロを目標とし、各海運会社は脱炭素対応が急務となっています。</p>
+        <p style="color:var(--gray-dark); margin-bottom:24px;">サステオ（バイオA重油）は、現行の船舶エンジンをそのまま使用でき、今すぐ着手できる海運の脱炭素手段として注目されています。</p>
 
-    <h4 class="minor-title">対応分野</h4>
-    <div class="card-grid cols-3">
-      <div class="card">
-        <div class="card-icon">⛴️</div>
-        <h3>内航船・フェリー</h3>
-        <p>港湾内の作業船・内航フェリーへのバンカリング。</p>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <div class="card" style="padding:16px 20px;">
+            <div style="font-weight:700; margin-bottom:4px;">⛵ 内航船・フェリー</div>
+            <p style="font-size:0.875rem; color:var(--gray-dark);">港湾内の作業船・内航フェリーへのバンカリング（燃料補給）に対応。</p>
+          </div>
+          <div class="card" style="padding:16px 20px;">
+            <div style="font-weight:700; margin-bottom:4px;">🚢 沿岸輸送船</div>
+            <p style="font-size:0.875rem; color:var(--gray-dark);">沿岸・短距離ルートの輸送船への供給実績あり。大阪・川崎港から対応。</p>
+          </div>
+          <div class="card" style="padding:16px 20px;">
+            <div style="font-weight:700; margin-bottom:4px;">🏭 港湾作業機械</div>
+            <p style="font-size:0.875rem; color:var(--gray-dark);">コンテナターミナル内のフォークリフト・荷役機械にも対応可能。</p>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <div class="card-icon">🚢</div>
-        <h3>沿岸輸送船</h3>
-        <p>沿岸・短距離ルートの輸送船。大阪・川崎港から対応。</p>
+      <div>
+        <div style="background:linear-gradient(135deg, #1A2E2B, #2D3D3A); border-radius:var(--radius); padding:40px; color:white;">
+          <div style="font-size:3rem; margin-bottom:16px; text-align:center;">⛴️</div>
+          <h3 style="color:white; margin-bottom:24px; text-align:center;">対応可能な供給方式</h3>
+          <div style="display:flex; flex-direction:column; gap:16px;">
+            <div style="background:rgba(255,255,255,0.1); border-radius:var(--radius-sm); padding:16px;">
+              <div style="font-weight:700; color:var(--main); margin-bottom:4px;">バージ（油送船）供給</div>
+              <div style="font-size:0.875rem; opacity:0.8;">タンカーから直接船舶へ補給。大量供給に対応。</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.1); border-radius:var(--radius-sm); padding:16px;">
+              <div style="font-weight:700; color:var(--main); margin-bottom:4px;">陸上タンクローリー供給</div>
+              <div style="font-size:0.875rem; opacity:0.8;">港湾施設にローリー車で配送。小〜中規模の需要に対応。</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.1); border-radius:var(--radius-sm); padding:16px;">
+              <div style="font-weight:700; color:var(--main); margin-bottom:4px;">ドラム缶・IBC容器</div>
+              <div style="font-size:0.875rem; opacity:0.8;">少量から試験導入したい場合に対応。全国の拠点から配送。</div>
+            </div>
+          </div>
+          <div style="margin-top:24px; padding:16px; background:rgba(0,158,138,0.2); border-radius:var(--radius-sm); font-size:0.875rem; opacity:0.9;">
+            📞 船舶供給のご相談は、専任の担当者が対応いたします。まずはお問い合わせください。
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <div class="card-icon">🏗️</div>
-        <h3>港湾作業機械</h3>
-        <p>コンテナターミナル内のフォークリフト・荷役機械。</p>
-      </div>
-    </div>
-
-    <h4 class="minor-title">対応可能な供給方式</h4>
-    <div class="card-grid cols-3">
-      <div class="card">
-        <h3>バージ（油送船）供給</h3>
-        <p>タンカーから直接船舶へ補給。大量供給に対応。</p>
-      </div>
-      <div class="card">
-        <h3>陸上タンクローリー供給</h3>
-        <p>港湾施設にローリー車で配送。小〜中規模の需要に対応。</p>
-      </div>
-      <div class="card">
-        <h3>ドラム缶・IBC容器</h3>
-        <p>少量から試験導入したい場合に対応。全国の拠点から配送。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="cta-band">
-  <div class="container">
-    <h2>お近くの拠点からの供給可否をご確認ください</h2>
-    <p>現在の燃料使用量・エリアをお知らせいただければ、最適な供給方式をご提案します。</p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="simulation.html">見積りシミュレーションを試す</a>
-      <a class="btn btn-outline" href="faq.html">よくあるご質問</a>
     </div>
   </div>
 </section>
 
-<footer class="site-footer">
+<footer>
   <div class="container">
     <div class="footer-grid">
-      <div>
-        <div class="footer-brand">SUSTEO<span>.</span></div>
-        <p class="footer-desc">次世代バイオ燃料「サステオ」。地域・企業・行政の共創による、バイオ燃料での脱炭素社会を実現します。</p>
-      </div>
-      <div>
-        <h4>CONTENTS</h4>
-        <ul>
-          <li><a href="market.html">市場・環境</a></li>
-          <li><a href="products.html">製品</a></li>
-          <li><a href="supply.html">供給体制</a></li>
-          <li><a href="quality.html">品質データ</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>SUPPORT</h4>
-        <ul>
-          <li><a href="cases.html">導入事例</a></li>
-          <li><a href="future.html">特徴</a></li>
-          <li><a href="faq.html">よくあるご質問</a></li>
-          <li><a href="simulation.html">見積りシミュレーション</a></li>
-        </ul>
-      </div>
+      <div class="footer-brand"><div class="logo" style="margin-bottom:16px;"><div class="logo-icon">🌿</div>SUSTEO <span style="color:var(--main);">Green Journey</span></div><p>ユーグレナが提供する次世代バイオ燃料「サステオ」。</p><div class="sns-links"><a href="#" class="sns-link">𝕏</a><a href="#" class="sns-link">in</a><a href="#" class="sns-link">▶</a></div></div>
+      <div class="footer-col"><h4>サイトマップ</h4><ul><li><a href="market.html">市場・環境</a></li><li><a href="products.html">製品</a></li><li><a href="supply.html">供給体制</a></li><li><a href="quality.html">品質データ</a></li><li><a href="cases.html">導入事例</a></li><li><a href="future.html">特徴</a></li></ul></div>
+      <div class="footer-col"><h4>サポート</h4><ul><li><a href="faq.html">FAQ</a></li><li><a href="simulation.html">シミュレーション</a></li><li><a href="mailto:contact@euglena.jp">お問い合わせ</a></li></ul></div>
+      <div class="footer-col"><h4>会社情報</h4><ul><li><a href="#">株式会社ユーグレナ</a></li><li><a href="#">プライバシーポリシー</a></li><li><a href="#">利用規約</a></li></ul></div>
     </div>
-    <div class="footer-bottom">© SUSTEO Green Journey. All rights reserved.</div>
+    <div class="footer-bottom"><div>© 2025 Euglena Co., Ltd. All Rights Reserved.</div><div class="footer-links"><a href="#">プライバシーポリシー</a><a href="#">利用規約</a><a href="#">お問い合わせ</a></div></div>
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<a href="mailto:contact@euglena.jp" class="floating-cta">✉️ お問い合わせ</a>
+
+<script>
+  function toggleNav() { document.getElementById('nav').classList.toggle('open'); }
+  window.addEventListener('scroll', () => { document.getElementById('header').style.boxShadow = window.scrollY > 50 ? '0 4px 24px rgba(0,0,0,0.08)' : 'none'; });
+
+  function showPopup(event, title, type, company) {
+    const popup = document.getElementById('pinPopup');
+    const container = document.getElementById('mapContainer');
+    const rect = container.getBoundingClientRect();
+    const svgRect = event.target.getBoundingClientRect();
+
+    document.getElementById('popupTitle').textContent = title;
+    document.getElementById('popupTag').textContent = type;
+    document.getElementById('popupCompany').textContent = company;
+
+    let x = svgRect.left - rect.left + 20;
+    let y = svgRect.top - rect.top - 10;
+    if (x + 280 > container.offsetWidth) x = x - 300;
+    if (y < 0) y = 0;
+
+    popup.style.left = x + 'px';
+    popup.style.top = y + 'px';
+    popup.style.display = 'block';
+  }
+
+  function hidePopup() {
+    document.getElementById('pinPopup').style.display = 'none';
+  }
+</script>
 </body>
 </html>
