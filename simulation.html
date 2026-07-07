@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>見積りシミュレーション｜GHG削減量・参考価格シミュレーター｜サステオ</title>
+<meta name="description" content="月間の燃料使用量を入力するだけで、CO₂削減量と参考費用を自動計算します。登録不要・無料でお試しください。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-logo">SUSTEO<span>.</span></span>
+      <span class="brand-sub">次世代バイオ燃料 サステオ</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-label="メニュー">☰</button>
+    <nav class="global-nav">
+      <ul>
+        <li><a href="index.html">TOP</a></li>
+        <li><a href="market.html">市場・環境</a></li>
+        <li><a href="products.html">製品</a></li>
+        <li><a href="supply.html">供給体制</a></li>
+        <li><a href="quality.html">品質データ</a></li>
+        <li><a href="cases.html">導入事例</a></li>
+        <li><a href="future.html">特徴</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="simulation.html" class="nav-cta is-active">見積りシミュレーション</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb"><a href="index.html">TOP</a> ／ 見積りシミュレーション</p>
+    <p class="hero-eyebrow">Simulation</p>
+    <h1>GHG削減量・参考価格シミュレーター</h1>
+    <p>月間の燃料使用量を入力するだけで、CO₂削減量と参考費用を自動計算します。登録不要・無料でお試しください。</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="sim-panel">
+
+      <!-- ① 製品選択 -->
+      <div class="sim-step">
+        <div class="sim-step-label">
+          <span class="sim-step-num">1</span>
+          <h3>導入したいサステオの種類を選択</h3>
+        </div>
+        <div class="sim-options">
+          <div class="sim-option">
+            <input type="radio" name="product" id="p-hvo100" value="hvo100">
+            <label for="p-hvo100">
+              <span class="opt-name">サステオ（HVO100%）</span>
+              <span class="opt-desc" style="display:block;">最大84%削減</span>
+            </label>
+          </div>
+          <div class="sim-option">
+            <input type="radio" name="product" id="p-s51" value="s51" checked>
+            <label for="p-s51">
+              <span class="opt-name">サステオ51（混合燃料）</span>
+              <span class="opt-desc" style="display:block;">約50%削減</span>
+            </label>
+          </div>
+          <div class="sim-option">
+            <input type="radio" name="product" id="p-bioa" value="bioa">
+            <label for="p-bioa">
+              <span class="opt-name">バイオA重油</span>
+              <span class="opt-desc" style="display:block;">約20%削減</span>
+            </label>
+          </div>
+        </div>
+        <p class="field-hint" style="font-size:12.5px; color:var(--ink-500); margin-top:8px;">迷う場合は「サステオ51」からお試しください。</p>
+      </div>
+
+      <!-- ② 用途 -->
+      <div class="sim-step">
+        <div class="sim-step-label">
+          <span class="sim-step-num">2</span>
+          <h3>主な使用用途</h3>
+        </div>
+        <div class="sim-field">
+          <select id="usage">
+            <option value="truck">大型トラック</option>
+            <option value="bus">路線バス</option>
+            <option value="construction">建設重機</option>
+            <option value="generator">発電機</option>
+            <option value="ship">船舶</option>
+            <option value="other">その他</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- ③ 使用量 -->
+      <div class="sim-step">
+        <div class="sim-step-label">
+          <span class="sim-step-num">3</span>
+          <h3>月間燃料使用量（軽油ベース）</h3>
+        </div>
+        <div class="sim-field">
+          <div class="sim-range-row">
+            <input type="range" id="volume" min="500" max="50000" step="500" value="5000">
+            <span class="sim-range-value" id="volume-label">5,000 L/月</span>
+          </div>
+          <p class="field-hint">500L（小規模）〜50,000L（大規模）。現在の軽油月間消費量の伝票・請求書を参考に入力してください。</p>
+        </div>
+      </div>
+
+      <!-- ④ 台数 -->
+      <div class="sim-step">
+        <div class="sim-step-label">
+          <span class="sim-step-num">4</span>
+          <h3>台数／設備数</h3>
+        </div>
+        <div class="sim-field">
+          <select id="units">
+            <option value="1">1台</option>
+            <option value="5" selected>2〜5台</option>
+            <option value="10">6〜10台</option>
+            <option value="30">11〜30台</option>
+            <option value="100">31〜100台</option>
+            <option value="200">100〜200台以上</option>
+          </select>
+          <p class="field-hint">※月間燃料使用量は全台数の合計値としてご入力ください。</p>
+        </div>
+      </div>
+
+      <!-- 結果 -->
+      <div class="sim-results">
+        <div class="sim-step-label" style="margin-bottom:16px;">
+          <span class="sim-step-num" style="background:var(--blue-600);">✓</span>
+          <h3>シミュレーション結果</h3>
+        </div>
+        <div class="sim-result-grid">
+          <div class="sim-result">
+            <div class="r-value" id="r-monthly">—</div>
+            <div class="r-label">月間GHG削減量（CO₂換算）</div>
+          </div>
+          <div class="sim-result">
+            <div class="r-value" id="r-yearly">—</div>
+            <div class="r-label">年間GHG削減量（CO₂換算）</div>
+          </div>
+          <div class="sim-result">
+            <div class="r-value" id="r-cost">—</div>
+            <div class="r-label">月間参考費用（税別・概算）</div>
+          </div>
+          <div class="sim-result">
+            <div class="r-value" id="r-trees">—</div>
+            <div class="r-label">削減量相当の杉の木本数（年間）</div>
+          </div>
+        </div>
+        <p style="margin-top:18px; font-size:12.5px; color:var(--ink-500);">注記：本シミュレーションの結果は概算参考値です。実際の価格・削減量は使用条件・エリア・数量等によって異なります。正確な見積りは営業担当までお問い合わせください。</p>
+      </div>
+
+    </div>
+
+    <div class="info-box" style="margin-top:30px;">
+      <strong>補助金の活用：</strong>東京都のバイオ燃料導入支援補助金など、利用できる制度があります。補助金の活用可否や申請方法について、担当者が無料でアドバイスします。
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>正確なお見積り・ご相談はお気軽に</h2>
+    <p>使用条件・エリア・数量に応じた正式なお見積りは、営業担当が個別にご案内します。</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="products.html">製品を見る</a>
+      <a class="btn btn-outline" href="faq.html">よくあるご質問</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">SUSTEO<span>.</span></div>
+        <p class="footer-desc">次世代バイオ燃料「サステオ」。地域・企業・行政の共創による、バイオ燃料での脱炭素社会を実現します。</p>
+      </div>
+      <div>
+        <h4>CONTENTS</h4>
+        <ul>
+          <li><a href="market.html">市場・環境</a></li>
+          <li><a href="products.html">製品</a></li>
+          <li><a href="supply.html">供給体制</a></li>
+          <li><a href="quality.html">品質データ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>SUPPORT</h4>
+        <ul>
+          <li><a href="cases.html">導入事例</a></li>
+          <li><a href="future.html">特徴</a></li>
+          <li><a href="faq.html">よくあるご質問</a></li>
+          <li><a href="simulation.html">見積りシミュレーション</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© SUSTEO Green Journey. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+(function () {
+  // 製品パラメータ（概算参考値）
+  // reduction: ライフサイクルCO₂削減率／price: 参考単価（円/L・税別）
+  var PRODUCTS = {
+    hvo100: { reduction: 0.84, price: 250 },
+    s51:    { reduction: 0.50, price: 190 },
+    bioa:   { reduction: 0.20, price: 130 }
+  };
+  var CO2_PER_LITER = 2.62;   // 軽油1Lあたりの燃焼CO₂排出量（kg-CO₂）
+  var CO2_PER_TREE  = 14;     // 杉1本あたりの年間CO₂吸収量（kg-CO₂／林野庁公表値ベース）
+
+  var volumeInput = document.getElementById('volume');
+  var volumeLabel = document.getElementById('volume-label');
+  var rMonthly = document.getElementById('r-monthly');
+  var rYearly  = document.getElementById('r-yearly');
+  var rCost    = document.getElementById('r-cost');
+  var rTrees   = document.getElementById('r-trees');
+
+  function selectedProduct() {
+    var el = document.querySelector('input[name="product"]:checked');
+    return PRODUCTS[el ? el.value : 's51'];
+  }
+
+  function fmt(n, digits) {
+    return n.toLocaleString('ja-JP', { maximumFractionDigits: digits, minimumFractionDigits: 0 });
+  }
+
+  function calc() {
+    var liters = parseInt(volumeInput.value, 10) || 0;
+    var p = selectedProduct();
+
+    volumeLabel.textContent = fmt(liters, 0) + ' L/月';
+
+    var monthlyKg = liters * CO2_PER_LITER * p.reduction; // kg-CO2/月
+    var yearlyKg  = monthlyKg * 12;
+    var monthlyCost = liters * p.price;                   // 円/月
+    var trees = yearlyKg / CO2_PER_TREE;
+
+    rMonthly.innerHTML = fmt(monthlyKg / 1000, 1) + ' <small>t-CO₂</small>';
+    rYearly.innerHTML  = fmt(yearlyKg / 1000, 1) + ' <small>t-CO₂</small>';
+    rCost.innerHTML    = '約 ' + fmt(Math.round(monthlyCost / 10000), 0) + ' <small>万円</small>';
+    rTrees.innerHTML   = '約 ' + fmt(Math.round(trees), 0) + ' <small>本</small>';
+  }
+
+  volumeInput.addEventListener('input', calc);
+  document.querySelectorAll('input[name="product"]').forEach(function (el) {
+    el.addEventListener('change', calc);
+  });
+  document.getElementById('usage').addEventListener('change', calc);
+  document.getElementById('units').addEventListener('change', calc);
+
+  calc();
+})();
+</script>
+</body>
+</html>
