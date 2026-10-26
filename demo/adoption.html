@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>導入を検討する｜バイオ燃料HVO サステオ</title>
+<meta name="description" content="サステオ導入の判断ガイド、CO₂削減量の簡易シミュレーション、価格決定要素、供給エリアと供給方法、車両・設備の適合確認、公道走行時の税務上の取扱い、導入までの流れを整理しています。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@700;900&family=Noto+Sans+JP:wght@400;500;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="demo-bar">
+  <div class="demo-bar__inner">
+    <strong>DEMO</strong>
+    <span>「Web掲載原稿ドラフト v0.5」をもとに構成したデモ版です。シミュレーションは概算値で、環境開示や制度報告にそのまま使用できることを保証するものではありません。</span>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="index.html">
+      <span class="brand__mark">HVO</span>
+      サステオ
+      <span class="brand__sub">バイオ燃料</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false">MENU</button>
+    <nav class="site-nav" id="site-nav" aria-label="メインメニュー">
+      <a href="about.html">HVO・サステオを知る</a>
+      <a href="solutions.html">用途・立場から探す</a>
+      <a href="adoption.html" aria-current="page">導入を検討する</a>
+      <a href="knowledge.html">導入事例・ナレッジ</a>
+      <a href="company.html">ユーグレナについて</a>
+      <a class="nav-cta" href="contact.html">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="wrap">
+    <p class="breadcrumb"><a href="index.html">TOP</a> ／ 導入を検討する</p>
+  </section>
+
+  <section class="band band--tight">
+    <div class="wrap">
+      <p class="eyebrow">03 / How to adopt</p>
+      <h1 class="page-title">導入を検討する</h1>
+      <p class="lead lead--hero">サステオの導入では、車両や設備で使用できるかだけでなく、供給方法、現場での運用、GHG削減効果の算定、証憑、継続的な費用負担まで含めて検討することが重要です。導入判断に必要な情報を、テーマごとに整理しています。</p>
+    </div>
+  </section>
+
+  <div class="wrap band band--tight">
+    <div class="layout">
+
+      <aside class="rail" aria-label="このページの目次">
+        <p class="rail__label">検討テーマ</p>
+        <ol>
+          <li><a href="#guide">導入判断ガイド</a></li>
+          <li><a href="#ghg">GHG削減効果・削減量試算</a></li>
+          <li><a href="#cost">コスト・価格決定要素</a></li>
+          <li><a href="#supply">供給エリア・供給方法</a></li>
+          <li><a href="#equipment">車両・設備・メーカー確認</a></li>
+          <li><a href="#tax">公道走行時の税務上の取扱い</a></li>
+          <li><a href="#flow">導入までの流れ</a></li>
+        </ol>
+      </aside>
+
+      <div>
+
+        <!-- 1 導入判断ガイド -->
+        <section class="doc-section" id="guide">
+          <div class="doc-section__head">
+            <span class="doc-section__no">Section 01</span>
+            <h2 class="section-title">導入判断ガイド</h2>
+            <p class="doc-section__q"><b>この節で分かること</b>何から確認すればよいか、確認の順序</p>
+          </div>
+
+          <div class="prose">
+            <p>ユーグレナは、建設機械、トラック、バス、発電機、船舶などへの燃料供給や実証で得た知見をもとに、お客様の用途や導入目的に応じて必要な確認事項を整理します。</p>
+          </div>
+
+          <div class="steps">
+            <article class="step">
+              <div class="step__head">
+                <span class="step__no">01</span>
+                <h3>導入目的と対象を整理する</h3>
+              </div>
+              <p>まず、何を目的としてサステオを導入するのかを確認します。自社で使用する車両・設備のScope1削減、委託輸送や発注工事におけるサプライチェーン排出量の削減など、利用形態によって検討の進め方や必要な証憑が異なります。</p>
+              <p class="step__sub">主な確認事項</p>
+              <ul class="checklist">
+                <li>削減対象となる業務、拠点、車両・設備</li>
+                <li>現在使用している燃料と年間使用量</li>
+                <li>自社利用か、委託先・取引先での利用か</li>
+                <li>導入目的と社内外への報告目的</li>
+              </ul>
+            </article>
+
+            <article class="step">
+              <div class="step__head">
+                <span class="step__no">02</span>
+                <h3>車両・設備での使用条件を確認する</h3>
+              </div>
+              <p>対象となる車両・設備のメーカー、型式、年式、エンジン仕様などを確認します。あわせて、現在の燃料、タンクや配管、フィルター、保守契約など、燃料切替に関係する条件を整理します。</p>
+              <p>HVOは既存のディーゼル車両・設備との親和性が高い燃料ですが、具体的な使用可否や保証条件は機種や仕様によって異なるため、個別の確認が必要です。</p>
+              <p class="step__sub">主な確認事項</p>
+              <ul class="checklist">
+                <li>メーカー、型式、年式、エンジン仕様</li>
+                <li>バイオ燃料に対するメーカーの使用承認</li>
+                <li>現在使用している燃料とタンク内の残油</li>
+              </ul>
+            </article>
+
+            <article class="step">
+              <div class="step__head">
+                <span class="step__no">03</span>
+                <h3>供給方法と現場運用を設計する</h3>
+              </div>
+              <p>納入先の地域、使用量、保管設備、給油場所などをもとに、供給方法を検討します。タンクローリー、ドラム缶など、用途や数量に応じた方法を選び、納入から使用記録までの運用を設計します。</p>
+              <p class="step__sub">主な確認事項</p>
+              <ul class="checklist">
+                <li>納入地域と希望開始時期</li>
+                <li>1回、月間、年間の使用量</li>
+                <li>給油場所</li>
+                <li>既存タンクの利用可否</li>
+                <li>配送頻度、誤給油防止対策</li>
+                <li>納品量、使用量、残量の記録方法</li>
+                <li>保管設備、給油設備に関する法令上の確認</li>
+              </ul>
+            </article>
+
+            <article class="step">
+              <div class="step__head">
+                <span class="step__no">04</span>
+                <h3>GHG削減効果と証憑を確認する</h3>
+              </div>
+              <p>削減効果は、使用量、製品の種類、HVOの混合率、原料、製造・輸送条件などによって異なります。導入目的に応じて算定範囲を定め、必要な証憑や使用記録を確認します。</p>
+              <p>自社での使用、委託輸送、発注工事では、排出量を算定・報告する主体や対象となるScopeが異なります。開示や報告への反映については、採用する算定基準に沿って個別に整理します。</p>
+              <p class="step__sub">主な確認事項</p>
+              <ul class="checklist">
+                <li>HVOの混合率と使用予定量</li>
+                <li>算定主体と算定範囲</li>
+                <li>必要な証憑・使用実績データ</li>
+                <li>第三者認証（ISCC認証）の必要性の有無</li>
+              </ul>
+            </article>
+
+            <article class="step">
+              <div class="step__head">
+                <span class="step__no">05</span>
+                <h3>継続可能な導入計画を検討する</h3>
+              </div>
+              <p>燃料価格だけでなく、配送、保管、設備対応、運用管理を含めた導入条件を整理します。必要に応じて、対象車両、設備、拠点を限定したトライアルを行い、運用上の課題や本導入への条件を確認します。</p>
+              <p>また、荷主と運送会社、発注者と施工会社など、複数の企業が関わる場合には、費用負担、証憑の受け渡し、削減効果の報告方法をあらかじめ整理します。</p>
+              <p class="step__sub">主な確認事項</p>
+              <ul class="checklist">
+                <li>燃料、配送、保管、運用を含む導入条件</li>
+                <li>費用負担者と契約関係</li>
+                <li>トライアルの要否と評価項目</li>
+                <li>本導入後の供給量と配送計画</li>
+                <li>使用実績、証憑、削減量の管理体制</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="ask">
+            <p>導入条件整理シートをもとに、確認の進め方をご案内します。</p>
+            <a class="btn btn--primary" href="contact.html">初回相談を申し込む</a>
+          </div>
+        </section>
+
+        <!-- 2 GHG -->
+        <section class="doc-section" id="ghg">
+          <div class="doc-section__head">
+            <span class="doc-section__no">Section 02</span>
+            <h2 class="section-title">GHG削減効果・削減量試算</h2>
+            <p class="doc-section__q"><b>この節で分かること</b>算定基準による見方の違いと、削減量の概算</p>
+          </div>
+
+          <p class="lead">GHG削減量は、目的によって見方が異なります。</p>
+
+          <div class="prose">
+            <p>サステオによるGHG削減効果は、利用目的や算定基準によって評価方法が異なります。</p>
+            <p>例えば、温対法に基づく排出量算定では、バイオマス由来分を考慮して排出量を評価するため、サステオ100では100％、サステオ51では51％のHVO混合率に応じたGHG削減効果として整理できます。</p>
+            <p>一方で、原料調達から製造、輸送、利用までを含めて評価するライフサイクル評価（LCA）では、原料や製造方法、輸送経路なども考慮するため、評価結果は異なります。</p>
+            <p>ユーグレナでは、お客様の利用用途や報告目的に応じて、適切な算定方法や削減量の考え方の整理を支援します。</p>
+          </div>
+
+          <!-- シミュレーター -->
+          <div class="sim">
+            <div class="sim__head">
+              <h3>CO₂削減量シミュレーション</h3>
+              <p>現在使用している軽油の年間使用量と、導入を検討している油種を入力すると、燃料転換によって削減できるCO₂量の概算を確認できます。</p>
+            </div>
+            <form class="sim__body" id="sim" novalidate>
+              <div>
+                <div class="field">
+                  <label for="sim-volume">現在の軽油使用量（年間）</label>
+                  <div class="input-row">
+                    <input type="number" id="sim-volume" name="volume" min="0" step="0.1" inputmode="decimal" value="120" placeholder="例：120">
+                    <span class="unit">kL</span>
+                  </div>
+                  <p class="field__hint">デモ版では年間120 kLを初期値として表示しています。</p>
+                </div>
+
+                <div class="field">
+                  <fieldset>
+                    <legend class="field__legend">導入を検討している油種</legend>
+                    <div class="radio-row">
+                      <label class="radio-chip">
+                        <input type="radio" name="product" value="100" checked>
+                        サステオ100（HVO 100％）
+                      </label>
+                      <label class="radio-chip">
+                        <input type="radio" name="product" value="51">
+                        サステオ51（HVO 51％）
+                      </label>
+                    </div>
+                  </fieldset>
+                </div>
+
+                <p class="field__hint" id="sim-detail" style="font-family:var(--mono);font-size:.74rem;letter-spacing:.02em;color:var(--ink-2)"></p>
+              </div>
+
+              <div class="sim__out" id="sim-out" data-state="ok" aria-live="polite">
+                <div class="sim__out-label">削減量の概算</div>
+                <div class="sim__value" id="sim-value">—</div>
+                <div class="sim__unit" id="sim-unit"></div>
+                <p class="sim__msg" id="sim-msg"></p>
+              </div>
+            </form>
+          </div>
+
+          <p class="note">※ 本シミュレーションは、入力された軽油使用量、軽油のCO₂排出係数およびHVO混合率をもとに、燃料使用時のCO₂削減量を簡易的に試算するものです。軽油のCO₂排出係数には、環境省の「温室効果ガス排出量 算定・報告・公表制度」等で用いられる2.62 t-CO₂/kLを使用しています。排出係数は制度改正等により変更される場合があります。原料調達、製造、輸送等を含むライフサイクル全体のGHG排出量は含みません。算定結果は概算値であり、環境開示や制度報告にそのまま使用できることを保証するものではありません。正式な算定にあたっては、適用する制度・算定基準の最新の排出係数、算定範囲および使用実績をご確認ください。</p>
+
+          <div class="ask">
+            <p>報告目的と算定基準にあわせて、GHG削減量の個別試算をご相談いただけます。</p>
+            <a class="btn btn--primary" href="contact.html">個別試算を相談する</a>
+            <a class="btn btn--line" href="knowledge.html#faq">よくある質問を見る</a>
+          </div>
+        </section>
+
+        <!-- 3 コスト -->
+        <section class="doc-section" id="cost">
+          <div class="doc-section__head">
+            <span class="doc-section__no">Section 03</span>
+            <h2 class="section-title">コスト・価格決定要素</h2>
+            <p class="doc-section__q"><b>この節で分かること</b>価格が何で決まるか、見積りに必要な情報</p>
+          </div>
+
+          <p class="lead">導入費用と見積条件を確認する</p>
+
+          <div class="prose">
+            <p>サステオの見積価格は、製品の種類、使用量、納入地域、1回当たりの納入量、配送方法、納入頻度、契約条件などによって異なります。</p>
+            <p>また、導入にあたっては、燃料価格だけでなく、保管・給油方法や現場での運用条件も確認する必要があります。お客様の利用用途や納入条件を伺ったうえで、適した製品と供給方法をご提案し、個別にお見積りします。</p>
+            <p>まずは、現在の燃料使用状況や導入目的をもとに、対象となる車両・設備での利用可能性、供給条件、想定されるGHG削減効果などを整理します。使用量や導入時期が確定していない段階でも、分かる範囲の情報からご相談いただけます。</p>
+          </div>
+
+          <div class="cards cards--2">
+            <div class="card">
+              <h3>見積・初期検討に必要な主な情報</h3>
+              <ul class="checklist checklist--plain">
+                <li>利用用途（建設機械、トラック、発電機、船舶など）</li>
+                <li>現在使用している燃料</li>
+                <li>納入先の場所</li>
+                <li>月間または年間のおおよその使用量</li>
+                <li>1回当たりのおおよその納入量や希望する納入頻度</li>
+                <li>現在の燃料の受入れ・保管・給油方法</li>
+                <li>導入希望時期</li>
+                <li>トライアルまたは本導入の検討状況</li>
+              </ul>
+              <p style="margin:10px 0 0;font-size:.82rem;color:var(--ink-3)">情報が確定していない項目は、初回のご相談時に一緒に整理します。</p>
+            </div>
+            <div class="card">
+              <h3>ご提案時に確認する内容</h3>
+              <p>燃料価格だけでなく、配送方法、保管方法、給油方法、使用量管理、GHG削減量の把握に必要な証憑など、継続的な運用に関わる条件もあわせて整理します。</p>
+              <p>「現在使用している車両や設備で利用できるのか知りたい」「供給可能なエリアか確認したい」「どの程度のGHG削減効果が見込めるのか知りたい」といった初期検討の段階からお問い合わせください。</p>
+            </div>
+          </div>
+
+          <div class="ask">
+            <p>地域、数量、納入条件をお知らせいただくと、個別にお見積りします。</p>
+            <a class="btn btn--primary" href="contact.html">見積りを相談する</a>
+          </div>
+        </section>
+
+        <!-- 4 供給 -->
+        <section class="doc-section" id="supply">
+          <div class="doc-section__head">
+            <span class="doc-section__no">Section 04</span>
+            <h2 class="section-title">供給エリア・供給方法・販売体制</h2>
+            <p class="doc-section__q"><b>この節で分かること</b>どこで、どのように供給されるか</p>
+          </div>
+
+          <p class="lead">お客様の利用条件に応じた供給方法をご提案します</p>
+
+          <div class="prose">
+            <p>サステオは、各地の供給拠点と、燃料の販売・保管・配送に知見を持つパートナー企業との連携により、納入地域、使用量、利用用途、保管・給油環境に応じた供給体制を整えています。</p>
+            <p>タンクローリーによる納入のほか、ドラム缶による全国各地への配送もご相談いただけます。建設現場、営業所・車庫、工場、港湾、船舶など、使用場所や導入規模によって適した方法が異なるため、納入先や使用条件を確認したうえで、供給可否と具体的な方法をご案内します。</p>
+          </div>
+
+          <h3 class="sub-title">主な納入方法</h3>
+          <div class="cards cards--2">
+            <div class="card">
+              <span class="card__no">Method 01</span>
+              <h3>パトロール給油による現場への直接給油</h3>
+              <p>建設現場をはじめとするさまざまな現場へ小型ローリーでサステオをお届けし、建設機械や発電機などへ直接給油します。納入地域、必要数量、給油対象、現場への進入経路などを確認したうえで、適した供給方法をご提案します。</p>
+            </div>
+            <div class="card">
+              <span class="card__no">Method 02</span>
+              <h3>ドラム缶による配送</h3>
+              <p>小規模なトライアルや、タンクローリーでの納入が難しい拠点では、ドラム缶による配送を検討できます。全国各地への配送について、納入地域、必要数量、保管場所、給油方法などを確認したうえでご提案します。</p>
+            </div>
+            <div class="card">
+              <span class="card__no">Method 03</span>
+              <h3>既存タンクへの受入れ</h3>
+              <p>既存の地下タンクや地上タンクを活用して、サステオを受け入れることも検討できます。タンクの仕様、現在使用している燃料、残油の状態、配管・ポンプ・フィルター、保管・給油方法などを確認したうえで、タンクローリーによる納入方法をご案内します。</p>
+            </div>
+            <div class="card">
+              <span class="card__no">Method 04</span>
+              <h3>船舶・港湾への供給</h3>
+              <p>船舶や港湾での利用については、寄港地、給油場所、燃料使用量、設備条件などを確認し、供給方法を個別に検討します。</p>
+            </div>
+          </div>
+
+          <p class="note">保管数量、設備、荷姿、使用場所等によっては、消防法や地域の条例に基づく確認が必要となる場合があります。必要に応じて、施設管理者や販売・供給パートナー等と連携し、所轄消防への確認を含む必要な対応を整理します。</p>
+
+          <h3 class="sub-title">サステオの販売・供給を支えるパートナー</h3>
+          <div class="partner-row">
+            <span class="partner-chip">カメイ株式会社</span>
+            <span class="partner-chip">シナネン株式会社</span>
+            <span class="partner-chip">平野石油株式会社</span>
+            <span class="partner-chip">丸紅エネルギー株式会社</span>
+          </div>
+          <p class="note">供給拠点、パートナー、配送範囲、在庫量は変動します。デモ版ではロゴの代わりに社名を表示しています。</p>
+
+          <div class="ask">
+            <p>郵便番号、用途、月間使用量、希望時期をお知らせいただくと、供給可否をご案内できます。</p>
+            <a class="btn btn--primary" href="contact.html">供給可否を相談する</a>
+          </div>
+        </section>
+
+        <!-- 5 車両・設備 -->
+        <section class="doc-section" id="equipment">
+          <div class="doc-section__head">
+            <span class="doc-section__no">Section 05</span>
+            <h2 class="section-title">車両・設備・メーカー確認</h2>
+            <p class="doc-section__q"><b>この節で分かること</b>自社設備で使えるかを判断するための確認事項</p>
+          </div>
+
+          <p class="lead">車両・設備での使用条件を確認する</p>
+
+          <div class="prose">
+            <p>サステオは軽油に近い性状を持ち、既存のディーゼル車両・設備との親和性が高い燃料です。車両や設備を大きく変更することなく、燃料転換によるGHG排出削減を検討できます。</p>
+            <p>実際の使用可否は、導入するサステオの製品仕様と、対象となる車両・設備のメーカー、型式、年式、エンジン仕様、メーカーが指定・許容する燃料条件などを確認して判断します。</p>
+            <p>ユーグレナでは、お客様からご提供いただいた車両・設備情報と燃料仕様を整理し、必要に応じてメーカー、販売会社、リース会社、整備事業者等への照会を支援します。メーカー保証やリース・保守契約等に燃料条件が定められている場合は、その取扱いについても確認します。</p>
+          </div>
+
+          <p class="step__sub">確認する主な情報</p>
+          <ul class="checklist">
+            <li>車両・設備のメーカー、型式、年式</li>
+            <li>エンジン型式、仕様</li>
+            <li>現在使用している燃料</li>
+            <li>メーカーが指定・許容している燃料規格</li>
+            <li>使用地域、気温、稼働時間などの運用条件</li>
+          </ul>
+          <p class="note">必要に応じて、排出ガス規制区分、車両・設備側の燃料タンクや配管、フィルター等の仕様、メーカー保証やリース・保守契約上の燃料条件も確認します。</p>
+
+          <div class="panel" style="margin-top:28px">
+            <p class="panel__label">Technical verification</p>
+            <h3 class="sub-title" style="margin-top:0">メーカー・事業者との技術検証</h3>
+            <div class="prose">
+              <p>ユーグレナでは、車両・設備メーカー、利用事業者等と連携し、サステオの使用条件や車両・設備への影響に関する確認を進めています。</p>
+              <p>通常は、対象機器の仕様、メーカーの指定・許容燃料、サステオの燃料仕様等を照合して使用条件を整理します。必要に応じて、実際の運用環境における始動性、出力、燃費、排出ガス、燃料フィルターや燃料系統への影響など、導入判断に必要な確認項目を設定します。</p>
+              <p style="margin-bottom:0">これまでに蓄積した技術データや運用実績をもとに、対象となる製品、車両・設備、使用条件に応じた導入検討を支援します。</p>
+            </div>
+          </div>
+
+          <p class="note">※ 車両・設備における使用可否、メーカー保証および保守契約上の取扱いは、メーカー、型式、年式、仕様、使用条件等によって異なります。</p>
+
+          <div class="ask">
+            <p>対象機器の情報を添えてお送りいただくと、使用可否の確認を進められます。</p>
+            <a class="btn btn--primary" href="contact.html">使用可否を相談する</a>
+          </div>
+        </section>
+
+        <!-- 6 税務 -->
+        <section class="doc-section" id="tax">
+          <div class="doc-section__head">
+            <span class="doc-section__no">Section 06</span>
+            <h2 class="section-title">公道走行時の税務上の取扱い</h2>
+            <p class="doc-section__q"><b>この節で分かること</b>軽油引取税上の取扱いと、必要な手続・運用</p>
+          </div>
+
+          <p class="lead">通常の軽油と同様の運用で、公道走行車に利用できるサステオ51</p>
+
+          <div class="prose">
+            <p>バイオ燃料を公道走行車に使用する場合は、燃料の性状や軽油との混合割合によって、軽油引取税上の取扱いや必要な手続きが異なります。</p>
+            <p>サステオ100（HVO 100％）は、その燃料性状から地方税法上の「軽油」に該当しません。そのため、公道走行車で使用する場合は、地方税法上の事前手続きに加え、対象車両、給油量、使用量などを管理する専用の運用が必要です。また、軽油との混合や継ぎ足しには地方税法上の手続きが必要となるため、軽油とは分けた運用が基本となります。</p>
+            <p>サステオ51は、HVOを51％、軽油を49％配合し、軽油として販売・使用するための品質要件および地方税法上の要件を満たすよう設計した燃料です。軽油引取税が課税された軽油として流通するため、サステオ100を公道走行車で使用する場合に必要となる個別の税務手続きや専用運用を行うことなく、通常の軽油と同様にトラックやバスなどで利用できます。軽油が残る燃料タンクへの継ぎ足し給油も可能です。</p>
+          </div>
+
+          <div class="table-scroll">
+            <table class="spec">
+              <caption>サステオ100とサステオ51の比較</caption>
+              <thead>
+                <tr>
+                  <th scope="col">確認項目</th>
+                  <th scope="col">サステオ100</th>
+                  <th scope="col" class="col-focus">サステオ51</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">燃料構成</th>
+                  <td>HVO 100％</td>
+                  <td class="col-focus">HVO 51％、軽油 49％</td>
+                </tr>
+                <tr>
+                  <th scope="row">地方税法上の取扱い</th>
+                  <td>軽油以外の燃料炭化水素油</td>
+                  <td class="col-focus">軽油として課税・流通</td>
+                </tr>
+                <tr>
+                  <th scope="row">公道走行車での使用</th>
+                  <td>地方税法上の事前手続きと、対象車両を特定した専用運用が必要</td>
+                  <td class="col-focus">通常の軽油と同様に使用可能</td>
+                </tr>
+                <tr>
+                  <th scope="row">軽油との継ぎ足し</th>
+                  <td>原則として行わない</td>
+                  <td class="col-focus">可能</td>
+                </tr>
+                <tr>
+                  <th scope="row">主な用途</th>
+                  <td>公道を走行しない建設機械、構内専用機械、発電機など</td>
+                  <td class="col-focus">トラック、バス、公道を走行する建設車両など</td>
+                </tr>
+                <tr>
+                  <th scope="row">燃焼時CO₂削減の<br>算定上の取扱い</th>
+                  <td>温対法<sup>※</sup>上、HVO由来分を100％として整理</td>
+                  <td class="col-focus">温対法<sup>※</sup>上、軽油比51％削減として整理</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="note">※ 「温対法」は、地球温暖化対策の推進に関する法律の略称です。<br>本ページは一般的な整理であり、法令の解釈・適用は用途や地域によって異なります。実際の取扱いについては、所管官庁、都道府県、専門家への確認をお願いします。</p>
+
+          <div class="ask">
+            <p>用途、地域、製品を明示いただくと、法令・税務上の確認事項を整理してご案内できます。</p>
+            <a class="btn btn--primary" href="contact.html">法令・税務について相談する</a>
+          </div>
+        </section>
+
+        <!-- 7 導入までの流れ -->
+        <section class="doc-section" id="flow">
+          <div class="doc-section__head">
+            <span class="doc-section__no">Section 07</span>
+            <h2 class="section-title">導入までの流れ</h2>
+            <p class="doc-section__q"><b>この節で分かること</b>初回相談から試行、評価、本導入、報告までの流れ</p>
+          </div>
+
+          <p class="lead">ご相談から利用開始まで、導入条件を一つずつ確認します</p>
+
+          <div class="prose">
+            <p>サステオの導入方法は、対象となる車両・設備、納入地域、使用量、供給方法、メーカー確認の要否などによって異なります。</p>
+            <p>ユーグレナでは、初回のご相談から、車両・設備での利用可能性、供給方法、費用、CO₂削減効果の算定方法、必要な証憑・関連資料まで、お客様の利用条件や報告目的に合わせて整理します。型式や使用量などが確定していない段階でも、まずは分かる範囲の情報からご相談いただけます。</p>
+          </div>
+
+          <div class="steps">
+            <article class="step">
+              <div class="step__head">
+                <span class="step__no">STEP 1</span>
+                <h3>利用目的と導入条件を確認する</h3>
+              </div>
+              <p class="step__sub">お伺いする主な内容</p>
+              <ul class="checklist">
+                <li>利用用途と対象となる車両・設備</li>
+                <li>納入先の地域</li>
+                <li>現在使用している燃料</li>
+                <li>月間または年間のおおよその使用量</li>
+                <li>導入目的と希望時期</li>
+                <li>トライアルまたは本導入のご希望</li>
+              </ul>
+              <p style="margin-top:14px">この段階で、供給可能性や導入にあたって確認が必要な基本事項を整理します。型式や使用量が確定していない場合でも、初期相談が可能です。</p>
+              <p class="step__meta">期間の目安：初回相談から数営業日程度</p>
+            </article>
+
+            <article class="step">
+              <div class="step__head">
+                <span class="step__no">STEP 2</span>
+                <h3>車両・設備と供給条件を確認する</h3>
+              </div>
+              <p>対象となる車両・設備のメーカー、型式、年式、エンジン仕様などを確認します。あわせて、納入場所、給油方法、保管設備、ローリーの進入可否などを整理し、適した供給方法を検討します。必要に応じて、メーカーなどへの確認を支援します。</p>
+              <p class="step__sub">この段階で確認すること</p>
+              <ul class="checklist">
+                <li>対象車両・設備での利用可能性</li>
+                <li>メーカー保証・保守契約上の取扱い</li>
+                <li>用途に適したバイオ燃料とその供給方法</li>
+              </ul>
+              <p class="step__meta">期間の目安：1週間程度</p>
+            </article>
+
+            <article class="step">
+              <div class="step__head">
+                <span class="step__no">STEP 3</span>
+                <h3>費用とCO₂削減効果を確認する</h3>
+              </div>
+              <p>確認した利用条件をもとに、燃料価格、配送条件、供給量、契約条件などを含むお見積りをご提示します。あわせて、使用予定量や製品の混合率などをもとに、CO₂削減量の考え方を整理します。社内報告や環境開示に必要となる証憑についても確認します。</p>
+              <p class="step__sub">この段階で分かること</p>
+              <ul class="checklist">
+                <li>導入費用と供給条件</li>
+                <li>想定されるCO₂削減効果</li>
+                <li>トライアルの要否</li>
+                <li>導入開始までに必要な準備</li>
+              </ul>
+              <p class="step__meta">期間の目安：条件確定後、2週間程度</p>
+            </article>
+
+            <article class="step">
+              <div class="step__head">
+                <span class="step__no">STEP 4</span>
+                <h3>必要に応じてトライアルを実施する</h3>
+              </div>
+              <p>対象となる車両・設備や拠点を限定し、実際の運用条件でサステオを使用します。燃料の納入・給油方法、車両・設備の稼働状況、燃料使用量、現場での運用方法などを確認します。</p>
+              <p>必要に応じて、始動性、出力、燃費、排出ガス、燃料フィルターや燃料系統への影響などの評価項目を設定し、本導入に向けた課題と対応方法を整理します。</p>
+              <p class="step__meta">期間の目安：使用量、燃料を消費するまでの期間、評価項目などに応じて個別に設定します</p>
+            </article>
+
+            <article class="step">
+              <div class="step__head">
+                <span class="step__no">STEP 5</span>
+                <h3>本導入・継続運用を開始する</h3>
+              </div>
+              <p>契約内容、納入スケジュール、給油・保管方法、使用量の記録方法などを確定し、供給を開始します。導入後は、納入量・使用量・証憑を管理し、CO₂削減実績の把握や社内外への報告に活用できるよう整理します。使用量や対象拠点の拡大についても、運用状況に応じて検討できます。</p>
+              <p class="step__sub">主な実施内容</p>
+              <ul class="checklist">
+                <li>定期またはスポットでの燃料供給</li>
+                <li>納入量・使用量の管理</li>
+                <li>CO₂削減実績の整理</li>
+                <li>対象車両・設備・拠点の拡大検討</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="ask">
+            <p>導入条件を整理して、初回相談をお申し込みいただけます。</p>
+            <a class="btn btn--primary" href="contact.html">初回相談を申し込む</a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <section class="band band--ink">
+    <div class="wrap">
+      <p class="eyebrow" style="color:rgba(255,255,255,.72)">Next</p>
+      <h2 class="section-title" style="color:#fff">判断に迷う点は、Q&amp;Aと用語集で</h2>
+      <p class="lead" style="color:rgba(255,255,255,.82)">車両・設備での使用可否、供給方法、費用、GHG削減効果などについて、よくお寄せいただくご質問をまとめています。</p>
+      <div class="hero__actions">
+        <a class="btn btn--onink" href="knowledge.html#faq">よくある質問を見る</a>
+        <a class="btn btn--ghostink" href="contact.html">お問い合わせ</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h2>バイオ燃料HVO サステオ</h2>
+        <p>ユーグレナが提供するバイオ燃料HVOのブランドです。電化が難しい車両、建設機械、発電機、船舶などのGHG排出削減を支援します。</p>
+      </div>
+      <div>
+        <h3>知る・探す</h3>
+        <ul>
+          <li><a href="about.html">HVO・サステオを知る</a></li>
+          <li><a href="solutions.html">用途・立場から探す</a></li>
+          <li><a href="knowledge.html#glossary">用語集</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>検討する</h3>
+        <ul>
+          <li><a href="adoption.html#guide">導入判断ガイド</a></li>
+          <li><a href="adoption.html#ghg">GHG削減量の試算</a></li>
+          <li><a href="adoption.html#supply">供給エリア・供給方法</a></li>
+          <li><a href="adoption.html#flow">導入までの流れ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>その他</h3>
+        <ul>
+          <li><a href="knowledge.html#faq">よくある質問</a></li>
+          <li><a href="company.html">ユーグレナについて</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© Euglena Co., Ltd. — デモ版（Web掲載原稿ドラフト v0.5 ベース）</span>
+      <span>SUSTEO / HVO</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

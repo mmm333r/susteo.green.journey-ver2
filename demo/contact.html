@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>お問い合わせ｜バイオ燃料HVO サステオ</title>
+<meta name="description" content="自社の車両や設備で利用できるか、GHG削減効果や供給条件を確認したい。初期検討の段階からご相談いただけます。相談種別に応じて必要な情報をお伺いします。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@700;900&family=Noto+Sans+JP:wght@400;500;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="demo-bar">
+  <div class="demo-bar__inner">
+    <strong>DEMO</strong>
+    <span>デモ版のため、このフォームからの送信は行われません。本番環境では、入力内容の確認画面を経て相談種別ごとの担当窓口へ送信されます。</span>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="index.html">
+      <span class="brand__mark">HVO</span>
+      サステオ
+      <span class="brand__sub">バイオ燃料</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false">MENU</button>
+    <nav class="site-nav" id="site-nav" aria-label="メインメニュー">
+      <a href="about.html">HVO・サステオを知る</a>
+      <a href="solutions.html">用途・立場から探す</a>
+      <a href="adoption.html">導入を検討する</a>
+      <a href="knowledge.html">導入事例・ナレッジ</a>
+      <a href="company.html">ユーグレナについて</a>
+      <a class="nav-cta" href="contact.html" aria-current="page">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="wrap">
+    <p class="breadcrumb"><a href="index.html">TOP</a> ／ お問い合わせ</p>
+  </section>
+
+  <section class="band band--tight">
+    <div class="wrap">
+      <p class="eyebrow">Contact</p>
+      <h1 class="page-title">お問い合わせ</h1>
+      <div class="prose">
+        <p>「自社の車両や設備で利用できるか知りたい」「GHG削減効果や供給条件を確認したい」。そのような初期検討の段階でもお気軽にお問い合わせください。</p>
+        <p>用途や利用条件に応じて、導入可否、供給方法、費用、GHG削減効果などをご案内します。使用量や導入時期が決まっていない場合でもご相談いただけます。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--tight band--surface">
+    <div class="wrap">
+      <div class="layout">
+
+        <aside class="rail" aria-label="このページの目次">
+          <p class="rail__label">入力項目</p>
+          <ol>
+            <li><a href="#form-about">ご相談者について</a></li>
+            <li><a href="#form-topic">相談種別・対象設備</a></li>
+            <li><a href="#form-detail">利用条件（任意）</a></li>
+            <li><a href="#form-consent">個人情報の取扱い</a></li>
+          </ol>
+        </aside>
+
+        <div>
+          <form id="contact-form" novalidate>
+
+            <!-- 1 -->
+            <section class="form-block" id="form-about">
+              <h2 class="form-block__title"><span>01</span>ご相談者について</h2>
+              <p class="form-block__note">初回のご回答に必要な連絡先をお伺いします。</p>
+
+              <div class="form-grid form-grid--2">
+                <div class="field">
+                  <label for="company">会社名<span class="req">必須</span></label>
+                  <input type="text" id="company" name="company" required autocomplete="organization" placeholder="例：株式会社○○建設">
+                </div>
+                <div class="field">
+                  <label for="department">部署<span class="req">必須</span></label>
+                  <input type="text" id="department" name="department" required placeholder="例：環境推進部">
+                </div>
+                <div class="field">
+                  <label for="name">氏名<span class="req">必須</span></label>
+                  <input type="text" id="name" name="name" required autocomplete="name">
+                </div>
+                <div class="field">
+                  <label for="email">メールアドレス<span class="req">必須</span></label>
+                  <input type="email" id="email" name="email" required autocomplete="email" placeholder="例：name@example.co.jp">
+                </div>
+                <div class="field">
+                  <label for="tel">電話番号<span class="opt">任意</span></label>
+                  <input type="tel" id="tel" name="tel" autocomplete="tel" placeholder="例：03-0000-0000">
+                </div>
+              </div>
+            </section>
+
+            <!-- 2 -->
+            <section class="form-block" id="form-topic">
+              <h2 class="form-block__title"><span>02</span>相談種別・対象設備</h2>
+              <p class="form-block__note">相談の目的によって、ご案内する内容と担当窓口が異なります。</p>
+
+              <div class="field">
+                <span class="field__legend">相談種別<span class="req">必須</span></span>
+                <fieldset>
+                  <legend class="visually-hidden">相談種別</legend>
+                  <div class="radio-row">
+                    <label class="radio-chip">
+                      <input type="radio" name="topic" value="hvo" required checked>
+                      HVO導入について相談
+                    </label>
+                    <label class="radio-chip">
+                      <input type="radio" name="topic" value="media">
+                      メディア取材
+                    </label>
+                    <label class="radio-chip">
+                      <input type="radio" name="topic" value="other">
+                      その他
+                    </label>
+                  </div>
+                </fieldset>
+              </div>
+
+              <div class="form-grid form-grid--2">
+                <div class="field">
+                  <label for="usage">用途<span class="req">必須</span></label>
+                  <select id="usage" name="usage" required>
+                    <option value="">選択してください</option>
+                    <option>建設・建設機械</option>
+                    <option>物流・トラック</option>
+                    <option>港湾・荷役機械</option>
+                    <option>船舶</option>
+                    <option>発電機</option>
+                    <option>荷主・発注者・デベロッパー（Scope3削減）</option>
+                    <option>製造業（ボイラー）</option>
+                    <option>その他・未定</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="equipment">対象車両・設備<span class="req">必須</span></label>
+                  <input type="text" id="equipment" name="equipment" required placeholder="例：バックホウ5台、現場発電機2台">
+                </div>
+              </div>
+            </section>
+
+            <!-- 3 -->
+            <section class="form-block" id="form-detail">
+              <h2 class="form-block__title"><span>03</span>利用条件</h2>
+              <p class="form-block__note">分かる範囲でご記入ください。確定していない項目は、初回のご相談時に一緒に整理します。</p>
+
+              <div class="form-grid form-grid--2">
+                <div class="field">
+                  <label for="area">想定の使用地域<span class="opt">任意</span></label>
+                  <input type="text" id="area" name="area" placeholder="例：東京都・神奈川県（郵便番号でも可）">
+                </div>
+                <div class="field">
+                  <label for="fuel">現在使用している燃料<span class="opt">任意</span></label>
+                  <input type="text" id="fuel" name="fuel" placeholder="例：軽油（免税軽油を一部使用）">
+                </div>
+                <div class="field">
+                  <label for="volume">月間・年間使用量<span class="opt">任意</span></label>
+                  <input type="text" id="volume" name="volume" placeholder="例：月間8 kL ／ 年間約100 kL">
+                </div>
+                <div class="field">
+                  <label for="maker">メーカー・型式<span class="opt">任意</span></label>
+                  <input type="text" id="maker" name="maker" placeholder="例：メーカー名・型式・年式">
+                </div>
+              </div>
+
+              <div class="field" style="margin-top:18px">
+                <label for="message">ご相談内容<span class="opt">任意</span></label>
+                <textarea id="message" name="message" rows="5" placeholder="導入目的、希望時期、トライアルの検討状況などをご記入ください。"></textarea>
+              </div>
+
+              <p class="note" style="margin-top:14px">CO₂削減量の概算は、<a href="adoption.html#ghg">GHG削減効果・削減量試算</a>のシミュレーションでもご確認いただけます。</p>
+            </section>
+
+            <!-- 4 -->
+            <section class="form-block" id="form-consent">
+              <h2 class="form-block__title"><span>04</span>個人情報の取扱い</h2>
+              <p class="form-block__note">ご入力いただいた情報は、お問い合わせへの回答およびご提案のために使用します。</p>
+              <label class="consent">
+                <input type="checkbox" id="consent" name="consent" required>
+                <span>個人情報の取扱いに同意します。<span class="req">必須</span></span>
+              </label>
+
+              <div class="form-submit">
+                <button class="btn btn--primary" type="submit">入力内容を確認する</button>
+                <span class="note" style="margin:0">デモ版では送信されません。</span>
+              </div>
+              <p class="result-note" id="contact-result" hidden role="status"></p>
+            </section>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--tight">
+    <div class="wrap">
+      <div class="cards cards--3">
+        <a class="card" href="knowledge.html#faq">
+          <h3>よくある質問</h3>
+          <p>車両・設備での使用可否、供給方法、費用、GHG削減効果など、多いご質問への回答を掲載しています。</p>
+          <span class="card__go">確認する →</span>
+        </a>
+        <a class="card" href="adoption.html#guide">
+          <h3>導入判断ガイド</h3>
+          <p>導入目的の整理から、設備の確認、供給方法の設計、削減効果と証憑、導入計画まで。</p>
+          <span class="card__go">確認する →</span>
+        </a>
+        <a class="card" href="adoption.html#flow">
+          <h3>導入までの流れ</h3>
+          <p>初回のご相談から、確認、試行、本導入、継続運用までの流れと期間の目安。</p>
+          <span class="card__go">確認する →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h2>バイオ燃料HVO サステオ</h2>
+        <p>ユーグレナが提供するバイオ燃料HVOのブランドです。電化が難しい車両、建設機械、発電機、船舶などのGHG排出削減を支援します。</p>
+      </div>
+      <div>
+        <h3>知る・探す</h3>
+        <ul>
+          <li><a href="about.html">HVO・サステオを知る</a></li>
+          <li><a href="solutions.html">用途・立場から探す</a></li>
+          <li><a href="knowledge.html#glossary">用語集</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>検討する</h3>
+        <ul>
+          <li><a href="adoption.html#guide">導入判断ガイド</a></li>
+          <li><a href="adoption.html#ghg">GHG削減量の試算</a></li>
+          <li><a href="adoption.html#supply">供給エリア・供給方法</a></li>
+          <li><a href="adoption.html#flow">導入までの流れ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>その他</h3>
+        <ul>
+          <li><a href="knowledge.html#faq">よくある質問</a></li>
+          <li><a href="company.html">ユーグレナについて</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© Euglena Co., Ltd. — デモ版（Web掲載原稿ドラフト v0.5 ベース）</span>
+      <span>SUSTEO / HVO</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>
