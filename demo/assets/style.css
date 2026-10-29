@@ -528,6 +528,49 @@ a.card:hover .card__go { color: var(--teal); }
 }
 .doc-section__q b { font-size: .74rem; font-weight: 700; letter-spacing: .02em; color: var(--teal-deep); margin-right: 10px; }
 
+/* ---------- 本文と図版の二段組み ----------
+   列が入る幅があれば二段、なければ一段に落ちる。親の幅で決まるので
+   目次レールの有無にかかわらず破綻しない。 */
+.split {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  align-items: start;
+}
+.split > * { min-width: 0; }
+
+/* 白地の図版は、暗いテーマでも白いカードとして見せる */
+.diagram {
+  margin: 0;
+  background: #FFFFFF;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px 14px 0;
+  box-shadow: var(--shadow);
+}
+.diagram img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+}
+.diagram figcaption {
+  padding: 12px 4px 14px;
+  border-top: 1px solid #E8EEEC;
+  margin-top: 12px;
+  font-size: .78rem;
+  line-height: 1.75;
+  color: #4B5B57;
+}
+.diagram figcaption b {
+  display: block;
+  font-family: var(--display);
+  font-size: .86rem;
+  font-weight: 700;
+  color: #13211E;
+  margin-bottom: 3px;
+}
+
 /* ---------- tables ---------- */
 .table-scroll {
   overflow-x: auto;
