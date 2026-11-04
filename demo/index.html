@@ -45,16 +45,15 @@
 <div class="demo-bar">
   <div class="demo-bar__inner">
     <strong>DEMO</strong>
-    <span>「Web掲載原稿ドラフト v0.5」をもとに構成したデモ版です。企業名・導入量・削減率・開始年などの数値は一次情報との照合前のため、ダミーまたは非掲載としています。</span>
+    <span>「Web掲載原稿ドラフト v0.5」をもとに構成したデモ版です。写真は差し替え位置のみ示しています。企業名・導入量・削減率・開始年などの数値は一次情報との照合前のため掲載していません。</span>
   </div>
 </div>
 
 <header class="site-header">
   <div class="site-header__inner">
     <a class="brand" href="index.html">
-      <span class="brand__mark">HVO</span>
-      サステオ
-      <span class="brand__sub">バイオ燃料</span>
+      <span class="brand__word">SUSTEO</span>
+      <span class="brand__sub">バイオ燃料HVO</span>
     </a>
     <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false">MENU</button>
     <nav class="site-nav" id="site-nav" aria-label="メインメニュー">
@@ -63,7 +62,7 @@
       <a href="adoption.html">導入を検討する</a>
       <a href="knowledge.html">導入事例・ナレッジ</a>
       <a href="company.html">ユーグレナについて</a>
-      <a class="nav-cta" href="contact.html">お問い合わせ</a>
+      <a class="nav-cta" href="contact.html">お問い合わせ <span class="arw">→</span></a>
     </nav>
   </div>
 </header>
@@ -71,261 +70,242 @@
 <main>
 
   <!-- ===== ファーストビュー ===== -->
-  <section class="hero">
-    <div class="wrap hero__grid">
+  <section class="hero-split">
+    <div class="hero-split__text">
       <div>
-        <p class="eyebrow">Biofuel HVO / SUSTEO</p>
+        <p class="eyebrow">Renewable fuel / SUSTEO</p>
         <h1>脱炭素を、<br>現場から動かす。</h1>
         <p class="hero__sub">Scope1・Scope3の削減を、今ある設備から。</p>
-        <div class="prose">
-          <p>サステオは、ユーグレナが提供するバイオ燃料HVOのブランドです。電化が難しい車両、建設機械、発電機、船舶などのGHG排出削減を支援します。</p>
-          <p>車両・建設機械・発電機・船舶などの利用条件をもとに、削減効果や燃料供給の方法を含め、<span class="mark">導入に向けた最適な選択肢</span>をご案内します。</p>
-        </div>
+        <p class="hero-split__lead">サステオは、ユーグレナが提供するバイオ燃料HVOのブランドです。電化が難しい車両、建設機械、発電機、船舶などのGHG排出削減を支援します。</p>
         <div class="hero__actions">
           <a class="btn btn--primary" href="about.html">HVO・サステオを知る <span class="arw">→</span></a>
-          <a class="btn btn--line" href="solutions.html">用途・立場から探す</a>
           <a class="btn btn--line" href="contact.html">導入について相談する</a>
         </div>
       </div>
-
-      <div class="spec-card" aria-label="製品ラインナップの概要">
-        <div class="spec-card__head">製品ラインナップ</div>
-        <dl>
-          <dt>サステオ100</dt>
-          <dd>HVO 100％</dd>
-          <dt>主な用途</dt>
-          <dd>建設機械・構内機械・発電機など</dd>
-          <dt>サステオ51</dt>
-          <dd>HVO 51％ ＋ 軽油 49％</dd>
-          <dt>主な用途</dt>
-          <dd>トラック・バスなど公道走行車</dd>
-          <dt>供給方法</dt>
-          <dd>ローリー／ドラム缶／既存タンク</dd>
-          <dt>持続可能性</dt>
-          <dd>ISCC認証に基づく管理</dd>
-        </dl>
-      </div>
+    </div>
+    <div class="hero-split__media">
+      <div class="ph ph--hero"><svg class="ico" aria-hidden="true"><use href="#i-truck"/></svg><span class="ph__t">写真が入ります</span><span class="ph__d">高速道路を走る大型トラック、または稼働中の建設機械。横長で、右半分に被写体が寄った構図が収まります。<b>推奨 1600 × 1100px 以上</b></span></div>
     </div>
   </section>
 
+  <!-- ===== HVOとは ===== -->
+  <section class="band-split">
+    <div class="band-split__text">
+      <div>
+        <p class="eyebrow">About HVO</p>
+        <h2 class="section-title">HVOとは？</h2>
+        <div class="prose">
+          <p>HVO（Hydrotreated Vegetable Oil）は、廃食油や植物油、動物性油脂などを水素化処理して製造する、パラフィン系炭化水素燃料です。</p>
+          <p>軽油に近い性状を持つため、既存のディーゼル車両や建設機械、発電機を大きく変更することなく、燃料を切り替えるだけで導入を検討できます。</p>
+        </div>
+        <a class="btn btn--soft" href="about.html">詳しく見る <span class="arw">→</span></a>
+      </div>
+    </div>
+    <div class="band-split__media">
+      <div class="ph ph--square"><svg class="ico" aria-hidden="true"><use href="#i-leaf"/></svg><span class="ph__t">写真が入ります</span><span class="ph__d">植物の葉と水滴など、原料の由来と再生可能性を示すもの。左端にテキストが重ならない構図が収まります。<b>推奨 1200 × 800px 以上</b></span></div>
+    </div>
+  </section>
 
   <!-- ===== 原料から現場まで ===== -->
-  <section class="band band--tight band--paper">
-    <div class="wrap">
-      <p class="eyebrow">Feedstock to site</p>
-      <h2 class="section-title">原料から、現場まで。</h2>
-      <p class="lead">廃棄物・残渣由来の油脂を水素化処理してHVOにし、用途と数量に応じた方法で現場までお届けします。</p>
-      <div class="flow">
-        <div class="flow__step">
-          <div class="flow__mark"><span class="flow__n">01</span><svg class="ico" aria-hidden="true"><use href="#i-leaf"/></svg></div>
-          <h3>原料</h3>
-          <p>廃食油（UCO）、植物油、動物性油脂など。廃棄物・残渣由来の原料を活用します。</p>
-        </div>
-        <div class="flow__step">
-          <div class="flow__mark"><span class="flow__n">02</span><svg class="ico" aria-hidden="true"><use href="#i-plant"/></svg></div>
-          <h3>製造</h3>
-          <p>水素化処理により、軽油に近い性状のパラフィン系炭化水素燃料をつくります。</p>
-        </div>
-        <div class="flow__step">
-          <div class="flow__mark"><span class="flow__n">03</span><svg class="ico" aria-hidden="true"><use href="#i-nozzle"/></svg></div>
-          <h3>供給</h3>
-          <p>タンクローリー、ドラム缶、既存タンクへの受入れ。納入先と数量に応じて選びます。</p>
-        </div>
-        <div class="flow__step">
-          <div class="flow__mark"><span class="flow__n">04</span><svg class="ico" aria-hidden="true"><use href="#i-excavator"/></svg></div>
-          <h3>利用</h3>
-          <p>既存のディーゼル車両・建設機械・発電機・船舶で、そのまま使用できます。</p>
+  <section class="sect wrap">
+    <div class="sect__grid">
+      <div class="sect__lede">
+        <p class="eyebrow">Process</p>
+        <h2>原料から、現場まで。</h2>
+        <p>廃棄物・残渣由来の油脂を水素化処理してHVOにし、用途と数量に応じた方法で現場までお届けします。</p>
+        <a class="btn btn--soft" href="adoption.html#supply">供給方法を見る <span class="arw">→</span></a>
+      </div>
+      <div class="sect__body">
+        <div class="proc">
+          <div class="proc__step">
+            <div class="proc__chip"><svg class="ico" aria-hidden="true"><use href="#i-leaf"/></svg></div>
+            <h3>原料</h3>
+            <p>廃食油（UCO）、<br>植物油、動物性油脂</p>
+          </div>
+          <div class="proc__step">
+            <div class="proc__chip"><svg class="ico" aria-hidden="true"><use href="#i-plant"/></svg></div>
+            <h3>製造</h3>
+            <p>水素化処理により<br>HVOへ</p>
+          </div>
+          <div class="proc__step">
+            <div class="proc__chip"><svg class="ico" aria-hidden="true"><use href="#i-nozzle"/></svg></div>
+            <h3>供給</h3>
+            <p>ローリー、ドラム缶、<br>既存タンクへの受入れ</p>
+          </div>
+          <div class="proc__step">
+            <div class="proc__chip"><svg class="ico" aria-hidden="true"><use href="#i-excavator"/></svg></div>
+            <h3>現場での活用</h3>
+            <p>既存のディーゼル<br>車両・設備で使用</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ===== HVOの主な価値 ===== -->
-  <section class="band band--paper">
-    <div class="wrap">
-      <p class="eyebrow">Why HVO</p>
-      <h2 class="section-title">設備更新を待たず、既存資産を活かした脱炭素の選択肢。</h2>
-      <p class="lead">サステオは、既存のディーゼル車両・設備を活用しながら、GHG排出削減に取り組みたいお客様に向けたバイオ燃料です。</p>
-
-      <div class="values">
-        <div>
-          <span class="values__k">Scope 1</span>
-          <h3>Scope1削減への対応</h3>
-          <p>燃料転換によって、既存設備を活用しながらGHG排出削減に取り組めます。</p>
+  <section class="sect wrap">
+    <div class="sect__grid">
+      <div class="sect__lede">
+        <p class="eyebrow">Advantage</p>
+        <h2>設備更新を待たず、既存資産を活かす。</h2>
+        <p>サステオは、既存のディーゼル車両・設備を活用しながら、GHG排出削減に取り組みたいお客様に向けたバイオ燃料です。</p>
+        <a class="btn btn--soft" href="about.html#susteo">詳しく見る <span class="arw">→</span></a>
+      </div>
+      <div class="sect__body">
+        <div class="adv">
+          <div class="adv__item"><svg class="ico" aria-hidden="true"><use href="#i-drop"/></svg>
+            <h3>Scope1削減への対応</h3>
+            <p>燃料転換によって、既存設備を活用しながら取り組めます。</p>
+          </div>
+          <div class="adv__item"><svg class="ico" aria-hidden="true"><use href="#i-wrench"/></svg>
+            <h3>既存資産の活用</h3>
+            <p>車両や建設機械、発電機を大きく更新せずに検討できます。</p>
+          </div>
+          <div class="adv__item"><svg class="ico" aria-hidden="true"><use href="#i-generator"/></svg>
+            <h3>電化が難しい現場へ</h3>
+            <p>長距離輸送、建設現場、船舶、非常用電源などに。</p>
+          </div>
+          <div class="adv__item"><svg class="ico" aria-hidden="true"><use href="#i-network"/></svg>
+            <h3>サプライチェーンの要請に</h3>
+            <p>顧客・荷主・発注者からの排出削減要請への選択肢として。</p>
+          </div>
+          <div class="adv__item"><svg class="ico" aria-hidden="true"><use href="#i-steps"/></svg>
+            <h3>小規模導入から開始</h3>
+            <p>対象設備や拠点を限定したトライアルから段階的に。</p>
+          </div>
+          <div class="adv__item"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg>
+            <h3>証憑による説明</h3>
+            <p>ISCC認証に基づく管理のもとで供給し、各種証憑を提供します。</p>
+          </div>
         </div>
-        <div>
-          <span class="values__k">Asset</span>
-          <h3>既存資産の活用</h3>
-          <p>車両や建設機械、発電機などを大きく更新せずに導入を検討できます。</p>
-        </div>
-        <div>
-          <span class="values__k">Hard to electrify</span>
-          <h3>電化が難しい現場への適用</h3>
-          <p>長距離輸送、建設現場、船舶、非常用電源などの脱炭素化手段として活用できます。</p>
-        </div>
-        <div>
-          <span class="values__k">Supply chain</span>
-          <h3>サプライチェーンからの要請への対応</h3>
-          <p>顧客・荷主・発注者からの排出削減要請に対する選択肢として活用できます。</p>
-        </div>
-        <div>
-          <span class="values__k">Small start</span>
-          <h3>小規模導入から開始可能</h3>
-          <p>対象設備や対象拠点を限定したトライアルから段階的に導入できます。</p>
-        </div>
-        <div>
-          <span class="values__k">Evidence</span>
-          <h3>証憑による説明</h3>
-          <p>ISCC認証に基づくサプライチェーン管理のもとで供給される燃料を取り扱い、各種証憑をご提供します。</p>
+        <div class="callout callout--attention">
+          <p class="callout__title">削減効果の示し方には前提があります</p>
+          <p>Scope1・Scope3への反映方法は、<span class="mark">利用形態と採用する算定基準によって異なります。</span>実際の削減効果は、原料や製造・輸送条件、算定基準などに応じて算定します。固定的な削減率はデモ版では掲載していません。</p>
         </div>
       </div>
-
-      <div class="callout callout--attention">
-        <p class="callout__title">削減効果の示し方には前提があります</p>
-        <p>Scope1・Scope3への反映方法は、<span class="mark">利用形態と採用する算定基準によって異なります。</span>実際の削減効果は、原料や製造・輸送条件、算定基準などに応じて算定します。</p>
-      </div>
-      <a class="cta-inline" href="about.html">HVO・サステオを知る →</a>
     </div>
   </section>
 
-  <!-- ===== 用途・立場から探す ===== -->
-  <section class="band band--surface">
-    <div class="wrap">
-      <p class="eyebrow">Use cases</p>
-      <h2 class="section-title">サステオの活用方法を、用途やお客様の立場から確認できます。</h2>
-      <p class="lead">対象となる設備、確認が必要な事項、供給方法、削減効果の整理の仕方は用途によって異なります。</p>
-
-      <div class="cards cards--3">
-        <a class="card" href="solutions.html#construction">
-          <span class="card__icon"><svg class="ico" aria-hidden="true"><use href="#i-excavator"/></svg></span>
-          <span class="card__no">01</span>
-          <h3>建設・建設機械</h3>
-          <p>バックホウ、クレーン、ホイールローダー、現場発電機。工事現場単位での導入を検討できます。</p>
-          <span class="card__go">確認する →</span>
-        </a>
-        <a class="card" href="solutions.html#logistics">
-          <span class="card__icon"><svg class="ico" aria-hidden="true"><use href="#i-truck"/></svg></span>
-          <span class="card__no">02</span>
-          <h3>物流・トラック</h3>
-          <p>既存フリートを活用した燃料転換。荷主企業と運送会社が連携する導入スキームも設計します。</p>
-          <span class="card__go">確認する →</span>
-        </a>
-        <a class="card" href="solutions.html#port">
-          <span class="card__icon"><svg class="ico" aria-hidden="true"><use href="#i-crane"/></svg></span>
-          <span class="card__no">03</span>
-          <h3>港湾・荷役機械</h3>
-          <p>コンテナ荷役機械、構内搬送車両、フォークリフト、ディーゼル発電機での活用。</p>
-          <span class="card__go">確認する →</span>
-        </a>
-        <a class="card" href="solutions.html#marine">
-          <span class="card__icon"><svg class="ico" aria-hidden="true"><use href="#i-ship"/></svg></span>
-          <span class="card__no">04</span>
-          <h3>船舶</h3>
-          <p>内航船、作業船、港湾関連船舶。船種、主機・補機の仕様から利用可能性を検討します。</p>
-          <span class="card__go">確認する →</span>
-        </a>
-        <a class="card" href="solutions.html#generator">
-          <span class="card__icon"><svg class="ico" aria-hidden="true"><use href="#i-generator"/></svg></span>
-          <span class="card__no">05</span>
-          <h3>発電機</h3>
-          <p>仮設電源から施設の非常用発電機まで、設備仕様と運用条件に応じて検討します。</p>
-          <span class="card__go">確認する →</span>
-        </a>
-        <a class="card" href="solutions.html#shipper">
-          <span class="card__icon"><svg class="ico" aria-hidden="true"><use href="#i-network"/></svg></span>
-          <span class="card__no">06</span>
-          <h3>荷主・発注者・デベロッパー</h3>
-          <p>委託輸送や発注工事に伴うScope3削減。費用分担と証憑管理を含めて整理します。</p>
-          <span class="card__go">確認する →</span>
-        </a>
-        <a class="card" href="solutions.html#manufacturing">
-          <span class="card__icon"><svg class="ico" aria-hidden="true"><use href="#i-factory"/></svg></span>
-          <span class="card__no">07</span>
-          <h3>製造業（ボイラー）</h3>
-          <p>工場設備での燃料転換について、対象設備と運用条件をもとに個別に検討します。</p>
-          <span class="card__go">確認する →</span>
-        </a>
+  <!-- ===== 活用方法 ===== -->
+  <section class="sect wrap">
+    <div class="sect__grid">
+      <div class="sect__lede">
+        <p class="eyebrow">Use cases</p>
+        <h2>活用方法</h2>
+        <p>トラック、建設機械、船舶、発電機など、電化が難しい現場で活用されています。用途ごとに確認事項と供給方法が異なります。</p>
+        <a class="btn btn--soft" href="solutions.html">活用シーンを見る <span class="arw">→</span></a>
       </div>
-
-      <a class="cta-inline" href="solutions.html">用途・立場から探す →</a>
+      <div class="sect__body">
+        <div class="pcards">
+          <a class="pcard" href="solutions.html#logistics">
+            <div class="ph "><svg class="ico" aria-hidden="true"><use href="#i-truck"/></svg><span class="ph__t">写真が入ります</span><span class="ph__d">幹線輸送のトラック、または営業所での給油風景<b>推奨 1200 × 750px</b></span></div>
+            <h3>物流・トラック</h3>
+            <p>既存フリートを活用した燃料転換。荷主企業との連携スキームも設計します。</p>
+            <span class="pcard__go">確認する →</span>
+          </a>
+          <a class="pcard" href="solutions.html#construction">
+            <div class="ph "><svg class="ico" aria-hidden="true"><use href="#i-excavator"/></svg><span class="ph__t">写真が入ります</span><span class="ph__d">稼働中のバックホウ、クレーンなどの建設機械<b>推奨 1200 × 750px</b></span></div>
+            <h3>建設・建設機械</h3>
+            <p>工事現場単位で導入でき、施工段階の排出削減に着手できます。</p>
+            <span class="pcard__go">確認する →</span>
+          </a>
+          <a class="pcard" href="solutions.html#marine">
+            <div class="ph "><svg class="ico" aria-hidden="true"><use href="#i-ship"/></svg><span class="ph__t">写真が入ります</span><span class="ph__d">内航船、作業船、または港湾関連船舶<b>推奨 1200 × 750px</b></span></div>
+            <h3>船舶</h3>
+            <p>既存の船舶用ディーゼルエンジンを活用したまま検討できます。</p>
+            <span class="pcard__go">確認する →</span>
+          </a>
+        </div>
+        <div class="chips">
+          <a class="chip" href="solutions.html#port"><svg class="ico" aria-hidden="true"><use href="#i-crane"/></svg>港湾・荷役機械</a>
+          <a class="chip" href="solutions.html#generator"><svg class="ico" aria-hidden="true"><use href="#i-generator"/></svg>発電機</a>
+          <a class="chip" href="solutions.html#shipper"><svg class="ico" aria-hidden="true"><use href="#i-network"/></svg>荷主・発注者・デベロッパー</a>
+          <a class="chip" href="solutions.html#manufacturing"><svg class="ico" aria-hidden="true"><use href="#i-factory"/></svg>製造業（ボイラー）</a>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ===== 導入を検討する ===== -->
-  <section class="band band--paper">
-    <div class="wrap">
-      <p class="eyebrow">How to adopt</p>
-      <h2 class="section-title">導入判断に必要な情報を、テーマごとに整理しています。</h2>
-      <div class="prose">
-        <p>サステオの導入にあたっては、設備との適合性だけでなく、GHG削減効果、供給方法、コスト、法令・税務、環境開示への反映方法などを確認する必要があります。</p>
+  <section class="sect wrap">
+    <div class="sect__grid">
+      <div class="sect__lede">
+        <p class="eyebrow">How to adopt</p>
+        <h2>導入条件を、順を追って確認する。</h2>
+        <p>設備との適合性だけでなく、GHG削減効果、供給方法、コスト、法令・税務、環境開示への反映方法まで確認が必要です。</p>
+        <a class="btn btn--soft" href="adoption.html">導入を検討する <span class="arw">→</span></a>
       </div>
-
-      <div class="cards cards--3">
-        <a class="card" href="adoption.html#equipment">
-          <span class="card__icon"><svg class="ico" aria-hidden="true"><use href="#i-wrench"/></svg></span>
-          <h3>車両・設備への適合確認</h3>
-          <p>メーカー、型式、年式、エンジン仕様、保証・保守契約上の取扱い。</p>
-          <span class="card__go">確認する →</span>
-        </a>
-        <a class="card" href="adoption.html#ghg">
-          <span class="card__icon"><svg class="ico" aria-hidden="true"><use href="#i-calc"/></svg></span>
-          <h3>GHG削減効果・削減量試算</h3>
-          <p>算定基準による見方の違いと、CO₂削減量の簡易シミュレーション。</p>
-          <span class="card__go">試算する →</span>
-        </a>
-        <a class="card" href="adoption.html#cost">
-          <span class="card__icon"><svg class="ico" aria-hidden="true"><use href="#i-tag"/></svg></span>
-          <h3>コスト・価格決定要素</h3>
-          <p>数量、地域、荷姿、配送、契約期間など、見積条件の整理。</p>
-          <span class="card__go">確認する →</span>
-        </a>
-        <a class="card" href="adoption.html#supply">
-          <span class="card__icon"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg></span>
-          <h3>供給エリア・供給方法</h3>
-          <p>パトロール給油、ドラム缶配送、既存タンクへの受入れ、船舶・港湾への供給。</p>
-          <span class="card__go">確認する →</span>
-        </a>
-        <a class="card" href="adoption.html#tax">
-          <span class="card__icon"><svg class="ico" aria-hidden="true"><use href="#i-doccheck"/></svg></span>
-          <h3>公道走行時の税務上の取扱い</h3>
-          <p>サステオ100とサステオ51の地方税法上の違いと、必要な運用。</p>
-          <span class="card__go">確認する →</span>
-        </a>
-        <a class="card" href="adoption.html#flow">
-          <span class="card__icon"><svg class="ico" aria-hidden="true"><use href="#i-steps"/></svg></span>
-          <h3>小規模トライアル・導入手順</h3>
-          <p>初回相談から試行、評価、本導入、継続運用までの流れ。</p>
-          <span class="card__go">確認する →</span>
-        </a>
+      <div class="sect__body">
+        <div class="chips" style="margin-top:0">
+          <a class="chip" href="adoption.html#guide"><svg class="ico" aria-hidden="true"><use href="#i-compass"/></svg>導入判断ガイド</a>
+          <a class="chip" href="adoption.html#ghg"><svg class="ico" aria-hidden="true"><use href="#i-calc"/></svg>GHG削減効果・削減量試算</a>
+          <a class="chip" href="adoption.html#cost"><svg class="ico" aria-hidden="true"><use href="#i-tag"/></svg>コスト・価格決定要素</a>
+          <a class="chip" href="adoption.html#supply"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>供給エリア・供給方法</a>
+          <a class="chip" href="adoption.html#equipment"><svg class="ico" aria-hidden="true"><use href="#i-wrench"/></svg>車両・設備・メーカー確認</a>
+          <a class="chip" href="adoption.html#tax"><svg class="ico" aria-hidden="true"><use href="#i-doccheck"/></svg>公道走行時の税務上の取扱い</a>
+          <a class="chip" href="adoption.html#flow"><svg class="ico" aria-hidden="true"><use href="#i-steps"/></svg>導入までの流れ</a>
+        </div>
+        <div class="statline">
+          <div class="stat">
+            <span class="stat__v">2.62<small>t-CO₂/kL</small></span>
+            <span class="stat__k">試算に用いる軽油のCO₂排出係数</span>
+          </div>
+          <div class="stat">
+            <span class="stat__v">100<small>％</small></span>
+            <span class="stat__k">サステオ100のHVO混合率</span>
+          </div>
+          <div class="stat stat--accent">
+            <span class="stat__v">51<small>％</small></span>
+            <span class="stat__k">サステオ51のHVO混合率。公道走行車に使えます</span>
+          </div>
+        </div>
+        <div class="ask">
+          <p>年間の軽油使用量を入れると、CO₂削減量の概算をその場で確認できます。</p>
+          <a class="btn btn--primary" href="adoption.html#ghg">CO₂削減量を試算する</a>
+        </div>
       </div>
-
-      <a class="cta-inline" href="adoption.html">導入を検討する →</a>
     </div>
   </section>
 
-  <!-- ===== 導入事例・ナレッジ ===== -->
-  <section class="band band--surface">
-    <div class="wrap">
-      <p class="eyebrow">Cases &amp; knowledge</p>
-      <h2 class="section-title">導入判断に必要な知見を発信しています。</h2>
-      <div class="prose">
-        <p>サステオの導入事例から、実証・技術検証、制度・技術の解説まで、導入判断に必要な知見を発信しています。</p>
-        <p>記事は、導入事例、実証・技術検証、コラム・解説、ニュース・活動情報に分類し、目的に応じて確認できます。あわせて、よくある質問と用語集を掲載しています。</p>
+  <!-- ===== ナレッジ ===== -->
+  <section class="sect wrap">
+    <div class="sect__grid">
+      <div class="sect__lede">
+        <p class="eyebrow">Knowledge</p>
+        <h2>事例と解説を、テーマごとに。</h2>
+        <p>導入事例、実証・技術検証、制度や技術の解説、ニュース・活動情報。あわせて、よくある質問と用語集を掲載しています。</p>
+        <a class="btn btn--soft" href="knowledge.html">ナレッジを読む <span class="arw">→</span></a>
       </div>
-      <a class="cta-inline" href="knowledge.html">導入事例・ナレッジ →</a>
+      <div class="sect__body">
+        <div class="pcards">
+          <a class="kcard" href="knowledge.html#articles">
+            <div class="kcard__top"><span class="pill">コラム・解説</span><span class="kcard__date">掲載準備中</span></div>
+            <h3>HVOとFAMEは何が違うのか</h3>
+            <div class="ph "><svg class="ico" aria-hidden="true"><use href="#i-article"/></svg><span class="ph__t">写真が入ります</span><span class="ph__d">記事サムネイル<b>推奨 800 × 450px</b></span></div>
+          </a>
+          <a class="kcard" href="knowledge.html#articles">
+            <div class="kcard__top"><span class="pill">導入事例</span><span class="kcard__date">掲載準備中</span></div>
+            <h3>幹線輸送トラックでのサステオ51導入</h3>
+            <div class="ph "><svg class="ico" aria-hidden="true"><use href="#i-article"/></svg><span class="ph__t">写真が入ります</span><span class="ph__d">記事サムネイル<b>推奨 800 × 450px</b></span></div>
+          </a>
+          <a class="kcard" href="knowledge.html#faq">
+            <div class="kcard__top"><span class="pill">よくある質問</span><span class="kcard__date">公開中</span></div>
+            <h3>品質・価格・供給についての質問</h3>
+            <div class="ph "><svg class="ico" aria-hidden="true"><use href="#i-article"/></svg><span class="ph__t">写真が入ります</span><span class="ph__d">記事サムネイル<b>推奨 800 × 450px</b></span></div>
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ===== お問い合わせ ===== -->
-  <section class="band band--ink">
-    <div class="wrap">
-      <p class="eyebrow" style="color:rgba(255,255,255,.72)">Contact</p>
-      <h2 class="section-title" style="color:#fff">「自社の車両や設備で利用できるか知りたい」<br>その段階からご相談いただけます。</h2>
-      <p class="lead" style="color:rgba(255,255,255,.82)">用途や利用条件に応じて、導入可否、供給方法、費用、GHG削減効果などをご案内します。使用量や導入時期が決まっていない場合でもご相談いただけます。</p>
-      <div class="hero__actions">
-        <a class="btn btn--onink" href="contact.html">お問い合わせ</a>
-        <a class="btn btn--ghostink" href="adoption.html#ghg">CO₂削減量を試算する</a>
+  <section class="cta-wide">
+    <div class="cta-wide__inner">
+      <div>
+        <h2>「脱炭素の第一歩」として、<br>サステオの導入をご検討ください。</h2>
+        <p>使用量や導入時期が決まっていない段階でも、分かる範囲の情報でご相談いただけます。</p>
       </div>
+      <a class="btn btn--onink" href="contact.html">お問い合わせ <span class="arw">→</span></a>
     </div>
   </section>
 
@@ -333,40 +313,23 @@
 
 <footer class="site-footer">
   <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <h2>バイオ燃料HVO サステオ</h2>
-        <p>ユーグレナが提供するバイオ燃料HVOのブランドです。電化が難しい車両、建設機械、発電機、船舶などのGHG排出削減を支援します。</p>
-      </div>
-      <div>
-        <h3>知る・探す</h3>
-        <ul>
-          <li><a href="about.html">HVO・サステオを知る</a></li>
-          <li><a href="solutions.html">用途・立場から探す</a></li>
-          <li><a href="knowledge.html#glossary">用語集</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3>検討する</h3>
-        <ul>
-          <li><a href="adoption.html#guide">導入判断ガイド</a></li>
-          <li><a href="adoption.html#ghg">GHG削減量の試算</a></li>
-          <li><a href="adoption.html#supply">供給エリア・供給方法</a></li>
-          <li><a href="adoption.html#flow">導入までの流れ</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3>その他</h3>
-        <ul>
-          <li><a href="knowledge.html#faq">よくある質問</a></li>
-          <li><a href="company.html">ユーグレナについて</a></li>
-          <li><a href="contact.html">お問い合わせ</a></li>
-        </ul>
-      </div>
+    <div class="footer-row">
+      <span class="footer-row__brand">SUSTEO</span>
+      <a href="about.html">HVO・サステオを知る</a>
+      <a href="solutions.html">用途・立場から探す</a>
+      <a href="adoption.html">導入を検討する</a>
+      <a href="knowledge.html">導入事例・ナレッジ</a>
+      <a href="knowledge.html#faq">よくある質問</a>
+      <a href="knowledge.html#glossary">用語集</a>
+      <a href="company.html">ユーグレナについて</a>
+      <a href="contact.html">お問い合わせ</a>
     </div>
-    <div class="footer-bottom">
-      <span>© Euglena Co., Ltd. — デモ版（Web掲載原稿ドラフト v0.5 ベース）</span>
-      <span>SUSTEO / HVO</span>
+    <div class="footer-foot">
+      <span class="footer-foot__c">© Euglena Co., Ltd. — デモ版（Web掲載原稿ドラフト v0.5 ベース）</span>
+      <span class="footer-foot__links">
+        <a href="#">プライバシーポリシー</a>
+        <a href="#">サイトマップ</a>
+      </span>
     </div>
   </div>
 </footer>
