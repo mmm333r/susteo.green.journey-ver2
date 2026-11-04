@@ -74,6 +74,15 @@
             <p class="doc-section__q"><b>この節で分かること</b>導入事例と専門情報を、内容種別から探せます</p>
           </div>
 
+          <div class="keypoints">
+            <p class="keypoints__label">この節の要点</p>
+            <ul>
+              <li>記事は<em>導入事例／実証・技術検証／コラム・解説／ニュース・活動情報</em>の4種別です。</li>
+              <li>上のボタンで種別を切り替えて絞り込めます。</li>
+              <li><em>デモ版では、企業名・導入量・削減率・開始年は掲載していません。</em></li>
+            </ul>
+          </div>
+
           <p class="lead">記事は、導入事例、実証・技術検証、コラム・解説、ニュース・活動情報に分類し、目的に応じて確認できます。</p>
 
           <div class="tabs" role="group" aria-label="記事の種別で絞り込む">
@@ -173,14 +182,34 @@
             <p class="doc-section__q"><b>この節で分かること</b>導入検討時に多いご質問への回答</p>
           </div>
 
+          <div class="keypoints">
+            <p class="keypoints__label">この節の要点</p>
+            <ul>
+              <li>質問は<em>7つの分類</em>に分かれています。タブで切り替えてご覧ください。</li>
+              <li>使用可否、供給方法、費用、削減効果は<em>利用条件によって変わります</em>。</li>
+              <li>回答で判断が難しい場合は、分かる範囲の情報でお問い合わせください。</li>
+            </ul>
+          </div>
+
           <div class="prose">
             <p>サステオの導入を検討されるお客様から、よくお寄せいただくご質問をまとめています。</p>
             <p>車両・設備での使用可否、供給方法、費用、GHG削減効果などは、利用条件によって異なります。回答をご覧いただいても判断が難しい場合は、分かる範囲の情報でお問い合わせください。</p>
           </div>
 
-          <div class="faq-group">
-            <h3 class="faq-group__title"><span>01</span>製品について</h3>
-            <details class="qa">
+          <div data-tabs>
+            <div class="tabrow" role="tablist" aria-label="質問の分類">
+              <button type="button" role="tab" id="tab-faq-product" aria-controls="faq-product" aria-selected="true">製品について</button>
+              <button type="button" role="tab" id="tab-faq-equipment" aria-controls="faq-equipment" aria-selected="false" tabindex="-1">車両・設備への利用について</button>
+              <button type="button" role="tab" id="tab-faq-ghg" aria-controls="faq-ghg" aria-selected="false" tabindex="-1">GHG削減効果について</button>
+              <button type="button" role="tab" id="tab-faq-price" aria-controls="faq-price" aria-selected="false" tabindex="-1">価格・見積りについて</button>
+              <button type="button" role="tab" id="tab-faq-supply" aria-controls="faq-supply" aria-selected="false" tabindex="-1">供給・保管について</button>
+              <button type="button" role="tab" id="tab-faq-quality" aria-controls="faq-quality" aria-selected="false" tabindex="-1">品質・認証・証憑について</button>
+              <button type="button" role="tab" id="tab-faq-legal" aria-controls="faq-legal" aria-selected="false" tabindex="-1">法令・税務について</button>
+            </div>
+
+            <div class="tabpanel" id="faq-product" role="tabpanel" aria-labelledby="tab-faq-product" tabindex="0">
+              <h3 class="faq-group__title"><span>01</span>製品について</h3>
+<details class="qa">
               <summary>サステオとは、どのような燃料ですか。</summary>
               <div class="qa__body">
                 <p>サステオは、ユーグレナが提供するバイオ燃料HVOのブランドです。HVOは、廃食油、植物油、動物性油脂などを水素化処理して製造するパラフィン系炭化水素燃料です。軽油に近い性状を持つため、既存のディーゼル車両や設備を活用しながら、燃料転換によるGHG排出削減を検討できます。</p>
@@ -194,11 +223,11 @@
                 <p>HVOは油脂を水素化処理して製造するパラフィン系炭化水素燃料で、軽油に近い性状を持ちます。FAMEは油脂とメタノールを反応させて製造する脂肪酸メチルエステルで、混合率、吸湿、酸化、低温特性、保管条件などの確認が必要です。</p>
               </div>
             </details>
-          </div>
+            </div>
 
-          <div class="faq-group">
-            <h3 class="faq-group__title"><span>02</span>車両・設備への利用について</h3>
-            <details class="qa">
+            <div class="tabpanel" id="faq-equipment" role="tabpanel" aria-labelledby="tab-faq-equipment" tabindex="0" hidden>
+              <h3 class="faq-group__title"><span>02</span>車両・設備への利用について</h3>
+<details class="qa">
               <summary>現在使用しているディーゼル車両や設備で使えますか。</summary>
               <div class="qa__body">
                 <p>HVOは軽油に極めて近い性状を持ち、既存のディーゼル車両・設備との親和性が高い燃料です。ただし、使用できる燃料の条件やメーカー保証、保守契約上の取扱いは、メーカー、型式、年式、エンジン仕様などによって異なります。</p>
@@ -219,11 +248,11 @@
                 <p>トラック、バス、建設機械、港湾荷役機械、構内車両、発電機、船舶など、軽油を使う車両・設備で利用を検討できます。具体的な利用可否は、機器の仕様やメーカーの推奨内容、燃料の種類、使用環境によって異なるため、対象となる車両・設備ごとに確認します。</p>
               </div>
             </details>
-          </div>
+            </div>
 
-          <div class="faq-group">
-            <h3 class="faq-group__title"><span>03</span>GHG削減効果について</h3>
-            <details class="qa">
+            <div class="tabpanel" id="faq-ghg" role="tabpanel" aria-labelledby="tab-faq-ghg" tabindex="0" hidden>
+              <h3 class="faq-group__title"><span>03</span>GHG削減効果について</h3>
+<details class="qa">
               <summary>サステオを導入すると、どの程度GHG排出量を削減できますか。</summary>
               <div class="qa__body">
                 <p>削減効果は、使用する製品、HVOの混合率、使用量、採用する算定基準などによって異なります。</p>
@@ -238,11 +267,11 @@
                 <p><a href="adoption.html#ghg">CO₂削減量シミュレーションで概算を確認する →</a></p>
               </div>
             </details>
-          </div>
+            </div>
 
-          <div class="faq-group">
-            <h3 class="faq-group__title"><span>04</span>価格・見積りについて</h3>
-            <details class="qa">
+            <div class="tabpanel" id="faq-price" role="tabpanel" aria-labelledby="tab-faq-price" tabindex="0" hidden>
+              <h3 class="faq-group__title"><span>04</span>価格・見積りについて</h3>
+<details class="qa">
               <summary>サステオの価格はどのように決まりますか。</summary>
               <div class="qa__body">
                 <p>価格は、製品の種類、使用量、納入地域、配送方法、納入頻度、保管・給油条件、契約期間などによって異なります。</p>
@@ -265,11 +294,11 @@
                 <p>トライアルの要否と実施内容は、対象機器、メーカー確認の状況、供給条件、導入目的に応じて個別に検討します。</p>
               </div>
             </details>
-          </div>
+            </div>
 
-          <div class="faq-group">
-            <h3 class="faq-group__title"><span>05</span>供給・保管について</h3>
-            <details class="qa">
+            <div class="tabpanel" id="faq-supply" role="tabpanel" aria-labelledby="tab-faq-supply" tabindex="0" hidden>
+              <h3 class="faq-group__title"><span>05</span>供給・保管について</h3>
+<details class="qa">
               <summary>どの地域に供給できますか。</summary>
               <div class="qa__body">
                 <p>納入地域、利用用途、使用量、保管・給油環境などを確認し、個別に供給可否を検討します。ローリーによる納入のほか、ドラム缶による配送も検討できます。</p>
@@ -283,22 +312,22 @@
                 <p>消防法、危険物に関する地域の条例、所轄消防の運用などを確認し、タンク、ドラム缶、簡易給油設備等の使用条件を個別に整理する必要があります。</p>
               </div>
             </details>
-          </div>
+            </div>
 
-          <div class="faq-group">
-            <h3 class="faq-group__title"><span>06</span>品質・認証・証憑について</h3>
-            <details class="qa">
+            <div class="tabpanel" id="faq-quality" role="tabpanel" aria-labelledby="tab-faq-quality" tabindex="0" hidden>
+              <h3 class="faq-group__title"><span>06</span>品質・認証・証憑について</h3>
+<details class="qa">
               <summary>原料の由来や持続可能性は確認できますか。</summary>
               <div class="qa__body">
                 <p>ユーグレナでは、ISCC認証に基づくサプライチェーン管理のもとで供給される燃料を取り扱っています。</p>
                 <p>原料の由来、持続可能性、サプライチェーンに関する情報は、供給される燃料と提示可能な証憑に基づいて確認が可能です。</p>
               </div>
             </details>
-          </div>
+            </div>
 
-          <div class="faq-group">
-            <h3 class="faq-group__title"><span>07</span>法令・税務について</h3>
-            <details class="qa">
+            <div class="tabpanel" id="faq-legal" role="tabpanel" aria-labelledby="tab-faq-legal" tabindex="0" hidden>
+              <h3 class="faq-group__title"><span>07</span>法令・税務について</h3>
+<details class="qa">
               <summary>公道を走行するトラックやバスでも使用できますか。</summary>
               <div class="qa__body">
                 <p>公道走行車に使用する場合は、使用する製品の燃料性状と、軽油引取税上の取扱いを確認する必要があります。サステオ51は、HVO51％・軽油49％を配合し、軽油として課税・流通することを前提に、公道走行車での利用を想定した製品です。</p>
@@ -318,6 +347,7 @@
                 <p>免税軽油との関係は、使用用途、使用場所、対象機械、燃料の種類、既存の免税手続などによって異なります。サステオを導入する前に、現在の免税軽油の利用状況と、導入後の燃料管理・税務上の取扱いを確認する必要があります。所管する都道府県等への確認を含め、個別に整理します。</p>
               </div>
             </details>
+            </div>
           </div>
 
           <div class="ask">
@@ -332,6 +362,15 @@
             <span class="doc-section__no">Section 03</span>
             <h2 class="section-title">HVO・脱炭素に関する用語集</h2>
             <p class="doc-section__q"><b>この節で分かること</b>用語の定義と、導入検討で押さえるポイント</p>
+          </div>
+
+          <div class="keypoints">
+            <p class="keypoints__label">この節の要点</p>
+            <ul>
+              <li>HVO、FAME、ISCC、PoS、Scope1/3、LCAなど<em>13の用語</em>を掲載しています。</li>
+              <li>定義だけでなく、<em>導入検討で押さえるポイント</em>をあわせて記載しています。</li>
+              <li>「ドロップイン燃料」「マスバランス方式」など、誤解しやすい用語も補足しています。</li>
+            </ul>
           </div>
 
           <div class="prose">

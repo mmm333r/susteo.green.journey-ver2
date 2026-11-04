@@ -48,34 +48,43 @@
     <div class="wrap">
       <p class="eyebrow">02 / Use cases</p>
       <h1 class="page-title">用途・立場から探す</h1>
-      <p class="lead lead--hero">サステオの活用方法を、用途やお客様の立場から確認できます。対象となる設備、導入前に確認すべき事項、供給方法、関係者の役割分担は用途によって異なります。</p>
+      <p class="lead lead--hero">サステオの活用方法を、用途やお客様の立場から確認できます。対象となる設備、導入前に確認すべき事項、供給方法、関係者の役割分担は用途によって異なります。<span class="mark">左の一覧から、あてはまる用途を選んでください。</span></p>
     </div>
   </section>
 
   <div class="wrap band band--tight">
-    <div class="layout">
+    <div class="layout" data-tabs>
 
-      <aside class="rail" aria-label="このページの目次">
-        <p class="rail__label">用途・立場</p>
-        <ol>
-          <li><a href="#construction">建設・建設機械</a></li>
-          <li><a href="#logistics">物流・トラック</a></li>
-          <li><a href="#port">港湾・荷役機械</a></li>
-          <li><a href="#marine">船舶</a></li>
-          <li><a href="#generator">発電機</a></li>
-          <li><a href="#shipper">荷主・発注者・デベロッパー</a></li>
-          <li><a href="#manufacturing">製造業（ボイラー）</a></li>
-        </ol>
+      <aside class="rail">
+        <p class="rail__label">用途・立場から選ぶ</p>
+        <div class="tabnav" role="tablist" aria-label="用途・立場" aria-orientation="vertical">
+          <button type="button" role="tab" id="tab-construction" aria-controls="construction" aria-selected="true">建設・建設機械</button>
+          <button type="button" role="tab" id="tab-logistics" aria-controls="logistics" aria-selected="false" tabindex="-1">物流・トラック</button>
+          <button type="button" role="tab" id="tab-port" aria-controls="port" aria-selected="false" tabindex="-1">港湾・荷役機械</button>
+          <button type="button" role="tab" id="tab-marine" aria-controls="marine" aria-selected="false" tabindex="-1">船舶</button>
+          <button type="button" role="tab" id="tab-generator" aria-controls="generator" aria-selected="false" tabindex="-1">発電機</button>
+          <button type="button" role="tab" id="tab-shipper" aria-controls="shipper" aria-selected="false" tabindex="-1">荷主・発注者・デベロッパー</button>
+          <button type="button" role="tab" id="tab-manufacturing" aria-controls="manufacturing" aria-selected="false" tabindex="-1">製造業（ボイラー）</button>
+        </div>
       </aside>
 
       <div>
 
         <!-- 1 建設 -->
-        <section class="doc-section" id="construction">
+        <section class="tabpanel doc-section" id="construction" role="tabpanel" aria-labelledby="tab-construction" tabindex="0">
           <div class="doc-section__head">
-            <span class="doc-section__no">Section 01</span>
+            <span class="doc-section__no">Use case 01 ／ 建設・建設機械</span>
             <h2 class="section-title">施工時のGHG排出削減を、今ある建設機械から。</h2>
             <p class="doc-section__q"><b>想定する読者</b>建設会社、発注者</p>
+          </div>
+
+          <div class="keypoints">
+            <p class="keypoints__label">この用途の要点</p>
+            <ul>
+              <li><em>工事現場単位で導入できる</em>ため、設備更新を待たずに施工段階の排出削減に着手できます。</li>
+              <li>バックホウ、クレーン、ホイールローダー、現場発電機が対象になります。</li>
+              <li><em>免税軽油を使っている現場</em>は、既存制度との関係を先に確認します。</li>
+            </ul>
           </div>
 
           <div class="prose">
@@ -85,13 +94,18 @@
           </div>
 
           <p class="step__sub">導入にあたって重要な確認事項</p>
-          <ul class="checklist">
+          <ul class="checkgrid">
             <li>対象機種・メーカー推奨燃料の確認</li>
             <li>免税軽油等の既存制度との関係</li>
             <li>ローリー・ドラム缶等の供給方法</li>
             <li>現場別の燃料使用量・削減量管理</li>
             <li>発注者、元請会社、協力会社の役割と費用負担</li>
           </ul>
+
+          <div class="callout callout--attention">
+            <p class="callout__title">先に確認したい点</p>
+            <p>免税軽油を使用している建設機械では、使用用途、使用場所、対象機械、既存の免税手続によって取扱いが変わります。導入前に、現在の免税軽油の利用状況と、導入後の燃料管理・税務上の取扱いを所管する都道府県等への確認を含めて整理します。</p>
+          </div>
 
           <div class="ask">
             <p>対象設備、地域、月間使用量を整理いただくと、適合性・供給条件・試行方法をご案内できます。</p>
@@ -100,11 +114,20 @@
         </section>
 
         <!-- 2 物流 -->
-        <section class="doc-section" id="logistics">
+        <section class="tabpanel doc-section" id="logistics" role="tabpanel" aria-labelledby="tab-logistics" tabindex="0" hidden>
           <div class="doc-section__head">
-            <span class="doc-section__no">Section 02</span>
+            <span class="doc-section__no">Use case 02 ／ 物流・トラック</span>
             <h2 class="section-title">物流の脱炭素化を、既存フリートから。</h2>
             <p class="doc-section__q"><b>想定する読者</b>物流会社、荷主</p>
+          </div>
+
+          <div class="keypoints">
+            <p class="keypoints__label">この用途の要点</p>
+            <ul>
+              <li>車両の更新を待たず、<em>特定の車両・拠点・輸送ルートから段階的に</em>導入を検討できます。</li>
+              <li>公道走行車には、軽油として流通する<em>サステオ51</em>が前提になります。</li>
+              <li>荷主企業と運送会社が連携する導入スキームの設計を支援します。</li>
+            </ul>
           </div>
 
           <div class="prose">
@@ -114,13 +137,18 @@
           </div>
 
           <p class="step__sub">導入前の主な確認事項</p>
-          <ul class="checklist">
+          <ul class="checkgrid">
             <li>車両型式、メーカーの使用承認の有無、保証条件の確認</li>
             <li>営業所・車庫における燃料の受入れ・保管・給油方法</li>
             <li>対象車両・輸送ルートごとの燃料使用量の把握</li>
             <li>Scope1・Scope3への反映方法と算定基準</li>
             <li>荷主企業・運送会社間の費用負担、役割分担</li>
           </ul>
+
+          <div class="callout">
+            <p class="callout__title">あわせて確認できます</p>
+            <p>公道走行時の軽油引取税上の取扱いは「<a href="adoption.html#tax">公道走行時の税務上の取扱い</a>」、改正省エネ法の非化石エネルギー自動車としての報告は「<a href="about.html#standards">制度・品質規格から見るサステオ</a>」に整理しています。</p>
+          </div>
 
           <div class="ask">
             <p>対象車両、地域、月間使用量を整理いただくと、適合性・供給条件・試行方法をご案内できます。</p>
@@ -129,11 +157,20 @@
         </section>
 
         <!-- 3 港湾 -->
-        <section class="doc-section" id="port">
+        <section class="tabpanel doc-section" id="port" role="tabpanel" aria-labelledby="tab-port" tabindex="0" hidden>
           <div class="doc-section__head">
-            <span class="doc-section__no">Section 03</span>
+            <span class="doc-section__no">Use case 03 ／ 港湾・荷役機械</span>
             <h2 class="section-title">港の脱炭素化を、稼働中の荷役機械から。</h2>
             <p class="doc-section__q"><b>想定する読者</b>港湾運営、荷役事業者</p>
+          </div>
+
+          <div class="keypoints">
+            <p class="keypoints__label">この用途の要点</p>
+            <ul>
+              <li>コンテナ荷役機械、構内搬送車両、フォークリフト、ディーゼル発電機が対象になります。</li>
+              <li><em>対象設備やターミナルを限定して導入</em>し、段階的に対象を広げることもできます。</li>
+              <li>構内への搬入経路、給油場所、関係者の役割分担の整理が要になります。</li>
+            </ul>
           </div>
 
           <div class="prose">
@@ -145,7 +182,7 @@
           </div>
 
           <p class="step__sub">導入前の主な確認事項</p>
-          <ul class="checklist">
+          <ul class="checkgrid">
             <li>対象設備のメーカー、型式、年式、推奨燃料</li>
             <li>稼働時間、燃料使用量、現在の給油方法</li>
             <li>構内へのローリー進入可否と給油場所</li>
@@ -154,11 +191,10 @@
             <li>燃料使用量とGHG削減効果の算定・記録方法</li>
           </ul>
 
-          <div class="panel" style="margin-top:28px">
-            <p class="panel__label">Also</p>
-            <h3 class="sub-title" style="margin-top:0">港湾整備工事や港湾の脱炭素化にも</h3>
-            <p style="margin:0 0 12px;font-size:.9rem;color:var(--ink-2);max-width:var(--measure)">港湾整備工事や港湾の脱炭素化に燃料転換を取り入れる場合は、対象となる設備や工事を明確にし、発注条件、燃料使用実績の確認方法、関係事業者の役割分担などを整理することが重要です。</p>
-            <p style="margin:0;font-size:.9rem;color:var(--ink-2);max-width:var(--measure)">ユーグレナは、港湾・建設分野における行政や事業者との意見交換、実証・導入に向けた検討経験を活かし、それぞれの事業に応じた導入スキームの具体化を支援します。</p>
+          <div class="callout">
+            <p class="callout__title">港湾整備工事や港湾の脱炭素化にも</p>
+            <p>港湾整備工事や港湾の脱炭素化に燃料転換を取り入れる場合は、対象となる設備や工事を明確にし、発注条件、燃料使用実績の確認方法、関係事業者の役割分担などを整理することが重要です。</p>
+            <p>ユーグレナは、港湾・建設分野における行政や事業者との意見交換、実証・導入に向けた検討経験を活かし、それぞれの事業に応じた導入スキームの具体化を支援します。</p>
           </div>
 
           <div class="ask">
@@ -168,11 +204,20 @@
         </section>
 
         <!-- 4 船舶 -->
-        <section class="doc-section" id="marine">
+        <section class="tabpanel doc-section" id="marine" role="tabpanel" aria-labelledby="tab-marine" tabindex="0" hidden>
           <div class="doc-section__head">
-            <span class="doc-section__no">Section 04</span>
+            <span class="doc-section__no">Use case 04 ／ 船舶</span>
             <h2 class="section-title">船舶の脱炭素化を、既存のエンジンから。</h2>
             <p class="doc-section__q"><b>想定する読者</b>船社・運航会社、港湾関連事業者</p>
+          </div>
+
+          <div class="keypoints">
+            <p class="keypoints__label">この用途の要点</p>
+            <ul>
+              <li>内航船、作業船、港湾関連船舶など、<em>既存船を活用したまま</em>検討できます。</li>
+              <li>船種、主機・補機の仕様、給油条件をもとに<em>船舶ごとに</em>利用可能性を判断します。</li>
+              <li>荷主や物流事業者が海上輸送事業者と連携して取り組むこともできます。</li>
+            </ul>
           </div>
 
           <div class="prose">
@@ -183,7 +228,7 @@
           </div>
 
           <p class="step__sub">導入前の主な確認事項</p>
-          <ul class="checklist">
+          <ul class="checkgrid">
             <li>船種、主機・補機、エンジンの仕様</li>
             <li>現在使用している燃料と燃料タンクの運用</li>
             <li>エンジンメーカー、船級、船舶管理会社等への確認事項</li>
@@ -201,11 +246,20 @@
         </section>
 
         <!-- 5 発電機 -->
-        <section class="doc-section" id="generator">
+        <section class="tabpanel doc-section" id="generator" role="tabpanel" aria-labelledby="tab-generator" tabindex="0" hidden>
           <div class="doc-section__head">
-            <span class="doc-section__no">Section 05</span>
+            <span class="doc-section__no">Use case 05 ／ 発電機</span>
             <h2 class="section-title">発電機の脱炭素化を、燃料転換から。</h2>
             <p class="doc-section__q"><b>想定する読者</b>設備管理、BCP担当</p>
+          </div>
+
+          <div class="keypoints">
+            <p class="keypoints__label">この用途の要点</p>
+            <ul>
+              <li>建設現場やイベントの<em>仮設電源</em>に加え、施設の<em>非常用発電機</em>でも検討できます。</li>
+              <li>商用電源の利用や設備更新が難しい場合の選択肢になります。</li>
+              <li>非常用の場合は、定期試運転、燃料更新、非常時の供給条件まで含めて設計します。</li>
+            </ul>
           </div>
 
           <div class="prose">
@@ -215,7 +269,7 @@
           </div>
 
           <p class="step__sub">導入前の主な確認事項</p>
-          <ul class="checklist">
+          <ul class="checkgrid">
             <li>発電機のメーカー、型式、年式、エンジン仕様</li>
             <li>メーカーが定める使用可能燃料、保証・保守条件</li>
             <li>現在使用している燃料とタンク内の残油</li>
@@ -233,11 +287,20 @@
         </section>
 
         <!-- 6 荷主 -->
-        <section class="doc-section" id="shipper">
+        <section class="tabpanel doc-section" id="shipper" role="tabpanel" aria-labelledby="tab-shipper" tabindex="0" hidden>
           <div class="doc-section__head">
-            <span class="doc-section__no">Section 06</span>
+            <span class="doc-section__no">Use case 06 ／ 荷主・発注者・デベロッパー</span>
             <h2 class="section-title">サプライチェーン全体でScope3削減を進める。</h2>
             <p class="doc-section__q"><b>想定する読者</b>荷主、発注者、デベロッパー</p>
+          </div>
+
+          <div class="keypoints">
+            <p class="keypoints__label">この用途の要点</p>
+            <ul>
+              <li>燃料を直接使わない立場でも、<em>委託先の燃料転換</em>を通じて削減に着手できます。</li>
+              <li>対象業務の整理、費用負担、証憑管理までを含めた<em>導入スキーム</em>を設計します。</li>
+              <li>CDP、SBT、統合報告書などの開示に必要な情報整理まで対応します。</li>
+            </ul>
           </div>
 
           <div class="prose">
@@ -248,7 +311,7 @@
           </div>
 
           <p class="step__sub">このような場面で検討されています</p>
-          <ul class="checklist">
+          <ul class="checkgrid">
             <li>輸送に伴うScope3排出量を削減したい</li>
             <li>発注工事における施工時の排出削減を進めたい</li>
             <li>物流委託先と共同で脱炭素施策を検討したい</li>
@@ -263,18 +326,21 @@
         </section>
 
         <!-- 7 製造業 -->
-        <section class="doc-section" id="manufacturing">
+        <section class="tabpanel doc-section" id="manufacturing" role="tabpanel" aria-labelledby="tab-manufacturing" tabindex="0" hidden>
           <div class="doc-section__head">
-            <span class="doc-section__no">Section 07</span>
+            <span class="doc-section__no">Use case 07 ／ 製造業（ボイラー）</span>
             <h2 class="section-title">製造業（ボイラー）</h2>
             <p class="doc-section__q"><b>掲載状況</b>原稿準備中（デモ版では枠のみ掲載）</p>
           </div>
 
-          <div class="card card--muted">
-            <span class="pill pill--draft">準備中</span>
-            <h3>工場設備での燃料転換</h3>
+          <div class="callout callout--attention">
+            <p class="callout__title">このセクションは準備中です</p>
             <p>工場のボイラーなど、燃焼設備における燃料転換についても、対象設備の仕様、燃料の受入れ・保管条件、関係法令、GHG削減効果の算定方法をもとに個別に検討します。本セクションの掲載原稿は、対象設備の整理と技術確認を経て追加する予定です。</p>
-            <span class="card__go"><a href="contact.html">先に相談する →</a></span>
+          </div>
+
+          <div class="ask">
+            <p>原稿の公開を待たずに、対象設備の条件からご相談いただけます。</p>
+            <a class="btn btn--primary" href="contact.html">先に相談する</a>
           </div>
         </section>
 

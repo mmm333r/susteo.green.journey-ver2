@@ -77,6 +77,83 @@
     updateSpy();
   }
 
+  /* ---- ページ内タブ ----
+     [data-tabs] のなかの role="tab" と、aria-controls が指す role="tabpanel" を
+     対応づける。パネルの id をそのまま #ハッシュで開けるようにしている。 */
+  var tabGroups = Array.prototype.slice.call(document.querySelectorAll('[data-tabs]'));
+
+  tabGroups.forEach(function (group) {
+    var tabs = Array.prototype.slice.call(group.querySelectorAll('[role="tab"]'));
+    var panels = tabs.map(function (t) { return document.getElementById(t.getAttribute('aria-controls')); });
+    if (!tabs.length) return;
+
+    var select = function (index, moveFocus) {
+      tabs.forEach(function (tab, i) {
+        var on = i === index;
+        tab.setAttribute('aria-selected', String(on));
+        tab.tabIndex = on ? 0 : -1;
+        if (panels[i]) panels[i].hidden = !on;
+      });
+      if (moveFocus) tabs[index].focus();
+    };
+
+    tabs.forEach(function (tab, i) {
+      tab.addEventListener('click', function () {
+        select(i);
+        var id = tab.getAttribute('aria-controls');
+        if (id && window.history && window.history.replaceState) {
+          window.history.replaceState(null, '', '#' + id);
+        }
+      });
+      tab.addEventListener('keydown', function (e) {
+        var step = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[e.key];
+        if (step) {
+          e.preventDefault();
+          select((i + step + tabs.length) % tabs.length, true);
+        } else if (e.key === 'Home') {
+          e.preventDefault(); select(0, true);
+        } else if (e.key === 'End') {
+          e.preventDefault(); select(tabs.length - 1, true);
+        }
+      });
+    });
+
+    var indexForHash = function (hash) {
+      if (!hash) return -1;
+      for (var i = 0; i < tabs.length; i++) {
+        if (tabs[i].getAttribute('aria-controls') === hash) return i;
+      }
+      return -1;
+    };
+
+    group.openByHash = function (hash, scroll) {
+      var i = indexForHash(hash);
+      if (i < 0) return false;
+      select(i);
+      if (scroll) group.scrollIntoView({ block: 'start', behavior: 'auto' });
+      return true;
+    };
+
+    var initial = indexForHash(window.location.hash.replace('#', ''));
+    select(initial < 0 ? 0 : initial);
+    if (initial > 0) group.scrollIntoView({ block: 'start', behavior: 'auto' });
+  });
+
+  if (tabGroups.length) {
+    // ページ内リンクや戻る操作でも、該当タブを開く
+    window.addEventListener('hashchange', function () {
+      var hash = window.location.hash.replace('#', '');
+      tabGroups.some(function (g) { return g.openByHash(hash, true); });
+    });
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest ? e.target.closest('a[href^="#"]') : null;
+      if (!link) return;
+      var hash = link.getAttribute('href').slice(1);
+      var opened = tabGroups.some(function (g) { return g.openByHash(hash, true); });
+      if (opened) e.preventDefault();
+    });
+  }
+
   /* ---- 記事一覧の絞り込み ---- */
   var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab[data-filter]'));
   var articles = Array.prototype.slice.call(document.querySelectorAll('[data-cat]'));
