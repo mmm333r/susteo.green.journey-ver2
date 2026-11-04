@@ -292,6 +292,10 @@
     var msgEl = document.getElementById('sim-msg');
     var outEl = document.getElementById('sim-out');
     var detailEl = document.getElementById('sim-detail');
+    var meterEl = document.getElementById('sim-meter');
+    var fillEl = document.getElementById('sim-fill');
+    var cutEl = document.getElementById('sim-cut');
+    var leftEl = document.getElementById('sim-left');
 
     var ratio = function () {
       var picked = simForm.querySelector('input[name="product"]:checked');
@@ -311,14 +315,25 @@
         unitEl.textContent = '';
         msgEl.textContent = '軽油の年間使用量を入力してください';
         if (detailEl) detailEl.textContent = '';
+        if (meterEl) meterEl.hidden = true;
         return;
       }
 
-      var reduction = volume * DIESEL_FACTOR * ratio();
+      var baseline = volume * DIESEL_FACTOR;
+      var reduction = baseline * ratio();
+      var remaining = baseline - reduction;
       outEl.dataset.state = 'ok';
       valueEl.textContent = '約 ' + reduction.toFixed(1);
       unitEl.textContent = 't-CO₂ / 年';
       msgEl.textContent = productName() + 'に切り替えた場合の概算値です。';
+      if (meterEl) {
+        var share = ratio() * 100;
+        meterEl.hidden = false;
+        fillEl.style.width = share + '%';
+        fillEl.dataset.full = String(share >= 100);
+        cutEl.textContent = reduction.toFixed(1) + ' t-CO₂';
+        leftEl.textContent = remaining.toFixed(1) + ' t-CO₂';
+      }
       if (detailEl) {
         detailEl.textContent =
           '計算式：' + volume.toLocaleString('ja-JP') + ' kL × ' + DIESEL_FACTOR +
