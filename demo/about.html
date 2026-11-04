@@ -53,25 +53,28 @@
   </section>
 
   <div class="wrap band band--tight">
-    <div class="layout">
+    <div class="layout" data-tabs>
 
       <!-- ページ内目次 -->
-      <aside class="rail" aria-label="このページの目次">
-        <p class="rail__label">このページの構成</p>
-        <ol>
-          <li><a href="#susteo">サステオとは</a></li>
-          <li><a href="#compare-fuel">HVO・FAME・軽油の違い</a></li>
-          <li><a href="#compare-measure">電化・水素等との比較</a></li>
-          <li><a href="#feedstock">原料・持続可能性</a></li>
-          <li><a href="#certification">認証・トレーサビリティ・証憑</a></li>
-          <li><a href="#standards">制度・品質規格から見るサステオ</a></li>
-        </ol>
+      <aside class="rail">
+        <div class="rail__head">
+          <p class="rail__label">このページの構成</p>
+          <button class="viewtoggle" type="button" data-viewtoggle aria-pressed="false">すべて表示</button>
+        </div>
+        <div class="tabnav" role="tablist" aria-label="このページの構成" aria-orientation="vertical">
+          <button type="button" role="tab" id="tab-susteo" aria-controls="susteo" aria-selected="true">サステオとは</button>
+          <button type="button" role="tab" id="tab-compare-fuel" aria-controls="compare-fuel" aria-selected="false" tabindex="-1">HVO・FAME・軽油の違い</button>
+          <button type="button" role="tab" id="tab-compare-measure" aria-controls="compare-measure" aria-selected="false" tabindex="-1">電化・水素等との比較</button>
+          <button type="button" role="tab" id="tab-feedstock" aria-controls="feedstock" aria-selected="false" tabindex="-1">原料・持続可能性</button>
+          <button type="button" role="tab" id="tab-certification" aria-controls="certification" aria-selected="false" tabindex="-1">認証・トレーサビリティ・証憑</button>
+          <button type="button" role="tab" id="tab-standards" aria-controls="standards" aria-selected="false" tabindex="-1">制度・品質規格から見るサステオ</button>
+        </div>
       </aside>
 
       <div>
 
         <!-- 1 -->
-        <section class="doc-section" id="susteo">
+        <section class="tabpanel doc-section" id="susteo" role="tabpanel" aria-labelledby="tab-susteo" tabindex="0">
           <div class="doc-section__head">
             <span class="doc-section__no">Section 01</span>
             <h2 class="section-title">サステオとは</h2>
@@ -138,7 +141,7 @@
         </section>
 
         <!-- 2 -->
-        <section class="doc-section" id="compare-fuel">
+        <section class="tabpanel doc-section" id="compare-fuel" role="tabpanel" aria-labelledby="tab-compare-fuel" tabindex="0" hidden>
           <div class="doc-section__head">
             <span class="doc-section__no">Section 02</span>
             <h2 class="section-title">HVO・FAME・軽油の違い</h2>
@@ -204,7 +207,7 @@
         </section>
 
         <!-- 3 -->
-        <section class="doc-section" id="compare-measure">
+        <section class="tabpanel doc-section" id="compare-measure" role="tabpanel" aria-labelledby="tab-compare-measure" tabindex="0" hidden>
           <div class="doc-section__head">
             <span class="doc-section__no">Section 03</span>
             <h2 class="section-title">電化・水素等との比較</h2>
@@ -275,7 +278,7 @@
         </section>
 
         <!-- 4 -->
-        <section class="doc-section" id="feedstock">
+        <section class="tabpanel doc-section" id="feedstock" role="tabpanel" aria-labelledby="tab-feedstock" tabindex="0" hidden>
           <div class="doc-section__head">
             <span class="doc-section__no">Section 04</span>
             <h2 class="section-title">原料・持続可能性</h2>
@@ -315,7 +318,7 @@
         </section>
 
         <!-- 5 -->
-        <section class="doc-section" id="certification">
+        <section class="tabpanel doc-section" id="certification" role="tabpanel" aria-labelledby="tab-certification" tabindex="0" hidden>
           <div class="doc-section__head">
             <span class="doc-section__no">Section 05</span>
             <h2 class="section-title">認証・トレーサビリティ・証憑</h2>
@@ -361,7 +364,7 @@
         </section>
 
         <!-- 6 -->
-        <section class="doc-section" id="standards">
+        <section class="tabpanel doc-section" id="standards" role="tabpanel" aria-labelledby="tab-standards" tabindex="0" hidden>
           <div class="doc-section__head">
             <span class="doc-section__no">Section 06</span>
             <h2 class="section-title">制度・品質規格から見るサステオ</h2>
@@ -392,14 +395,8 @@
             </div>
           </div>
 
-          <div data-tabs>
-            <div class="tabrow" role="tablist" aria-label="制度・品質規格の観点">
-              <button type="button" role="tab" id="tab-std-energy" aria-controls="std-energy" aria-selected="true">改正省エネ法</button>
-              <button type="button" role="tab" id="tab-std-jis" aria-controls="std-jis" aria-selected="false" tabindex="-1">国内の燃料品質規格</button>
-              <button type="button" role="tab" id="tab-std-en" aria-controls="std-en" aria-selected="false" tabindex="-1">欧州 EN 15940</button>
-            </div>
-
-            <div class="tabpanel" id="std-energy" role="tabpanel" aria-labelledby="tab-std-energy" tabindex="0">
+          <div class="std-block-stack">
+            <div class="std-block" id="std-energy">
               <h3 class="sub-title">改正省エネ法と非化石エネルギー自動車</h3>
               <div class="prose">
                 <p>2023年4月に施行された改正省エネ法では、従来の省エネルギーに加え、事業者による非化石エネルギーへの転換が求められるようになりました。一定規模以上の特定荷主や特定輸送事業者には、非化石エネルギーへの転換に関する中長期計画の作成や、取組状況の定期報告が求められます。</p>
@@ -419,7 +416,7 @@
               </ul>
             </div>
 
-            <div class="tabpanel" id="std-jis" role="tabpanel" aria-labelledby="tab-std-jis" tabindex="0" hidden>
+            <div class="std-block" id="std-jis">
               <h3 class="sub-title">国内の燃料品質規格とHVO・FAMEの違い</h3>
               <div class="prose">
                 <p>日本では、自動車用軽油について、JIS K 2204による標準規格と、品確法による強制規格が設けられています。</p>
@@ -438,7 +435,7 @@
               </ul>
             </div>
 
-            <div class="tabpanel" id="std-en" role="tabpanel" aria-labelledby="tab-std-en" tabindex="0" hidden>
+            <div class="std-block" id="std-en">
               <h3 class="sub-title">欧州のパラフィン系ディーゼル燃料規格「EN 15940」</h3>
               <div class="prose">
                 <p>欧州では、HVOなどのパラフィン系ディーゼル燃料について、品質要求事項と試験方法を定めた「EN 15940」が整備されています。EN 15940では、セタン価、密度、動粘度、硫黄分、酸化安定性、低温性能などが規定されています。</p>

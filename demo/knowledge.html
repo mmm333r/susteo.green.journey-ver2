@@ -53,21 +53,24 @@
   </section>
 
   <div class="wrap band band--tight">
-    <div class="layout">
+    <div class="layout" data-tabs>
 
-      <aside class="rail" aria-label="このページの目次">
-        <p class="rail__label">このページの構成</p>
-        <ol>
-          <li><a href="#articles">記事一覧</a></li>
-          <li><a href="#faq">よくある質問</a></li>
-          <li><a href="#glossary">HVO・脱炭素に関する用語集</a></li>
-        </ol>
+      <aside class="rail">
+        <div class="rail__head">
+          <p class="rail__label">このページの構成</p>
+          <button class="viewtoggle" type="button" data-viewtoggle aria-pressed="false">すべて表示</button>
+        </div>
+        <div class="tabnav" role="tablist" aria-label="このページの構成" aria-orientation="vertical">
+          <button type="button" role="tab" id="tab-articles" aria-controls="articles" aria-selected="true">記事一覧</button>
+          <button type="button" role="tab" id="tab-faq" aria-controls="faq" aria-selected="false" tabindex="-1">よくある質問</button>
+          <button type="button" role="tab" id="tab-glossary" aria-controls="glossary" aria-selected="false" tabindex="-1">HVO・脱炭素に関する用語集</button>
+        </div>
       </aside>
 
       <div>
 
         <!-- 記事一覧 -->
-        <section class="doc-section" id="articles">
+        <section class="tabpanel doc-section" id="articles" role="tabpanel" aria-labelledby="tab-articles" tabindex="0">
           <div class="doc-section__head">
             <span class="doc-section__no">Section 01</span>
             <h2 class="section-title">記事一覧</h2>
@@ -175,7 +178,7 @@
         </section>
 
         <!-- FAQ -->
-        <section class="doc-section" id="faq">
+        <section class="tabpanel doc-section" id="faq" role="tabpanel" aria-labelledby="tab-faq" tabindex="0" hidden>
           <div class="doc-section__head">
             <span class="doc-section__no">Section 02</span>
             <h2 class="section-title">よくある質問</h2>
@@ -196,18 +199,8 @@
             <p>車両・設備での使用可否、供給方法、費用、GHG削減効果などは、利用条件によって異なります。回答をご覧いただいても判断が難しい場合は、分かる範囲の情報でお問い合わせください。</p>
           </div>
 
-          <div data-tabs>
-            <div class="tabrow" role="tablist" aria-label="質問の分類">
-              <button type="button" role="tab" id="tab-faq-product" aria-controls="faq-product" aria-selected="true">製品について</button>
-              <button type="button" role="tab" id="tab-faq-equipment" aria-controls="faq-equipment" aria-selected="false" tabindex="-1">車両・設備への利用について</button>
-              <button type="button" role="tab" id="tab-faq-ghg" aria-controls="faq-ghg" aria-selected="false" tabindex="-1">GHG削減効果について</button>
-              <button type="button" role="tab" id="tab-faq-price" aria-controls="faq-price" aria-selected="false" tabindex="-1">価格・見積りについて</button>
-              <button type="button" role="tab" id="tab-faq-supply" aria-controls="faq-supply" aria-selected="false" tabindex="-1">供給・保管について</button>
-              <button type="button" role="tab" id="tab-faq-quality" aria-controls="faq-quality" aria-selected="false" tabindex="-1">品質・認証・証憑について</button>
-              <button type="button" role="tab" id="tab-faq-legal" aria-controls="faq-legal" aria-selected="false" tabindex="-1">法令・税務について</button>
-            </div>
-
-            <div class="tabpanel" id="faq-product" role="tabpanel" aria-labelledby="tab-faq-product" tabindex="0">
+          <div class="faq-group-stack">
+            <div class="faq-group" id="faq-product">
               <h3 class="faq-group__title"><span>01</span>製品について</h3>
 <details class="qa">
               <summary>サステオとは、どのような燃料ですか。</summary>
@@ -225,7 +218,7 @@
             </details>
             </div>
 
-            <div class="tabpanel" id="faq-equipment" role="tabpanel" aria-labelledby="tab-faq-equipment" tabindex="0" hidden>
+            <div class="faq-group" id="faq-equipment">
               <h3 class="faq-group__title"><span>02</span>車両・設備への利用について</h3>
 <details class="qa">
               <summary>現在使用しているディーゼル車両や設備で使えますか。</summary>
@@ -250,7 +243,7 @@
             </details>
             </div>
 
-            <div class="tabpanel" id="faq-ghg" role="tabpanel" aria-labelledby="tab-faq-ghg" tabindex="0" hidden>
+            <div class="faq-group" id="faq-ghg">
               <h3 class="faq-group__title"><span>03</span>GHG削減効果について</h3>
 <details class="qa">
               <summary>サステオを導入すると、どの程度GHG排出量を削減できますか。</summary>
@@ -269,7 +262,7 @@
             </details>
             </div>
 
-            <div class="tabpanel" id="faq-price" role="tabpanel" aria-labelledby="tab-faq-price" tabindex="0" hidden>
+            <div class="faq-group" id="faq-price">
               <h3 class="faq-group__title"><span>04</span>価格・見積りについて</h3>
 <details class="qa">
               <summary>サステオの価格はどのように決まりますか。</summary>
@@ -296,7 +289,7 @@
             </details>
             </div>
 
-            <div class="tabpanel" id="faq-supply" role="tabpanel" aria-labelledby="tab-faq-supply" tabindex="0" hidden>
+            <div class="faq-group" id="faq-supply">
               <h3 class="faq-group__title"><span>05</span>供給・保管について</h3>
 <details class="qa">
               <summary>どの地域に供給できますか。</summary>
@@ -314,7 +307,7 @@
             </details>
             </div>
 
-            <div class="tabpanel" id="faq-quality" role="tabpanel" aria-labelledby="tab-faq-quality" tabindex="0" hidden>
+            <div class="faq-group" id="faq-quality">
               <h3 class="faq-group__title"><span>06</span>品質・認証・証憑について</h3>
 <details class="qa">
               <summary>原料の由来や持続可能性は確認できますか。</summary>
@@ -325,7 +318,7 @@
             </details>
             </div>
 
-            <div class="tabpanel" id="faq-legal" role="tabpanel" aria-labelledby="tab-faq-legal" tabindex="0" hidden>
+            <div class="faq-group" id="faq-legal">
               <h3 class="faq-group__title"><span>07</span>法令・税務について</h3>
 <details class="qa">
               <summary>公道を走行するトラックやバスでも使用できますか。</summary>
@@ -357,7 +350,7 @@
         </section>
 
         <!-- 用語集 -->
-        <section class="doc-section" id="glossary">
+        <section class="tabpanel doc-section" id="glossary" role="tabpanel" aria-labelledby="tab-glossary" tabindex="0" hidden>
           <div class="doc-section__head">
             <span class="doc-section__no">Section 03</span>
             <h2 class="section-title">HVO・脱炭素に関する用語集</h2>

@@ -79,33 +79,84 @@
 
   /* ---- ページ内タブ ----
      [data-tabs] のなかの role="tab" と、aria-controls が指す role="tabpanel" を
-     対応づける。パネルの id をそのまま #ハッシュで開けるようにしている。 */
+     対応づける。パネルの id をそのまま #ハッシュで開ける。
+     「すべて表示」に切り替えると、全パネルを開いてタブ列を目次として使う。 */
+  var VIEW_KEY = 'susteo.view';
   var tabGroups = Array.prototype.slice.call(document.querySelectorAll('[data-tabs]'));
 
+  var readView = function () {
+    try { return window.localStorage.getItem(VIEW_KEY); } catch (e) { return null; }
+  };
+  var writeView = function (value) {
+    try { window.localStorage.setItem(VIEW_KEY, value); } catch (e) { /* 保存できなくても動作に影響しない */ }
+  };
+
   tabGroups.forEach(function (group) {
-    var tabs = Array.prototype.slice.call(group.querySelectorAll('[role="tab"]'));
-    var panels = tabs.map(function (t) { return document.getElementById(t.getAttribute('aria-controls')); });
+    // 入れ子の [data-tabs] は、それぞれが自分のタブだけを受け持つ
+    var own = function (selector) {
+      return Array.prototype.slice.call(group.querySelectorAll(selector)).filter(function (el) {
+        return el.closest('[data-tabs]') === group;
+      });
+    };
+    var tabs = own('[role="tab"], [data-tab]');
     if (!tabs.length) return;
+    var list = tabs[0].parentNode;
+    var panels = tabs.map(function (t) { return document.getElementById(t.getAttribute('aria-controls')); });
+
+    var expanded = false;
+    var current = 0;
+
+    var applyTabs = function () {
+      list.setAttribute('role', 'tablist');
+      tabs.forEach(function (tab, i) {
+        var on = i === current;
+        tab.setAttribute('role', 'tab');
+        tab.setAttribute('aria-selected', String(on));
+        tab.classList.remove('is-active');
+        tab.tabIndex = on ? 0 : -1;
+        if (panels[i]) {
+          panels[i].setAttribute('role', 'tabpanel');
+          panels[i].hidden = !on;
+        }
+      });
+    };
+
+    var applyExpanded = function () {
+      list.removeAttribute('role');
+      tabs.forEach(function (tab, i) {
+        tab.removeAttribute('role');
+        tab.removeAttribute('aria-selected');
+        tab.tabIndex = 0;
+        tab.classList.toggle('is-active', i === current);
+        if (panels[i]) {
+          panels[i].removeAttribute('role');
+          panels[i].hidden = false;
+        }
+      });
+    };
+
+    var render = function () { expanded ? applyExpanded() : applyTabs(); };
 
     var select = function (index, moveFocus) {
-      tabs.forEach(function (tab, i) {
-        var on = i === index;
-        tab.setAttribute('aria-selected', String(on));
-        tab.tabIndex = on ? 0 : -1;
-        if (panels[i]) panels[i].hidden = !on;
-      });
+      current = index;
+      render();
       if (moveFocus) tabs[index].focus();
     };
 
     tabs.forEach(function (tab, i) {
       tab.addEventListener('click', function () {
-        select(i);
+        current = i;
+        render();
+        if (expanded && panels[i]) {
+          panels[i].scrollIntoView({ block: 'start', behavior: 'smooth' });
+        }
         var id = tab.getAttribute('aria-controls');
         if (id && window.history && window.history.replaceState) {
           window.history.replaceState(null, '', '#' + id);
         }
       });
       tab.addEventListener('keydown', function (e) {
+        if (expanded) return;
         var step = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[e.key];
         if (step) {
           e.preventDefault();
@@ -129,18 +180,68 @@
     group.openByHash = function (hash, scroll) {
       var i = indexForHash(hash);
       if (i < 0) return false;
-      select(i);
-      if (scroll) group.scrollIntoView({ block: 'start', behavior: 'auto' });
+      current = i;
+      render();
+      if (scroll && panels[i]) panels[i].scrollIntoView({ block: 'start', behavior: 'auto' });
       return true;
     };
 
+    group.setExpanded = function (value) {
+      expanded = value;
+      group.dataset.expanded = String(value);
+      render();
+    };
+
+    // 全表示のときは、読んでいる節をタブ列に反映する
+    group.syncActive = function () {
+      if (!expanded) return;
+      var line = window.innerHeight * 0.3;
+      var at = 0;
+      panels.forEach(function (panel, i) {
+        if (panel && panel.getBoundingClientRect().top <= line) at = i;
+      });
+      if (at !== current) { current = at; applyExpanded(); }
+    };
+
     var initial = indexForHash(window.location.hash.replace('#', ''));
-    select(initial < 0 ? 0 : initial);
+    current = initial < 0 ? 0 : initial;
+    render();
     if (initial > 0) group.scrollIntoView({ block: 'start', behavior: 'auto' });
   });
 
   if (tabGroups.length) {
-    // ページ内リンクや戻る操作でも、該当タブを開く
+    var toggles = Array.prototype.slice.call(document.querySelectorAll('[data-viewtoggle]'));
+
+    var setExpandedAll = function (value, remember) {
+      tabGroups.forEach(function (g) { if (g.setExpanded) g.setExpanded(value); });
+      toggles.forEach(function (btn) {
+        btn.setAttribute('aria-pressed', String(value));
+        btn.textContent = value ? 'タブ表示に戻す' : 'すべて表示';
+      });
+      if (remember) writeView(value ? 'all' : 'tabs');
+    };
+
+    toggles.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        setExpandedAll(btn.getAttribute('aria-pressed') !== 'true', true);
+      });
+    });
+
+    // 前回「すべて表示」を選んでいた場合は、その状態で開く
+    if (toggles.length && readView() === 'all' && !window.location.hash) {
+      setExpandedAll(true, false);
+    }
+
+    var pending = false;
+    window.addEventListener('scroll', function () {
+      if (pending) return;
+      pending = true;
+      window.requestAnimationFrame(function () {
+        pending = false;
+        tabGroups.forEach(function (g) { if (g.syncActive) g.syncActive(); });
+      });
+    }, { passive: true });
+
     window.addEventListener('hashchange', function () {
       var hash = window.location.hash.replace('#', '');
       tabGroups.some(function (g) { return g.openByHash(hash, true); });

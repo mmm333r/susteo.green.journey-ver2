@@ -1375,3 +1375,56 @@ details.qa[open] > summary { border-bottom: 1px solid var(--line-soft); }
   .tabrow { gap: 0; overflow-x: auto; flex-wrap: nowrap; }
   .tabrow button { padding: 11px 13px; font-size: .83rem; }
 }
+
+/* ---------- 目次レールの見出し行と、表示切替 ---------- */
+.rail__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 0 0 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+}
+.rail__head .rail__label { margin: 0; padding: 0; border-bottom: 0; }
+
+.viewtoggle {
+  font: inherit;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+  color: var(--teal-deep);
+  background: var(--surface);
+  border: 1px solid color-mix(in srgb, var(--teal) 45%, transparent);
+  border-radius: 999px;
+  padding: 5px 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background .18s, color .18s, border-color .18s;
+}
+.viewtoggle:hover { background: var(--teal-wash); }
+.viewtoggle[aria-pressed="true"] {
+  background: var(--brand-solid);
+  border-color: var(--brand-solid);
+  color: #fff;
+}
+
+/* 全表示のときは、タブの並びがそのまま目次として働く */
+.tabnav button.is-active {
+  color: var(--teal-deep);
+  font-weight: 700;
+  border-left-color: var(--teal);
+  background: var(--teal-wash);
+}
+.tabnav button.is-active::before { color: var(--teal); }
+
+[data-expanded="true"] .tabpanel + .tabpanel { margin-top: 0; }
+
+/* 制度・品質規格：3つの観点を続けて読ませる */
+.std-block + .std-block {
+  margin-top: 34px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+.std-block > .sub-title:first-child { margin-top: 0; }

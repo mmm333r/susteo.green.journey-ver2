@@ -53,25 +53,28 @@
   </section>
 
   <div class="wrap band band--tight">
-    <div class="layout">
+    <div class="layout" data-tabs>
 
-      <aside class="rail" aria-label="このページの目次">
-        <p class="rail__label">検討テーマ</p>
-        <ol>
-          <li><a href="#guide">導入判断ガイド</a></li>
-          <li><a href="#ghg">GHG削減効果・削減量試算</a></li>
-          <li><a href="#cost">コスト・価格決定要素</a></li>
-          <li><a href="#supply">供給エリア・供給方法</a></li>
-          <li><a href="#equipment">車両・設備・メーカー確認</a></li>
-          <li><a href="#tax">公道走行時の税務上の取扱い</a></li>
-          <li><a href="#flow">導入までの流れ</a></li>
-        </ol>
+      <aside class="rail">
+        <div class="rail__head">
+          <p class="rail__label">検討テーマ</p>
+          <button class="viewtoggle" type="button" data-viewtoggle aria-pressed="false">すべて表示</button>
+        </div>
+        <div class="tabnav" role="tablist" aria-label="検討テーマ" aria-orientation="vertical">
+          <button type="button" role="tab" id="tab-guide" aria-controls="guide" aria-selected="true">導入判断ガイド</button>
+          <button type="button" role="tab" id="tab-ghg" aria-controls="ghg" aria-selected="false" tabindex="-1">GHG削減効果・削減量試算</button>
+          <button type="button" role="tab" id="tab-cost" aria-controls="cost" aria-selected="false" tabindex="-1">コスト・価格決定要素</button>
+          <button type="button" role="tab" id="tab-supply" aria-controls="supply" aria-selected="false" tabindex="-1">供給エリア・供給方法</button>
+          <button type="button" role="tab" id="tab-equipment" aria-controls="equipment" aria-selected="false" tabindex="-1">車両・設備・メーカー確認</button>
+          <button type="button" role="tab" id="tab-tax" aria-controls="tax" aria-selected="false" tabindex="-1">公道走行時の税務上の取扱い</button>
+          <button type="button" role="tab" id="tab-flow" aria-controls="flow" aria-selected="false" tabindex="-1">導入までの流れ</button>
+        </div>
       </aside>
 
       <div>
 
         <!-- 1 導入判断ガイド -->
-        <section class="doc-section" id="guide">
+        <section class="tabpanel doc-section" id="guide" role="tabpanel" aria-labelledby="tab-guide" tabindex="0">
           <div class="doc-section__head">
             <span class="doc-section__no">Section 01</span>
             <h2 class="section-title">導入判断ガイド</h2>
@@ -181,7 +184,7 @@
         </section>
 
         <!-- 2 GHG -->
-        <section class="doc-section" id="ghg">
+        <section class="tabpanel doc-section" id="ghg" role="tabpanel" aria-labelledby="tab-ghg" tabindex="0" hidden>
           <div class="doc-section__head">
             <span class="doc-section__no">Section 02</span>
             <h2 class="section-title">GHG削減効果・削減量試算</h2>
@@ -279,7 +282,7 @@
         </section>
 
         <!-- 3 コスト -->
-        <section class="doc-section" id="cost">
+        <section class="tabpanel doc-section" id="cost" role="tabpanel" aria-labelledby="tab-cost" tabindex="0" hidden>
           <div class="doc-section__head">
             <span class="doc-section__no">Section 03</span>
             <h2 class="section-title">コスト・価格決定要素</h2>
@@ -332,7 +335,7 @@
         </section>
 
         <!-- 4 供給 -->
-        <section class="doc-section" id="supply">
+        <section class="tabpanel doc-section" id="supply" role="tabpanel" aria-labelledby="tab-supply" tabindex="0" hidden>
           <div class="doc-section__head">
             <span class="doc-section__no">Section 04</span>
             <h2 class="section-title">供給エリア・供給方法・販売体制</h2>
@@ -397,7 +400,7 @@
         </section>
 
         <!-- 5 車両・設備 -->
-        <section class="doc-section" id="equipment">
+        <section class="tabpanel doc-section" id="equipment" role="tabpanel" aria-labelledby="tab-equipment" tabindex="0" hidden>
           <div class="doc-section__head">
             <span class="doc-section__no">Section 05</span>
             <h2 class="section-title">車両・設備・メーカー確認</h2>
@@ -450,7 +453,7 @@
         </section>
 
         <!-- 6 税務 -->
-        <section class="doc-section" id="tax">
+        <section class="tabpanel doc-section" id="tax" role="tabpanel" aria-labelledby="tab-tax" tabindex="0" hidden>
           <div class="doc-section__head">
             <span class="doc-section__no">Section 06</span>
             <h2 class="section-title">公道走行時の税務上の取扱い</h2>
@@ -532,7 +535,7 @@
         </section>
 
         <!-- 7 導入までの流れ -->
-        <section class="doc-section" id="flow">
+        <section class="tabpanel doc-section" id="flow" role="tabpanel" aria-labelledby="tab-flow" tabindex="0" hidden>
           <div class="doc-section__head">
             <span class="doc-section__no">Section 07</span>
             <h2 class="section-title">導入までの流れ</h2>

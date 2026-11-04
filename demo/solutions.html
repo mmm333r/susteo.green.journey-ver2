@@ -56,7 +56,10 @@
     <div class="layout" data-tabs>
 
       <aside class="rail">
-        <p class="rail__label">用途・立場から選ぶ</p>
+        <div class="rail__head">
+          <p class="rail__label">用途・立場から選ぶ</p>
+          <button class="viewtoggle" type="button" data-viewtoggle aria-pressed="false">すべて表示</button>
+        </div>
         <div class="tabnav" role="tablist" aria-label="用途・立場" aria-orientation="vertical">
           <button type="button" role="tab" id="tab-construction" aria-controls="construction" aria-selected="true">建設・建設機械</button>
           <button type="button" role="tab" id="tab-logistics" aria-controls="logistics" aria-selected="false" tabindex="-1">物流・トラック</button>
