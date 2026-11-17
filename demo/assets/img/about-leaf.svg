@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="HVOの原料となる植物の葉と水滴のイラスト">
+<rect width="800" height="600" fill="#E7F3F0"/>
+<circle cx="640" cy="150" r="118" fill="#D7EBE6"/>
+<path d="M150,470 C150,250 360,112 648,150 C676,414 452,534 150,470 Z" fill="#86CCBE" opacity=".5"/>
+<path d="M178,452 C178,258 374,134 636,170 C660,410 452,512 178,452 Z" fill="#009E8A"/>
+<path d="M196,444 C340,392 500,306 628,178" stroke="#FFFFFF" stroke-width="7" fill="none" opacity=".72" stroke-linecap="round"/>
+<path d="M291,372 l-58,-46" stroke="#FFFFFF" stroke-width="5" opacity=".5" stroke-linecap="round" fill="none"/>
+<path d="M369,323 l-62,-56" stroke="#FFFFFF" stroke-width="5" opacity=".5" stroke-linecap="round" fill="none"/>
+<path d="M447,277 l-58,-58" stroke="#FFFFFF" stroke-width="5" opacity=".5" stroke-linecap="round" fill="none"/>
+<path d="M516,239 l-48,-52" stroke="#FFFFFF" stroke-width="5" opacity=".5" stroke-linecap="round" fill="none"/>
+<path d="M430,278 c26,34 38,52 38,66 a38,38 0 0 1-76,0 c0-14 12-32 38-66 Z" fill="#FFFFFF" opacity=".92"/>
+<circle cx="416" cy="340" r="9" fill="#D7EBE6"/>
+<path d="M600,430 c18,24 26,36 26,46 a26,26 0 0 1-52,0 c0-10 8-22 26-46 Z" fill="#FFFFFF" opacity=".8"/>
+</svg>

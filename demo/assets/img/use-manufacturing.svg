@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="工場のボイラー設備のイラスト">
+<rect width="800" height="500" fill="#E7F3F0"/><rect y="250" width="800" height="90" fill="#D7EBE6"/>
+<path d="M0,340 C96,270 176,276 272,340 Z" fill="#BCDFD7"/><path d="M208,340 C336,244 464,252 592,340 Z" fill="#BCDFD7"/><path d="M528,340 C624,282 720,286 800,340 Z" fill="#BCDFD7"/>
+<rect y="340" width="800" height="160" fill="#DCE7E2"/><rect y="360" width="800" height="140" fill="#C7D4CE"/>
+<g transform="translate(240,140) scale(1.0)">
+  <circle cx="73" cy="16" r="17" fill="#FFFFFF" opacity=".9"/>
+  <circle cx="99" cy="4" r="12" fill="#FFFFFF" opacity=".7"/>
+  <circle cx="52" cy="2" r="10" fill="#FFFFFF" opacity=".55"/>
+  <rect x="58" y="34" width="28" height="166" fill="#00796A"/>
+  <rect x="53" y="34" width="38" height="11" rx="2" fill="#26332F"/>
+  <rect x="96" y="78" width="20" height="122" fill="#009E8A"/>
+  <rect x="92" y="78" width="28" height="9" rx="2" fill="#26332F"/>
+  <path d="M120,96 L120,66 L190,96 Z" fill="#00796A"/><path d="M190,96 L190,66 L260,96 Z" fill="#00796A"/><path d="M260,96 L260,66 L330,96 Z" fill="#00796A"/>
+  <rect x="120" y="96" width="210" height="104" fill="#FFFFFF"/>
+  <rect x="120" y="96" width="210" height="9" fill="#C7D4CE"/>
+  <rect x="144" y="132" width="34" height="30" fill="#D7EBE6"/>
+  <rect x="198" y="132" width="34" height="30" fill="#D7EBE6"/>
+  <rect x="252" y="132" width="34" height="30" fill="#EE8AAA"/>
+  <rect x="144" y="176" width="142" height="24" fill="#D7EBE6"/>
+  <rect x="4" y="146" width="40" height="54" rx="6" fill="#86CCBE"/>
+  <rect x="4" y="146" width="40" height="9" rx="4" fill="#00796A"/>
+</g>
+<rect x="40" y="250" width="120" height="90" rx="4" fill="#FFFFFF"/>
+<rect x="40" y="250" width="120" height="12" fill="#86CCBE"/>
+</svg>

@@ -1759,3 +1759,25 @@ a.post-card:hover { border-color: var(--teal); background: var(--paper); }
   .brand__sub { display: none; }
   .brand__word { font-size: 1.2rem; }
 }
+
+/* 図版（差し替え前提のイラスト。写真を入れる場合も同じ指定で収まる） */
+.figure-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+}
+.figure-img--hero { aspect-ratio: 4 / 3; }
+.post-card .figure-img { aspect-ratio: 16 / 9; margin-top: auto; }
+.photo-card .figure-img { margin-bottom: 14px; transition: border-color .18s; }
+.photo-card:hover .figure-img { border-color: var(--teal); }
+/* 暗いテーマでは図版だけが白く浮くので、わずかに落ち着かせる */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .figure-img { filter: brightness(.9) saturate(.95); }
+}
+:root[data-theme="dark"] .figure-img { filter: brightness(.9) saturate(.95); }

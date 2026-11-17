@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="仮設電源として使われるディーゼル発電機のイラスト">
+<rect width="800" height="500" fill="#E7F3F0"/><rect y="250" width="800" height="90" fill="#D7EBE6"/>
+<path d="M0,340 C96,270 176,276 272,340 Z" fill="#BCDFD7"/><path d="M208,340 C336,244 464,252 592,340 Z" fill="#BCDFD7"/><path d="M528,340 C624,282 720,286 800,340 Z" fill="#BCDFD7"/>
+<path d="M700,340 l-11.2,0 l11.2,-46.4 l11.2,46.4 Z" fill="#86CCBE"/><path d="M700,316.8 l-9.4,0 l9.4,-25.5 l9.4,25.5 Z" fill="#009E8A" opacity=".55"/><path d="M760,340 l-12.7,0 l12.7,-52.9 l12.7,52.9 Z" fill="#86CCBE"/><path d="M760,313.5 l-10.7,0 l10.7,-29.1 l10.7,29.1 Z" fill="#009E8A" opacity=".55"/>
+<rect y="340" width="800" height="160" fill="#DCE7E2"/><rect y="360" width="800" height="140" fill="#C7D4CE"/>
+<g transform="translate(276,196) scale(1.0)">
+  <rect x="8" y="34" width="228" height="98" rx="6" fill="#FFFFFF"/>
+  <rect x="8" y="34" width="228" height="16" rx="6" fill="#009E8A"/>
+  <rect x="26" y="62" width="76" height="52" rx="3" fill="#D7EBE6"/>
+  <rect x="34" y="70" width="60" height="5" fill="#A3B4AD"/>
+  <rect x="34" y="82" width="60" height="5" fill="#A3B4AD"/>
+  <rect x="34" y="94" width="60" height="5" fill="#A3B4AD"/>
+  <rect x="124" y="62" width="88" height="52" rx="3" fill="#00796A"/>
+  <circle cx="150" cy="80" r="9" fill="#D7EBE6"/>
+  <rect x="168" y="74" width="34" height="8" rx="4" fill="#86CCBE"/>
+  <rect x="168" y="90" width="34" height="8" rx="4" fill="#EE8AAA"/>
+  <path d="M236,116 c26,0 30,24 52,24" stroke="#26332F" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <rect x="0" y="132" width="250" height="20" rx="4" fill="#26332F"/>
+</g>
+<ellipse cx="104" cy="258" rx="34" ry="11" fill="#00796A"/>
+<path d="M70,258 v78 a34,11 0 0 0 68,0 v-78 Z" fill="#009E8A"/>
+<rect x="70" y="284" width="68" height="7" fill="#00796A"/>
+<rect x="70" y="310" width="68" height="7" fill="#00796A"/>
+</svg>

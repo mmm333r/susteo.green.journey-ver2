@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="導入事例のイメージイラスト">
+<rect width="800" height="450" fill="#E7F3F0"/>
+<rect y="330" width="800" height="120" fill="#C7D4CE"/>
+<g transform="translate(80,248) scale(0.46)">
+  <rect x="0" y="0" width="250" height="120" rx="4" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="250" height="13" rx="4" fill="#D7EBE6"/>
+  <rect x="0" y="107" width="250" height="13" fill="#C7D4CE"/>
+  <rect x="14" y="120" width="340" height="12" fill="#26332F" opacity=".22"/>
+  <path d="M258,34 h70 c11,0 20,6 25,16 l23,42 c3,6 4,11 4,17 v11 h-122 z" fill="#009E8A"/>
+  <path d="M294,46 h32 c7,0 12,4 15,10 l15,28 h-62 z" fill="#D7EBE6"/>
+  <rect x="368" y="104" width="24" height="16" rx="3" fill="#00796A"/>
+  <circle cx="62" cy="152" r="26" fill="#26332F"/><circle cx="62" cy="152" r="10" fill="#A3B4AD"/>
+  <circle cx="114" cy="152" r="26" fill="#26332F"/><circle cx="114" cy="152" r="10" fill="#A3B4AD"/>
+  <circle cx="330" cy="152" r="26" fill="#26332F"/><circle cx="330" cy="152" r="10" fill="#A3B4AD"/>
+</g>
+<g transform="translate(330,248) scale(0.46)">
+  <rect x="0" y="0" width="250" height="120" rx="4" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="250" height="13" rx="4" fill="#D7EBE6"/>
+  <rect x="0" y="107" width="250" height="13" fill="#C7D4CE"/>
+  <rect x="14" y="120" width="340" height="12" fill="#26332F" opacity=".22"/>
+  <path d="M258,34 h70 c11,0 20,6 25,16 l23,42 c3,6 4,11 4,17 v11 h-122 z" fill="#009E8A"/>
+  <path d="M294,46 h32 c7,0 12,4 15,10 l15,28 h-62 z" fill="#D7EBE6"/>
+  <rect x="368" y="104" width="24" height="16" rx="3" fill="#00796A"/>
+  <circle cx="62" cy="152" r="26" fill="#26332F"/><circle cx="62" cy="152" r="10" fill="#A3B4AD"/>
+  <circle cx="114" cy="152" r="26" fill="#26332F"/><circle cx="114" cy="152" r="10" fill="#A3B4AD"/>
+  <circle cx="330" cy="152" r="26" fill="#26332F"/><circle cx="330" cy="152" r="10" fill="#A3B4AD"/>
+</g>
+<g transform="translate(580,248) scale(0.46)">
+  <rect x="0" y="0" width="250" height="120" rx="4" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="250" height="13" rx="4" fill="#D7EBE6"/>
+  <rect x="0" y="107" width="250" height="13" fill="#C7D4CE"/>
+  <rect x="14" y="120" width="340" height="12" fill="#26332F" opacity=".22"/>
+  <path d="M258,34 h70 c11,0 20,6 25,16 l23,42 c3,6 4,11 4,17 v11 h-122 z" fill="#009E8A"/>
+  <path d="M294,46 h32 c7,0 12,4 15,10 l15,28 h-62 z" fill="#D7EBE6"/>
+  <rect x="368" y="104" width="24" height="16" rx="3" fill="#00796A"/>
+  <circle cx="62" cy="152" r="26" fill="#26332F"/><circle cx="62" cy="152" r="10" fill="#A3B4AD"/>
+  <circle cx="114" cy="152" r="26" fill="#26332F"/><circle cx="114" cy="152" r="10" fill="#A3B4AD"/>
+  <circle cx="330" cy="152" r="26" fill="#26332F"/><circle cx="330" cy="152" r="10" fill="#A3B4AD"/>
+</g>
+</svg>

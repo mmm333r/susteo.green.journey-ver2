@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="よくある質問のイメージイラスト">
+<rect width="800" height="450" fill="#E7F3F0"/>
+<path d="M150,96 h320 a14,14 0 0 1 14,14 v150 a14,14 0 0 1 -14,14 h-240 l-62,48 v-48 h-18 a14,14 0 0 1 -14,-14 v-150 a14,14 0 0 1 14,-14 Z" fill="#FFFFFF"/>
+<rect x="188" y="146" width="210" height="13" rx="6" fill="#D7EBE6"/>
+<rect x="188" y="182" width="248" height="13" rx="6" fill="#D7EBE6"/>
+<rect x="188" y="218" width="160" height="13" rx="6" fill="#D7EBE6"/>
+<path d="M420,224 h212 a14,14 0 0 1 14,14 v120 a14,14 0 0 1 -14,14 h-150 l-50,40 v-40 h-12 a14,14 0 0 1 -14,-14 v-120 a14,14 0 0 1 14,-14 Z" fill="#009E8A"/>
+<rect x="452" y="266" width="150" height="13" rx="6" fill="#FFFFFF" opacity=".85"/>
+<rect x="452" y="302" width="110" height="13" rx="6" fill="#FFFFFF" opacity=".6"/>
+</svg>
