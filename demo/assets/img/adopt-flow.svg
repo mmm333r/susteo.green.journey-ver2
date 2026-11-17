@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 500" role="img" aria-label="初回相談から本導入までの流れのイメージ">
+<rect width="1600" height="500" fill="#E7F3F0"/><rect y="396" width="1600" height="104" fill="#D7EBE6"/>
+<g transform="translate(250,186) scale(1.85)"><rect x="36" y="32" width="500" height="6" rx="3" fill="#86CCBE"/><circle cx="36" cy="35" r="24" fill="#009E8A"/><circle cx="36" cy="35" r="11" fill="#FFFFFF"/><circle cx="161" cy="35" r="24" fill="#009E8A"/><circle cx="161" cy="35" r="11" fill="#FFFFFF"/><circle cx="286" cy="35" r="24" fill="#009E8A"/><circle cx="286" cy="35" r="11" fill="#FFFFFF"/><circle cx="411" cy="35" r="24" fill="#009E8A"/><circle cx="411" cy="35" r="11" fill="#FFFFFF"/><circle cx="536" cy="35" r="30" fill="#EE8AAA"/><circle cx="536" cy="35" r="14" fill="#FFFFFF"/></g>
+<rect x="264" y="332" width="130" height="14" rx="7" fill="#86CCBE"/>
+<rect x="495" y="332" width="130" height="14" rx="7" fill="#86CCBE"/>
+<rect x="726" y="332" width="130" height="14" rx="7" fill="#86CCBE"/>
+<rect x="957" y="332" width="130" height="14" rx="7" fill="#86CCBE"/>
+<rect x="1188" y="332" width="130" height="14" rx="7" fill="#EE8AAA"/>
+</svg>

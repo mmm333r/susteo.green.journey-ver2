@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="航空分野（バイオジェット燃料）のイラスト">
+<rect width="800" height="500" fill="#E7F3F0"/>
+<g transform="translate(70,90) scale(1.2)" opacity="0.85"><circle cx="34" cy="34" r="26" fill="#FFFFFF"/><circle cx="68" cy="26" r="20" fill="#FFFFFF"/><circle cx="94" cy="38" r="24" fill="#FFFFFF"/><rect x="30" y="38" width="68" height="24" rx="12" fill="#FFFFFF"/></g>
+<g transform="translate(560,330) scale(1.0)" opacity="0.6"><circle cx="34" cy="34" r="26" fill="#FFFFFF"/><circle cx="68" cy="26" r="20" fill="#FFFFFF"/><circle cx="94" cy="38" r="24" fill="#FFFFFF"/><rect x="30" y="38" width="68" height="24" rx="12" fill="#FFFFFF"/></g>
+<g transform="translate(210,160) scale(1.2)">
+  <path d="M10,86 h212 c30,0 58,-10 78,-26 l24,-18 -30,6 -56,22 h-40 l-44,-44 h-26 l22,46
+           h-52 l-26,-26 h-18 l14,30 -22,8 z" fill="#FFFFFF"/>
+  <path d="M10,86 h212 c30,0 58,-10 78,-26 l24,-18 -30,6 -56,22 h-40 l-44,-44 h-26 l22,46
+           h-52 l-26,-26 h-18 l14,30 -22,8 z" fill="none" stroke="#C7D4CE" stroke-width="3"/>
+  <rect x="60" y="74" width="120" height="9" rx="4" fill="#009E8A"/>
+  <circle cx="232" cy="70" r="7" fill="#EE8AAA"/>
+</g>
+</svg>

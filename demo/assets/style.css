@@ -1781,3 +1781,42 @@ a.post-card:hover { border-color: var(--teal); background: var(--paper); }
   :root:not([data-theme="light"]) .figure-img { filter: brightness(.9) saturate(.95); }
 }
 :root[data-theme="dark"] .figure-img { filter: brightness(.9) saturate(.95); }
+
+/* 節の見出し下に置く帯の図版 */
+.section-banner {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 5;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+  margin: 0 0 26px;
+}
+/* 記事サムネイル・カードの図版 */
+.article-img, .card-img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--paper);
+  margin-bottom: 12px;
+}
+.article-img { aspect-ratio: 16 / 9; }
+.card-img { aspect-ratio: 16 / 10; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .section-banner,
+  :root:not([data-theme="light"]) .article-img,
+  :root:not([data-theme="light"]) .card-img { filter: brightness(.9) saturate(.95); }
+}
+:root[data-theme="dark"] .section-banner,
+:root[data-theme="dark"] .article-img,
+:root[data-theme="dark"] .card-img { filter: brightness(.9) saturate(.95); }
+@media (max-width: 680px) {
+  .section-banner { aspect-ratio: 16 / 7; margin-bottom: 20px; }
+}

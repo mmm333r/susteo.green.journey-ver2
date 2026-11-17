@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 500" role="img" aria-label="ISCC認証とPoSなど証憑のイメージ">
+<rect width="1600" height="500" fill="#E7F3F0"/><rect y="396" width="1600" height="104" fill="#D7EBE6"/>
+<g transform="translate(330,104) scale(1.5)">
+  <rect width="150" height="200" rx="6" fill="#FFFFFF"/>
+  <rect width="150" height="26" rx="6" fill="#00796A"/>
+  <rect x="20" y="54" width="110" height="9" rx="4" fill="#D7EBE6"/><rect x="20" y="80" width="92" height="9" rx="4" fill="#D7EBE6"/><rect x="20" y="106" width="110" height="9" rx="4" fill="#D7EBE6"/><rect x="20" y="132" width="92" height="9" rx="4" fill="#D7EBE6"/>
+</g>
+<g transform="translate(580,128) scale(1.35)">
+  <rect width="150" height="200" rx="6" fill="#FFFFFF"/>
+  <rect width="150" height="26" rx="6" fill="#009E8A"/>
+  <rect x="20" y="54" width="110" height="9" rx="4" fill="#D7EBE6"/><rect x="20" y="80" width="92" height="9" rx="4" fill="#D7EBE6"/><rect x="20" y="106" width="110" height="9" rx="4" fill="#D7EBE6"/><rect x="20" y="132" width="92" height="9" rx="4" fill="#D7EBE6"/>
+</g>
+<g transform="translate(900,120) scale(1.7)">
+  <circle cx="65" cy="62" r="56" fill="#009E8A"/>
+  <circle cx="65" cy="62" r="42" fill="#FFFFFF" opacity=".25"/>
+  <path d="M44,62 l14,14 28,-30" stroke="#FFFFFF" stroke-width="10"
+        fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M38,104 l-10,46 37,-20 37,20 -10,-46 z" fill="#EE8AAA"/>
+</g>
+<path d="M820,250 h56 m-14,-12 l14,12 -14,12" stroke="#86CCBE" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

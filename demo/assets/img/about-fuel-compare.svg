@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 500" role="img" aria-label="HVO・FAME・軽油の3種類を並べた比較イメージ">
+<rect width="1600" height="500" fill="#E7F3F0"/><rect y="286" width="1600" height="90" fill="#D7EBE6"/><path d="M0,376 C192,306 352,312 544,376 Z" fill="#BCDFD7"/><path d="M416,376 C672,280 928,288 1184,376 Z" fill="#BCDFD7"/><path d="M1056,376 C1248,318 1440,322 1600,376 Z" fill="#BCDFD7"/><rect y="376" width="1600" height="124" fill="#DCE7E2"/><rect y="394" width="1600" height="106" fill="#C7D4CE"/>
+<g transform="translate(300,142) scale(1.8)">
+  <path d="M0,14 v102 a45,14 0 0 0 90,0 V14 Z" fill="#009E8A"/>
+  <rect x="0" y="42" width="90" height="11" fill="#FFFFFF" opacity=".92"/>
+  <rect x="0" y="80" width="90" height="11" fill="#FFFFFF" opacity=".92"/>
+  <ellipse cx="45" cy="14" rx="45" ry="14" fill="#00796A"/>
+  <ellipse cx="45" cy="14" rx="26" ry="8" fill="#009E8A" opacity=".55"/>
+</g>
+<rect x="286" y="404" width="190" height="12" rx="6" fill="#009E8A"/>
+<g transform="translate(720,142) scale(1.8)">
+  <path d="M0,14 v102 a45,14 0 0 0 90,0 V14 Z" fill="#86CCBE"/>
+  <rect x="0" y="42" width="90" height="11" fill="#FFFFFF" opacity=".92"/>
+  <rect x="0" y="80" width="90" height="11" fill="#FFFFFF" opacity=".92"/>
+  <ellipse cx="45" cy="14" rx="45" ry="14" fill="#00796A"/>
+  <ellipse cx="45" cy="14" rx="26" ry="8" fill="#86CCBE" opacity=".55"/>
+</g>
+<rect x="706" y="404" width="190" height="12" rx="6" fill="#86CCBE"/>
+<g transform="translate(1140,142) scale(1.8)">
+  <path d="M0,14 v102 a45,14 0 0 0 90,0 V14 Z" fill="#A3B4AD"/>
+  <rect x="0" y="42" width="90" height="11" fill="#FFFFFF" opacity=".92"/>
+  <rect x="0" y="80" width="90" height="11" fill="#FFFFFF" opacity=".92"/>
+  <ellipse cx="45" cy="14" rx="45" ry="14" fill="#26332F"/>
+  <ellipse cx="45" cy="14" rx="26" ry="8" fill="#A3B4AD" opacity=".55"/>
+</g>
+<rect x="1126" y="404" width="190" height="12" rx="6" fill="#A3B4AD"/>
+</svg>

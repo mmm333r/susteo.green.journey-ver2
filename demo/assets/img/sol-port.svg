@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 500" role="img" aria-label="港湾のコンテナクレーンと荷役のイラスト">
+<rect width="1600" height="500" fill="#E7F3F0"/><rect y="286" width="1600" height="90" fill="#D7EBE6"/><path d="M0,376 C192,306 352,312 544,376 Z" fill="#BCDFD7"/><path d="M416,376 C672,280 928,288 1184,376 Z" fill="#BCDFD7"/><path d="M1056,376 C1248,318 1440,322 1600,376 Z" fill="#BCDFD7"/><rect y="376" width="1600" height="124" fill="#BBD9DA"/><rect y="394" width="1600" height="106" fill="#BBD9DA"/>
+<rect x="60" y="432" width="150" height="9" rx="4" fill="#FFFFFF" opacity=".5"/>
+<rect x="280" y="454" width="150" height="9" rx="4" fill="#FFFFFF" opacity=".5"/>
+<rect x="500" y="432" width="150" height="9" rx="4" fill="#FFFFFF" opacity=".5"/>
+<rect x="720" y="454" width="150" height="9" rx="4" fill="#FFFFFF" opacity=".5"/>
+<rect x="940" y="432" width="150" height="9" rx="4" fill="#FFFFFF" opacity=".5"/>
+<rect x="1160" y="454" width="150" height="9" rx="4" fill="#FFFFFF" opacity=".5"/>
+<rect x="1380" y="432" width="150" height="9" rx="4" fill="#FFFFFF" opacity=".5"/>
+<g transform="translate(430,126) scale(1.0)">
+  <path d="M190,52 h170" stroke="#009E8A" stroke-width="15" stroke-linecap="round" fill="none"/>
+  <path d="M8,52 h66" stroke="#009E8A" stroke-width="15" stroke-linecap="round" fill="none"/>
+  <path d="M130,30 L330,48" stroke="#26332F" stroke-width="6" fill="none"/>
+  <path d="M130,30 L36,48" stroke="#26332F" stroke-width="6" fill="none"/>
+  <rect x="48" y="60" width="164" height="16" rx="3" fill="#00796A"/>
+  <rect x="98" y="22" width="64" height="38" rx="4" fill="#00796A"/>
+  <path d="M62,250 L62,76" stroke="#26332F" stroke-width="12" fill="none"/>
+  <path d="M198,250 L198,76" stroke="#26332F" stroke-width="12" fill="none"/>
+  <path d="M62,160 L198,160" stroke="#26332F" stroke-width="8" fill="none"/>
+  <rect x="284" y="44" width="34" height="16" rx="3" fill="#26332F"/>
+  <path d="M301,60 L301,146" stroke="#26332F" stroke-width="4" fill="none"/>
+  <rect x="266" y="146" width="70" height="34" rx="2" fill="#EE8AAA"/>
+  <rect x="40" y="248" width="180" height="12" rx="3" fill="#26332F"/>
+</g>
+<rect x="1080" y="300" width="86" height="38" fill="#009E8A"/>
+<rect x="1172" y="300" width="86" height="38" fill="#00796A"/>
+<rect x="1080" y="340" width="86" height="38" fill="#86CCBE"/>
+<rect x="1172" y="340" width="86" height="38" fill="#EE8AAA"/>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 500" role="img" aria-label="車両・設備の仕様を確認するイメージ">
+<rect width="1600" height="500" fill="#E7F3F0"/><rect y="286" width="1600" height="90" fill="#D7EBE6"/><path d="M0,376 C192,306 352,312 544,376 Z" fill="#BCDFD7"/><path d="M416,376 C672,280 928,288 1184,376 Z" fill="#BCDFD7"/><path d="M1056,376 C1248,318 1440,322 1600,376 Z" fill="#BCDFD7"/><rect y="376" width="1600" height="124" fill="#DCE7E2"/><rect y="394" width="1600" height="106" fill="#C7D4CE"/>
+<g transform="translate(180,198) scale(1.0)">
+  <path d="M166,100 L236,46" stroke="#009E8A" stroke-width="21" stroke-linecap="round" fill="none"/>
+  <path d="M236,46 L286,108" stroke="#00796A" stroke-width="16" stroke-linecap="round" fill="none"/>
+  <path d="M286,108 l24,8 -7,28 -32,-7 z" fill="#26332F"/>
+  <rect x="26" y="86" width="18" height="54" rx="4" fill="#00796A"/>
+  <rect x="40" y="84" width="130" height="58" rx="6" fill="#009E8A"/>
+  <rect x="44" y="40" width="64" height="46" rx="6" fill="#00796A"/>
+  <rect x="53" y="49" width="46" height="28" rx="3" fill="#D7EBE6"/>
+  <rect x="0" y="140" width="210" height="38" rx="19" fill="#26332F"/>
+  <rect x="16" y="151" width="178" height="16" rx="8" fill="#A3B4AD"/>
+</g>
+<g transform="translate(700,136) scale(1.4)">
+  <rect y="14" width="140" height="166" rx="8" fill="#FFFFFF"/>
+  <rect y="14" width="140" height="166" rx="8" fill="none" stroke="#C7D4CE" stroke-width="3"/>
+  <rect x="44" y="0" width="52" height="26" rx="8" fill="#00796A"/>
+  <rect x="24" y="62" width="20" height="20" rx="4" fill="#D7EBE6"/><path d="M28,72 l6,6 10,-12" stroke="#009E8A" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="54" y="68" width="62" height="8" rx="4" fill="#D7EBE6"/><rect x="24" y="96" width="20" height="20" rx="4" fill="#D7EBE6"/><path d="M28,106 l6,6 10,-12" stroke="#009E8A" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="54" y="102" width="54" height="8" rx="4" fill="#D7EBE6"/><rect x="24" y="130" width="20" height="20" rx="4" fill="#D7EBE6"/><path d="M28,140 l6,6 10,-12" stroke="#A3B4AD" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="54" y="136" width="46" height="8" rx="4" fill="#D7EBE6"/>
+</g>
+<g transform="translate(1010,198) scale(0.9)">
+  <rect x="0" y="0" width="250" height="120" rx="4" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="250" height="13" rx="4" fill="#D7EBE6"/>
+  <rect x="0" y="107" width="250" height="13" fill="#C7D4CE"/>
+  <rect x="14" y="120" width="340" height="12" fill="#26332F" opacity=".22"/>
+  <path d="M258,34 h70 c11,0 20,6 25,16 l23,42 c3,6 4,11 4,17 v11 h-122 z" fill="#009E8A"/>
+  <path d="M294,46 h32 c7,0 12,4 15,10 l15,28 h-62 z" fill="#D7EBE6"/>
+  <rect x="368" y="104" width="24" height="16" rx="3" fill="#00796A"/>
+  <circle cx="62" cy="152" r="26" fill="#26332F"/><circle cx="62" cy="152" r="10" fill="#A3B4AD"/>
+  <circle cx="114" cy="152" r="26" fill="#26332F"/><circle cx="114" cy="152" r="10" fill="#A3B4AD"/>
+  <circle cx="330" cy="152" r="26" fill="#26332F"/><circle cx="330" cy="152" r="10" fill="#A3B4AD"/>
+</g>
+</svg>

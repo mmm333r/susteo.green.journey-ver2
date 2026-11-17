@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 500" role="img" aria-label="仮設電源として使われるディーゼル発電機のイラスト">
+<rect width="1600" height="500" fill="#E7F3F0"/><rect y="286" width="1600" height="90" fill="#D7EBE6"/><path d="M0,376 C192,306 352,312 544,376 Z" fill="#BCDFD7"/><path d="M416,376 C672,280 928,288 1184,376 Z" fill="#BCDFD7"/><path d="M1056,376 C1248,318 1440,322 1600,376 Z" fill="#BCDFD7"/><rect y="376" width="1600" height="124" fill="#DCE7E2"/><rect y="394" width="1600" height="106" fill="#C7D4CE"/>
+<path d="M1420,376 l-14.5,0 l14.5,-60.4 l14.5,60.4 Z" fill="#86CCBE"/><path d="M1420,345.8 l-12.2,0 l12.2,-33.2 l12.2,33.2 Z" fill="#009E8A" opacity=".55"/><path d="M1510,376 l-16.6,0 l16.6,-68.8 l16.6,68.8 Z" fill="#86CCBE"/><path d="M1510,341.6 l-13.9,0 l13.9,-37.8 l13.9,37.8 Z" fill="#009E8A" opacity=".55"/>
+<g transform="translate(620,224) scale(1.0)">
+  <rect x="8" y="34" width="228" height="98" rx="6" fill="#FFFFFF"/>
+  <rect x="8" y="34" width="228" height="16" rx="6" fill="#009E8A"/>
+  <rect x="26" y="62" width="76" height="52" rx="3" fill="#D7EBE6"/>
+  <rect x="34" y="70" width="60" height="5" fill="#A3B4AD"/>
+  <rect x="34" y="82" width="60" height="5" fill="#A3B4AD"/>
+  <rect x="34" y="94" width="60" height="5" fill="#A3B4AD"/>
+  <rect x="124" y="62" width="88" height="52" rx="3" fill="#00796A"/>
+  <circle cx="150" cy="80" r="9" fill="#D7EBE6"/>
+  <rect x="168" y="74" width="34" height="8" rx="4" fill="#86CCBE"/>
+  <rect x="168" y="90" width="34" height="8" rx="4" fill="#EE8AAA"/>
+  <path d="M236,116 c26,0 30,24 52,24" stroke="#26332F" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <rect x="0" y="132" width="250" height="20" rx="4" fill="#26332F"/>
+</g>
+<g transform="translate(400,246) scale(1.0)">
+  <path d="M0,14 v102 a45,14 0 0 0 90,0 V14 Z" fill="#009E8A"/>
+  <rect x="0" y="42" width="90" height="11" fill="#FFFFFF" opacity=".92"/>
+  <rect x="0" y="80" width="90" height="11" fill="#FFFFFF" opacity=".92"/>
+  <ellipse cx="45" cy="14" rx="45" ry="14" fill="#00796A"/>
+  <ellipse cx="45" cy="14" rx="26" ry="8" fill="#009E8A" opacity=".55"/>
+</g>
+<g transform="translate(500,246) scale(1.0)">
+  <path d="M0,14 v102 a45,14 0 0 0 90,0 V14 Z" fill="#00796A"/>
+  <rect x="0" y="42" width="90" height="11" fill="#FFFFFF" opacity=".92"/>
+  <rect x="0" y="80" width="90" height="11" fill="#FFFFFF" opacity=".92"/>
+  <ellipse cx="45" cy="14" rx="45" ry="14" fill="#00796A"/>
+  <ellipse cx="45" cy="14" rx="26" ry="8" fill="#00796A" opacity=".55"/>
+</g>
+<path d="M940,300 h120 m-22,-18 l22,18 -22,18" stroke="#00796A" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<g transform="translate(1120,198) scale(0.8)">
+  <path d="M166,100 L236,46" stroke="#009E8A" stroke-width="21" stroke-linecap="round" fill="none"/>
+  <path d="M236,46 L286,108" stroke="#00796A" stroke-width="16" stroke-linecap="round" fill="none"/>
+  <path d="M286,108 l24,8 -7,28 -32,-7 z" fill="#26332F"/>
+  <rect x="26" y="86" width="18" height="54" rx="4" fill="#00796A"/>
+  <rect x="40" y="84" width="130" height="58" rx="6" fill="#009E8A"/>
+  <rect x="44" y="40" width="64" height="46" rx="6" fill="#00796A"/>
+  <rect x="53" y="49" width="46" height="28" rx="3" fill="#D7EBE6"/>
+  <rect x="0" y="140" width="210" height="38" rx="19" fill="#26332F"/>
+  <rect x="16" y="151" width="178" height="16" rx="8" fill="#A3B4AD"/>
+</g>
+</svg>

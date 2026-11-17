@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 500" role="img" aria-label="見積条件と価格決定要素のイメージ">
+<rect width="1600" height="500" fill="#E7F3F0"/><rect y="396" width="1600" height="104" fill="#D7EBE6"/>
+<g transform="translate(300,104) scale(1.5)">
+  <rect width="150" height="200" rx="6" fill="#FFFFFF"/>
+  <rect width="150" height="26" rx="6" fill="#009E8A"/>
+  <rect x="20" y="54" width="110" height="9" rx="4" fill="#D7EBE6"/><rect x="20" y="80" width="92" height="9" rx="4" fill="#D7EBE6"/><rect x="20" y="106" width="110" height="9" rx="4" fill="#D7EBE6"/><rect x="20" y="132" width="92" height="9" rx="4" fill="#D7EBE6"/><rect x="20" y="158" width="110" height="9" rx="4" fill="#D7EBE6"/>
+</g>
+<g transform="translate(610,130) scale(1.45)"><rect width="150" height="190" rx="10" fill="#FFFFFF"/><rect x="18" y="18" width="114" height="40" rx="5" fill="#D7EBE6"/><rect x="18" y="74" width="30" height="26" rx="5" fill="#86CCBE"/><rect x="58" y="74" width="30" height="26" rx="5" fill="#86CCBE"/><rect x="98" y="74" width="30" height="26" rx="5" fill="#86CCBE"/><rect x="18" y="108" width="30" height="26" rx="5" fill="#86CCBE"/><rect x="58" y="108" width="30" height="26" rx="5" fill="#86CCBE"/><rect x="98" y="108" width="30" height="26" rx="5" fill="#86CCBE"/><rect x="18" y="142" width="30" height="26" rx="5" fill="#86CCBE"/><rect x="58" y="142" width="30" height="26" rx="5" fill="#86CCBE"/><rect x="98" y="142" width="30" height="26" rx="5" fill="#EE8AAA"/></g>
+<path d="M1010,180 h130 l76,76 -98,98 -76,-76 z" fill="#00796A"/>
+<circle cx="1058" cy="228" r="15" fill="#FFFFFF"/>
+</svg>

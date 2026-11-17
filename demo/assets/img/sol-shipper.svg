@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 500" role="img" aria-label="物流センターと委託輸送のイラスト">
+<rect width="1600" height="500" fill="#E7F3F0"/><rect y="286" width="1600" height="90" fill="#D7EBE6"/><path d="M0,376 C192,306 352,312 544,376 Z" fill="#BCDFD7"/><path d="M416,376 C672,280 928,288 1184,376 Z" fill="#BCDFD7"/><path d="M1056,376 C1248,318 1440,322 1600,376 Z" fill="#BCDFD7"/><rect y="376" width="1600" height="124" fill="#DCE7E2"/><rect y="394" width="1600" height="106" fill="#C7D4CE"/>
+<g transform="translate(600,186) scale(1.0)">
+  <rect x="0" y="40" width="360" height="150" fill="#FFFFFF"/>
+  <rect x="-8" y="28" width="376" height="16" rx="3" fill="#00796A"/>
+  <rect x="0" y="62" width="360" height="8" fill="#C7D4CE"/>
+  <rect x="34" y="102" width="78" height="88" rx="2" fill="#D7EBE6"/><rect x="34" y="102" width="78" height="11" fill="#009E8A"/><rect x="144" y="102" width="78" height="88" rx="2" fill="#D7EBE6"/><rect x="144" y="102" width="78" height="11" fill="#009E8A"/><rect x="254" y="102" width="78" height="88" rx="2" fill="#D7EBE6"/><rect x="254" y="102" width="78" height="11" fill="#EE8AAA"/>
+  <rect x="18" y="88" width="324" height="10" rx="3" fill="#C7D4CE"/>
+</g>
+<g transform="translate(130,198) scale(0.86)">
+  <rect x="0" y="0" width="250" height="120" rx="4" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="250" height="13" rx="4" fill="#D7EBE6"/>
+  <rect x="0" y="107" width="250" height="13" fill="#C7D4CE"/>
+  <rect x="14" y="120" width="340" height="12" fill="#26332F" opacity=".22"/>
+  <path d="M258,34 h70 c11,0 20,6 25,16 l23,42 c3,6 4,11 4,17 v11 h-122 z" fill="#009E8A"/>
+  <path d="M294,46 h32 c7,0 12,4 15,10 l15,28 h-62 z" fill="#D7EBE6"/>
+  <rect x="368" y="104" width="24" height="16" rx="3" fill="#00796A"/>
+  <circle cx="62" cy="152" r="26" fill="#26332F"/><circle cx="62" cy="152" r="10" fill="#A3B4AD"/>
+  <circle cx="114" cy="152" r="26" fill="#26332F"/><circle cx="114" cy="152" r="10" fill="#A3B4AD"/>
+  <circle cx="330" cy="152" r="26" fill="#26332F"/><circle cx="330" cy="152" r="10" fill="#A3B4AD"/>
+</g>
+<g transform="translate(1090,198) scale(0.86)">
+  <rect x="0" y="0" width="250" height="120" rx="4" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="250" height="13" rx="4" fill="#D7EBE6"/>
+  <rect x="0" y="107" width="250" height="13" fill="#C7D4CE"/>
+  <rect x="14" y="120" width="340" height="12" fill="#26332F" opacity=".22"/>
+  <path d="M258,34 h70 c11,0 20,6 25,16 l23,42 c3,6 4,11 4,17 v11 h-122 z" fill="#009E8A"/>
+  <path d="M294,46 h32 c7,0 12,4 15,10 l15,28 h-62 z" fill="#D7EBE6"/>
+  <rect x="368" y="104" width="24" height="16" rx="3" fill="#00796A"/>
+  <circle cx="62" cy="152" r="26" fill="#26332F"/><circle cx="62" cy="152" r="10" fill="#A3B4AD"/>
+  <circle cx="114" cy="152" r="26" fill="#26332F"/><circle cx="114" cy="152" r="10" fill="#A3B4AD"/>
+  <circle cx="330" cy="152" r="26" fill="#26332F"/><circle cx="330" cy="152" r="10" fill="#A3B4AD"/>
+</g>
+</svg>

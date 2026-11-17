@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 500" role="img" aria-label="建設現場で稼働する油圧ショベルのイラスト">
+<rect width="1600" height="500" fill="#E7F3F0"/><rect y="286" width="1600" height="90" fill="#D7EBE6"/><path d="M0,376 C192,306 352,312 544,376 Z" fill="#BCDFD7"/><path d="M416,376 C672,280 928,288 1184,376 Z" fill="#BCDFD7"/><path d="M1056,376 C1248,318 1440,322 1600,376 Z" fill="#BCDFD7"/><rect y="376" width="1600" height="124" fill="#E3DACB"/><rect y="394" width="1600" height="106" fill="#D9CFBC"/>
+<path d="M1120,394 c70,-56 170,-48 240,8 L1600,394 Z" fill="#CDBEA4"/>
+<path d="M190,472 c28,-62 160,-62 190,0 Z" fill="#CDBEA4"/>
+<g transform="translate(600,198) scale(1.05)">
+  <path d="M166,100 L236,46" stroke="#009E8A" stroke-width="21" stroke-linecap="round" fill="none"/>
+  <path d="M236,46 L286,108" stroke="#00796A" stroke-width="16" stroke-linecap="round" fill="none"/>
+  <path d="M286,108 l24,8 -7,28 -32,-7 z" fill="#26332F"/>
+  <rect x="26" y="86" width="18" height="54" rx="4" fill="#00796A"/>
+  <rect x="40" y="84" width="130" height="58" rx="6" fill="#009E8A"/>
+  <rect x="44" y="40" width="64" height="46" rx="6" fill="#00796A"/>
+  <rect x="53" y="49" width="46" height="28" rx="3" fill="#D7EBE6"/>
+  <rect x="0" y="140" width="210" height="38" rx="19" fill="#26332F"/>
+  <rect x="16" y="151" width="178" height="16" rx="8" fill="#A3B4AD"/>
+</g>
+</svg>

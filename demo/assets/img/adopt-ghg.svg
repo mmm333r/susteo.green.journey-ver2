@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 500" role="img" aria-label="GHG削減量の試算のイメージ">
+<rect width="1600" height="500" fill="#E7F3F0"/><rect y="396" width="1600" height="104" fill="#D7EBE6"/>
+<g transform="translate(230,110) scale(1.8)" opacity="0.95"><circle cx="34" cy="34" r="26" fill="#FFFFFF"/><circle cx="68" cy="26" r="20" fill="#FFFFFF"/><circle cx="94" cy="38" r="24" fill="#FFFFFF"/><rect x="30" y="38" width="68" height="24" rx="12" fill="#FFFFFF"/></g>
+<g transform="translate(640,120)"><rect width="320" height="236" rx="10" fill="#FFFFFF"/><rect x="54" y="46" width="74" height="162" rx="6" fill="#86CCBE"/><rect x="196" y="128" width="74" height="80" rx="6" fill="#EE8AAA"/><rect x="30" y="212" width="260" height="6" rx="3" fill="#C7D4CE"/></g>
+<path d="M1040,180 v100 m-24,-26 l24,26 24,-26" stroke="#00796A" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<g transform="translate(1140,150) scale(1.2)">
+  <rect width="210" height="170" rx="6" fill="#FFFFFF"/>
+  <rect x="30" y="86" width="28" height="58" rx="4" fill="#86CCBE"/><rect x="74" y="40" width="28" height="104" rx="4" fill="#86CCBE"/><rect x="118" y="64" width="28" height="80" rx="4" fill="#86CCBE"/><rect x="162" y="2" width="28" height="142" rx="4" fill="#EE8AAA"/>
+  <rect x="18" y="146" width="174" height="5" rx="2" fill="#C7D4CE"/>
+</g>
+</svg>

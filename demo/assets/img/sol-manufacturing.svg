@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 500" role="img" aria-label="工場のボイラー設備のイラスト">
+<rect width="1600" height="500" fill="#E7F3F0"/><rect y="286" width="1600" height="90" fill="#D7EBE6"/><path d="M0,376 C192,306 352,312 544,376 Z" fill="#BCDFD7"/><path d="M416,376 C672,280 928,288 1184,376 Z" fill="#BCDFD7"/><path d="M1056,376 C1248,318 1440,322 1600,376 Z" fill="#BCDFD7"/><rect y="376" width="1600" height="124" fill="#DCE7E2"/><rect y="394" width="1600" height="106" fill="#C7D4CE"/>
+<g transform="translate(560,176) scale(1.0)">
+  <circle cx="73" cy="16" r="17" fill="#FFFFFF" opacity=".9"/>
+  <circle cx="99" cy="4" r="12" fill="#FFFFFF" opacity=".7"/>
+  <circle cx="52" cy="2" r="10" fill="#FFFFFF" opacity=".55"/>
+  <rect x="58" y="34" width="28" height="166" fill="#00796A"/>
+  <rect x="53" y="34" width="38" height="11" rx="2" fill="#26332F"/>
+  <rect x="96" y="78" width="20" height="122" fill="#009E8A"/>
+  <rect x="92" y="78" width="28" height="9" rx="2" fill="#26332F"/>
+  <path d="M120,96 L120,66 L190,96 Z" fill="#00796A"/><path d="M190,96 L190,66 L260,96 Z" fill="#00796A"/><path d="M260,96 L260,66 L330,96 Z" fill="#00796A"/>
+  <rect x="120" y="96" width="210" height="104" fill="#FFFFFF"/>
+  <rect x="120" y="96" width="210" height="9" fill="#C7D4CE"/>
+  <rect x="144" y="132" width="34" height="30" fill="#D7EBE6"/>
+  <rect x="198" y="132" width="34" height="30" fill="#D7EBE6"/>
+  <rect x="252" y="132" width="34" height="30" fill="#EE8AAA"/>
+  <rect x="144" y="176" width="142" height="24" fill="#D7EBE6"/>
+  <rect x="4" y="146" width="40" height="54" rx="6" fill="#86CCBE"/>
+  <rect x="4" y="146" width="40" height="9" rx="4" fill="#00796A"/>
+</g>
+<g transform="translate(240,226) scale(1.0)">
+  <rect x="0" y="22" width="190" height="118" rx="10" fill="#FFFFFF"/>
+  <rect x="0" y="22" width="190" height="118" rx="10" fill="none" stroke="#C7D4CE" stroke-width="3"/>
+  <path d="M-6,22 h202 l-16,-22 h-170 z" fill="#00796A"/>
+  <rect x="26" y="62" width="138" height="20" rx="10" fill="#86CCBE"/>
+  <rect x="26" y="96" width="92" height="14" rx="7" fill="#D7EBE6"/>
+  <rect x="0" y="140" width="190" height="10" rx="3" fill="#26332F"/>
+</g>
+<g transform="translate(1060,246) scale(1.0)">
+  <path d="M0,14 v102 a45,14 0 0 0 90,0 V14 Z" fill="#009E8A"/>
+  <rect x="0" y="42" width="90" height="11" fill="#FFFFFF" opacity=".92"/>
+  <rect x="0" y="80" width="90" height="11" fill="#FFFFFF" opacity=".92"/>
+  <ellipse cx="45" cy="14" rx="45" ry="14" fill="#00796A"/>
+  <ellipse cx="45" cy="14" rx="26" ry="8" fill="#009E8A" opacity=".55"/>
+</g>
+<g transform="translate(1160,246) scale(1.0)">
+  <path d="M0,14 v102 a45,14 0 0 0 90,0 V14 Z" fill="#00796A"/>
+  <rect x="0" y="42" width="90" height="11" fill="#FFFFFF" opacity=".92"/>
+  <rect x="0" y="80" width="90" height="11" fill="#FFFFFF" opacity=".92"/>
+  <ellipse cx="45" cy="14" rx="45" ry="14" fill="#00796A"/>
+  <ellipse cx="45" cy="14" rx="26" ry="8" fill="#00796A" opacity=".55"/>
+</g>
+</svg>

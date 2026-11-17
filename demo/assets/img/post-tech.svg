@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="実証・技術検証のイメージイラスト">
+<rect width="800" height="450" fill="#E7F3F0"/>
+<g transform="translate(100,180) scale(1.0)">
+  <rect x="8" y="34" width="228" height="98" rx="6" fill="#FFFFFF"/>
+  <rect x="8" y="34" width="228" height="16" rx="6" fill="#009E8A"/>
+  <rect x="26" y="62" width="76" height="52" rx="3" fill="#D7EBE6"/>
+  <rect x="34" y="70" width="60" height="5" fill="#A3B4AD"/>
+  <rect x="34" y="82" width="60" height="5" fill="#A3B4AD"/>
+  <rect x="34" y="94" width="60" height="5" fill="#A3B4AD"/>
+  <rect x="124" y="62" width="88" height="52" rx="3" fill="#00796A"/>
+  <circle cx="150" cy="80" r="9" fill="#D7EBE6"/>
+  <rect x="168" y="74" width="34" height="8" rx="4" fill="#86CCBE"/>
+  <rect x="168" y="90" width="34" height="8" rx="4" fill="#EE8AAA"/>
+  <path d="M236,116 c26,0 30,24 52,24" stroke="#26332F" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <rect x="0" y="132" width="250" height="20" rx="4" fill="#26332F"/>
+</g>
+<g transform="translate(430,120) scale(1.1)">
+  <rect width="210" height="170" rx="6" fill="#FFFFFF"/>
+  <rect x="30" y="90" width="28" height="54" rx="4" fill="#86CCBE"/><rect x="74" y="48" width="28" height="96" rx="4" fill="#86CCBE"/><rect x="118" y="72" width="28" height="72" rx="4" fill="#86CCBE"/><rect x="162" y="16" width="28" height="128" rx="4" fill="#EE8AAA"/>
+  <rect x="18" y="146" width="174" height="5" rx="2" fill="#C7D4CE"/>
+</g>
+</svg>

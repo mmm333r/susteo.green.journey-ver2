@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="海上輸送（内航船）のイラスト">
+<rect width="800" height="500" fill="#E7F3F0"/><rect y="240" width="800" height="90" fill="#D7EBE6"/>
+<path d="M0,330 C96,260 176,266 272,330 Z" fill="#BCDFD7"/><path d="M208,330 C336,234 464,242 592,330 Z" fill="#BCDFD7"/><path d="M528,330 C624,272 720,276 800,330 Z" fill="#BCDFD7"/>
+<rect y="330" width="800" height="170" fill="#AFD2D6"/>
+<rect x="-10" y="376" width="130" height="8" rx="4" fill="#FFFFFF" opacity=".5"/>
+<rect x="160" y="402" width="130" height="8" rx="4" fill="#FFFFFF" opacity=".5"/>
+<rect x="330" y="428" width="130" height="8" rx="4" fill="#FFFFFF" opacity=".5"/>
+<rect x="500" y="376" width="130" height="8" rx="4" fill="#FFFFFF" opacity=".5"/>
+<rect x="670" y="402" width="130" height="8" rx="4" fill="#FFFFFF" opacity=".5"/>
+<g transform="translate(180,180) scale(0.86)">
+  <rect x="96" y="60" width="54" height="34" fill="#EE8AAA"/>
+  <rect x="152" y="60" width="54" height="34" fill="#009E8A"/>
+  <rect x="208" y="60" width="54" height="34" fill="#86CCBE"/>
+  <rect x="124" y="26" width="54" height="34" fill="#009E8A"/>
+  <rect x="180" y="26" width="54" height="34" fill="#00796A"/>
+  <rect x="300" y="34" width="86" height="60" rx="4" fill="#FFFFFF"/>
+  <rect x="312" y="48" width="18" height="14" fill="#D7EBE6"/>
+  <rect x="338" y="48" width="18" height="14" fill="#D7EBE6"/>
+  <rect x="312" y="70" width="44" height="12" fill="#D7EBE6"/>
+  <rect x="340" y="6" width="26" height="28" rx="3" fill="#009E8A"/>
+  <path d="M0,94 h420 l-44,56 h-332 z" fill="#00796A"/>
+  <rect x="26" y="108" width="368" height="9" fill="#EE8AAA" opacity=".85"/>
+</g>
+</svg>

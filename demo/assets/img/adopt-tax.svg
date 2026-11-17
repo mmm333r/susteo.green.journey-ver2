@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 500" role="img" aria-label="公道走行時の税務上の取扱いのイメージ">
+<rect width="1600" height="500" fill="#E7F3F0"/><rect y="396" width="1600" height="104" fill="#D7EBE6"/>
+<g transform="translate(300,104) scale(1.5)">
+  <rect width="150" height="200" rx="6" fill="#FFFFFF"/>
+  <rect width="150" height="26" rx="6" fill="#00796A"/>
+  <rect x="20" y="54" width="110" height="9" rx="4" fill="#D7EBE6"/><rect x="20" y="80" width="92" height="9" rx="4" fill="#D7EBE6"/><rect x="20" y="106" width="110" height="9" rx="4" fill="#D7EBE6"/><rect x="20" y="132" width="92" height="9" rx="4" fill="#D7EBE6"/><rect x="20" y="158" width="110" height="9" rx="4" fill="#D7EBE6"/>
+</g>
+<g transform="translate(590,196) scale(1.2)"><circle cx="60" cy="60" r="58" fill="#EE8AAA"/><circle cx="60" cy="60" r="44" fill="none" stroke="#FFFFFF" stroke-width="7"/><rect x="38" y="52" width="44" height="7" rx="3" fill="#FFFFFF"/><rect x="38" y="68" width="44" height="7" rx="3" fill="#FFFFFF"/></g>
+<rect x="830" y="196" width="20" height="160" fill="#A3B4AD"/>
+<rect x="762" y="138" width="156" height="72" rx="10" fill="#FFFFFF"/>
+<rect x="762" y="138" width="156" height="72" rx="10" fill="none" stroke="#00796A" stroke-width="6"/>
+<rect x="788" y="166" width="104" height="14" rx="7" fill="#00796A"/>
+<g transform="translate(1010,198) scale(0.9)">
+  <rect x="0" y="0" width="250" height="120" rx="4" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="250" height="13" rx="4" fill="#D7EBE6"/>
+  <rect x="0" y="107" width="250" height="13" fill="#C7D4CE"/>
+  <rect x="14" y="120" width="340" height="12" fill="#26332F" opacity=".22"/>
+  <path d="M258,34 h70 c11,0 20,6 25,16 l23,42 c3,6 4,11 4,17 v11 h-122 z" fill="#009E8A"/>
+  <path d="M294,46 h32 c7,0 12,4 15,10 l15,28 h-62 z" fill="#D7EBE6"/>
+  <rect x="368" y="104" width="24" height="16" rx="3" fill="#00796A"/>
+  <circle cx="62" cy="152" r="26" fill="#26332F"/><circle cx="62" cy="152" r="10" fill="#A3B4AD"/>
+  <circle cx="114" cy="152" r="26" fill="#26332F"/><circle cx="114" cy="152" r="10" fill="#A3B4AD"/>
+  <circle cx="330" cy="152" r="26" fill="#26332F"/><circle cx="330" cy="152" r="10" fill="#A3B4AD"/>
+</g>
+</svg>

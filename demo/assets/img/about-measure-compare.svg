@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 500" role="img" aria-label="HVO・電化・水素の3つの脱炭素手段の比較イメージ">
+<rect width="1600" height="500" fill="#E7F3F0"/><rect y="286" width="1600" height="90" fill="#D7EBE6"/><path d="M0,376 C192,306 352,312 544,376 Z" fill="#BCDFD7"/><path d="M416,376 C672,280 928,288 1184,376 Z" fill="#BCDFD7"/><path d="M1056,376 C1248,318 1440,322 1600,376 Z" fill="#BCDFD7"/><rect y="376" width="1600" height="124" fill="#DCE7E2"/><rect y="394" width="1600" height="106" fill="#C7D4CE"/>
+<g transform="translate(170,198) scale(1.0)">
+  <rect x="0" y="0" width="250" height="120" rx="4" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="250" height="13" rx="4" fill="#D7EBE6"/>
+  <rect x="0" y="107" width="250" height="13" fill="#C7D4CE"/>
+  <rect x="14" y="120" width="340" height="12" fill="#26332F" opacity=".22"/>
+  <path d="M258,34 h70 c11,0 20,6 25,16 l23,42 c3,6 4,11 4,17 v11 h-122 z" fill="#009E8A"/>
+  <path d="M294,46 h32 c7,0 12,4 15,10 l15,28 h-62 z" fill="#D7EBE6"/>
+  <rect x="368" y="104" width="24" height="16" rx="3" fill="#00796A"/>
+  <circle cx="62" cy="152" r="26" fill="#26332F"/><circle cx="62" cy="152" r="10" fill="#A3B4AD"/>
+  <circle cx="114" cy="152" r="26" fill="#26332F"/><circle cx="114" cy="152" r="10" fill="#A3B4AD"/>
+  <circle cx="330" cy="152" r="26" fill="#26332F"/><circle cx="330" cy="152" r="10" fill="#A3B4AD"/>
+</g>
+<g transform="translate(700,190) scale(1.9)">
+  <rect x="18" y="0" width="12" height="30" rx="6" fill="#26332F"/>
+  <rect x="46" y="0" width="12" height="30" rx="6" fill="#26332F"/>
+  <rect x="6" y="28" width="64" height="44" rx="10" fill="#00796A"/>
+  <path d="M38,72 v22 c0,16 -24,10 -24,26" stroke="#26332F" stroke-width="8"
+        fill="none" stroke-linecap="round"/>
+</g>
+<rect x="668, 0" y="0" width="0" height="0" fill="none"/>
+<rect x="676" y="368" width="180" height="12" rx="6" fill="#00796A"/>
+<g transform="translate(1130,184) scale(1.0)">
+  <rect x="10" y="40" width="70" height="152" rx="24" fill="#FFFFFF"/>
+  <rect x="10" y="40" width="70" height="152" rx="24" fill="none" stroke="#C7D4CE" stroke-width="3"/>
+  <rect x="34" y="8" width="22" height="36" rx="6" fill="#26332F"/>
+  <rect x="24" y="2" width="42" height="12" rx="6" fill="#00796A"/>
+  <rect x="20" y="92" width="50" height="28" rx="14" fill="#86CCBE"/>
+</g>
+<g transform="translate(1250,184) scale(1.0)">
+  <rect x="10" y="40" width="70" height="152" rx="24" fill="#FFFFFF"/>
+  <rect x="10" y="40" width="70" height="152" rx="24" fill="none" stroke="#C7D4CE" stroke-width="3"/>
+  <rect x="34" y="8" width="22" height="36" rx="6" fill="#26332F"/>
+  <rect x="24" y="2" width="42" height="12" rx="6" fill="#00796A"/>
+  <rect x="20" y="92" width="50" height="28" rx="14" fill="#86CCBE"/>
+</g>
+<rect x="1116" y="382" width="240" height="12" rx="6" fill="#86CCBE"/>
+</svg>
