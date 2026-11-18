@@ -428,7 +428,6 @@ FILES2 = {
     'adopt-tax.svg':             (b_tax(),             '公道走行時の税務上の取扱いのイメージ'),
     'adopt-flow.svg':            (b_flow(),            '初回相談から本導入までの流れのイメージ'),
     'know-glossary.svg':         (b_glossary(),        'HVO・脱炭素に関する用語集のイメージ'),
-    'contact-support.svg':       (b_contact(),         'お問い合わせと初期相談のイメージ'),
     'company-land.svg':          (c_land(),            '陸上の輸送（鉄道とトラック）のイラスト'),
     'company-sea.svg':           (c_sea(),             '海上輸送（内航船）のイラスト'),
     'company-air.svg':           (c_air(),             '航空分野（バイオジェット燃料）のイラスト'),
