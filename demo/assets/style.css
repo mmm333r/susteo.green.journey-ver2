@@ -43,48 +43,9 @@
   --header-h: 64px;
   --radius: 6px;
   --radius-sm: 4px;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --paper:      #16211E;
-    --surface:    #0E1816;
-    --surface-2:  #1C2825;
-    --ink:        #E9F0EC;
-    --ink-2:      #A3B2AA;
-    --ink-3:      #A3B2AA;
-    --line:       #2A3833;
-    --line-soft:  #223029;
-    --teal:       #2FC2AC;
-    --teal-deep:  #6FDCC8;
-    --teal-wash:  #0F2C27;
-    --accent:     #EE8AAA;
-    --clay:       #F3A8BF;
-    --clay-wash:  #2B1720;
-    --shadow:     0 1px 2px rgba(0,0,0,.4), 0 10px 30px -18px rgba(0,0,0,.7);
-    --shadow-lift:0 2px 4px rgba(0,0,0,.45), 0 22px 48px -22px rgba(0,0,0,.8);
-    color-scheme: dark;
-  }
-}
-
-:root[data-theme="dark"] {
-  --paper:      #16211E;
-  --surface:    #0E1816;
-  --surface-2:  #1C2825;
-  --ink:        #E9F0EC;
-  --ink-2:      #A3B2AA;
-  --ink-3:      #A3B2AA;
-  --line:       #2A3833;
-  --line-soft:  #223029;
-  --teal:       #2FC2AC;
-  --teal-deep:  #6FDCC8;
-  --teal-wash:  #0F2C27;
-  --accent:     #EE8AAA;
-  --clay:       #F3A8BF;
-  --clay-wash:  #2B1720;
-  --shadow:     0 1px 2px rgba(0,0,0,.4), 0 10px 30px -18px rgba(0,0,0,.7);
-  --shadow-lift:0 2px 4px rgba(0,0,0,.45), 0 22px 48px -22px rgba(0,0,0,.8);
-  color-scheme: dark;
+  /* 白を基調とするため、端末のダークモード設定には追従しない */
+  color-scheme: light;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -1050,7 +1011,6 @@ details.qa[open] > summary { border-bottom: 1px solid var(--line-soft); }
   padding-block: 56px 28px;
   font-size: 0.875rem;
 }
-:root[data-theme="dark"] .site-footer, :root:not([data-theme="light"]) .site-footer { border-top: 1px solid var(--line); }
 .site-footer a { color: #cfdbd7; text-decoration: none; }
 .site-footer a:hover { color: #fff; text-decoration: underline; }
 .footer-grid { display: grid; gap: 32px; }
@@ -1776,11 +1736,6 @@ a.post-card:hover { border-color: var(--teal); background: var(--paper); }
 .post-card .figure-img { aspect-ratio: 16 / 9; margin-top: auto; }
 .photo-card .figure-img { margin-bottom: 14px; transition: border-color .18s; }
 .photo-card:hover .figure-img { border-color: var(--teal); }
-/* 暗いテーマでは図版だけが白く浮くので、わずかに落ち着かせる */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .figure-img { filter: brightness(.9) saturate(.95); }
-}
-:root[data-theme="dark"] .figure-img { filter: brightness(.9) saturate(.95); }
 
 /* 節の見出し下に置く帯の図版 */
 .section-banner {
@@ -1809,14 +1764,6 @@ a.post-card:hover { border-color: var(--teal); background: var(--paper); }
 }
 .article-img { aspect-ratio: 16 / 9; }
 .card-img { aspect-ratio: 16 / 10; }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .section-banner,
-  :root:not([data-theme="light"]) .article-img,
-  :root:not([data-theme="light"]) .card-img { filter: brightness(.9) saturate(.95); }
-}
-:root[data-theme="dark"] .section-banner,
-:root[data-theme="dark"] .article-img,
-:root[data-theme="dark"] .card-img { filter: brightness(.9) saturate(.95); }
 @media (max-width: 680px) {
   .section-banner { aspect-ratio: 16 / 7; margin-bottom: 20px; }
 }
