@@ -347,6 +347,62 @@
     calc();
   }
 
+  /* ---- 横スクロールのカルーセル ---- */
+  Array.prototype.forEach.call(document.querySelectorAll('[data-carousel]'), function (root) {
+    var track = root.querySelector('[data-carousel-track]');
+    var prev = root.querySelector('[data-carousel-prev]');
+    var next = root.querySelector('[data-carousel-next]');
+    var current = root.querySelector('[data-carousel-current]');
+    if (!track) return;
+
+    var items = Array.prototype.slice.call(track.children);
+    if (items.length < 2) {
+      if (prev) prev.disabled = true;
+      if (next) next.disabled = true;
+      return;
+    }
+
+    function step() {
+      /* カード1枚ぶんの移動量（カード幅＋すき間）を実寸から求める */
+      var d = items[1].offsetLeft - items[0].offsetLeft;
+      return d > 0 ? d : items[0].getBoundingClientRect().width;
+    }
+
+    function reduceMotion() {
+      return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    }
+
+    function scrollByCards(n) {
+      track.scrollTo({
+        left: track.scrollLeft + step() * n,
+        behavior: reduceMotion() ? 'auto' : 'smooth'
+      });
+    }
+
+    function sync() {
+      var max = track.scrollWidth - track.clientWidth;
+      var index = Math.min(items.length - 1, Math.max(0, Math.round(track.scrollLeft / step())));
+      /* 右端では最後のカードを見ている */
+      if (max > 0 && track.scrollLeft >= max - 1) index = items.length - 1;
+      if (current) current.textContent = String(index + 1);
+      if (prev) prev.disabled = track.scrollLeft <= 1;
+      if (next) next.disabled = max <= 0 || track.scrollLeft >= max - 1;
+    }
+
+    if (prev) prev.addEventListener('click', function () { scrollByCards(-1); });
+    if (next) next.addEventListener('click', function () { scrollByCards(1); });
+
+    var ticking = false;
+    track.addEventListener('scroll', function () {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(function () { ticking = false; sync(); });
+    }, { passive: true });
+
+    window.addEventListener('resize', sync);
+    sync();
+  });
+
   /* ---- フォーム：デモ版は送信しない ---- */
   var contactForm = document.getElementById('contact-form');
   if (contactForm) {

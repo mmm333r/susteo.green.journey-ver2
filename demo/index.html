@@ -206,7 +206,19 @@
       <p class="eyebrow">Use cases</p>
       <h2 class="section-title">活用方法</h2>
       <p class="lead">サステオの活用方法を、用途やお客様の立場から確認できます。対象となる設備、確認が必要な事項、供給方法は用途によって異なります。</p>
-      <div class="photo-cards">
+      <div class="carousel" data-carousel>
+        <div class="carousel__head">
+          <p class="carousel__count"><span data-carousel-current>1</span> / 7</p>
+          <div class="carousel__nav">
+            <button class="carousel__btn" type="button" data-carousel-prev aria-label="前の活用方法を見る">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 5.5 8 12l6.5 6.5"/></svg>
+            </button>
+            <button class="carousel__btn" type="button" data-carousel-next aria-label="次の活用方法を見る">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 5.5 16 12l-6.5 6.5"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="carousel__track" data-carousel-track tabindex="0" role="group" aria-label="活用方法 全7件（左右にスクロールできます）">
         <a class="photo-card" href="solutions.html#logistics">
           <img class="figure-img" src="assets/img/use-logistics.svg" width="800" height="500" loading="lazy" decoding="async" alt="幹線輸送のトラックのイラスト">
           <h3>物流・トラック</h3>
@@ -249,6 +261,7 @@
           <p>工場の燃焼設備における燃料転換。対象設備と運用条件をもとに個別に検討します。</p>
           <span class="photo-card__go">確認する →</span>
         </a>
+        </div>
       </div>
       <a class="cta-inline" href="solutions.html">用途・立場から探す →</a>
     </div>
