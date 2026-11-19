@@ -70,13 +70,13 @@
 <main>
 
   <!-- ===== ② ファーストビュー ===== -->
-  <section class="hero-full">
-    <img class="hero-full__photo" src="assets/img/hero-truck.webp" width="1920" height="819"
+  <section class="photo-band hero-full">
+    <img class="photo-band__media" src="assets/img/hero-truck.webp" width="1920" height="819"
          fetchpriority="high" decoding="async"
          alt="高速道路を走る大型トラック。市街地を背景に、物流・輸送の現場を示しています。">
-    <div class="hero-full__veil" aria-hidden="true"></div>
-    <div class="wrap hero-full__inner">
-      <div class="hero-full__text">
+    <div class="photo-band__veil" aria-hidden="true"></div>
+    <div class="wrap photo-band__inner">
+      <div class="photo-band__text hero-full__text">
         <p class="eyebrow">Renewable fuel / SUSTEO</p>
         <h1 class="page-title">脱炭素を、<br>現場から動かす。</h1>
         <p class="hero__sub">Scope1・Scope3の削減を、今ある設備から。</p>
@@ -93,31 +93,38 @@
   </section>
 
   <!-- ===== ③ HVOとは？ ===== -->
-  <section class="band band--paper">
-    <div class="wrap">
-      <div class="media-row">
-        <div>
-          <p class="eyebrow">About HVO</p>
-          <h2 class="section-title">HVOとは？</h2>
-          <div class="prose">
-            <p>HVO（Hydrotreated Vegetable Oil）は、廃食油や植物油、動物性油脂などを原料に製造される再生可能燃料です。油脂を水素化処理して製造するパラフィン系炭化水素燃料で、軽油に近い性状を持ちます。</p>
-            <p>そのため、現在お使いのディーゼル車両や建設機械、発電機を大きく変更することなく活用でき、燃料を切り替えることでGHG排出量の削減に貢献します。</p>
-          </div>
-          <div class="table-scroll" style="margin-top:22px">
-            <table class="spec">
-              <caption>製品ラインナップ</caption>
-              <thead>
-                <tr><th scope="col">製品</th><th scope="col">燃料構成</th><th scope="col">主な用途</th></tr>
-              </thead>
-              <tbody>
-                <tr><th scope="row">サステオ100</th><td class="col-focus">HVO 100％</td><td>公道を走行しない建設機械、構内専用機械、発電機など</td></tr>
-                <tr><th scope="row">サステオ51</th><td class="col-focus">HVO 51％ ＋ 軽油 49％</td><td>トラック、バス、公道を走行する建設車両など</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <a class="cta-inline" href="about.html">HVO・サステオを知る →</a>
+  <section class="photo-band feature-photo">
+    <img class="photo-band__media" src="assets/img/about-beaker.png" width="1024" height="572"
+         loading="lazy" decoding="async"
+         alt="実験台に置かれたビーカー。淡い緑色の液体が入っています。">
+    <div class="photo-band__veil" aria-hidden="true"></div>
+    <div class="wrap photo-band__inner">
+      <div class="photo-band__text feature-photo__text">
+        <p class="eyebrow">About HVO</p>
+        <h2 class="section-title">HVOとは？</h2>
+        <div class="prose">
+          <p>HVO（Hydrotreated Vegetable Oil）は、廃食油や植物油、動物性油脂などを原料に製造される再生可能燃料です。油脂を水素化処理して製造するパラフィン系炭化水素燃料で、軽油に近い性状を持ちます。</p>
+          <p>そのため、現在お使いのディーゼル車両や建設機械、発電機を大きく変更することなく活用でき、燃料を切り替えることでGHG排出量の削減に貢献します。</p>
         </div>
-        <img class="figure-img figure-img--hero" src="assets/img/about-leaf.svg" width="800" height="600" loading="lazy" decoding="async" alt="HVOの原料となる植物の葉と水滴のイラスト">
+        <a class="cta-inline" href="about.html">HVO・サステオを知る →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ③-2 製品ラインナップ ===== -->
+  <section class="band band--tight band--paper">
+    <div class="wrap">
+      <div class="table-scroll">
+        <table class="spec">
+          <caption>製品ラインナップ</caption>
+          <thead>
+            <tr><th scope="col">製品</th><th scope="col">燃料構成</th><th scope="col">主な用途</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">サステオ100</th><td class="col-focus">HVO 100％</td><td>公道を走行しない建設機械、構内専用機械、発電機など</td></tr>
+            <tr><th scope="row">サステオ51</th><td class="col-focus">HVO 51％ ＋ 軽油 49％</td><td>トラック、バス、公道を走行する建設車両など</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>

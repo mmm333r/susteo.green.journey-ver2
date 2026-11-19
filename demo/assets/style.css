@@ -1769,27 +1769,26 @@ a.post-card:hover { border-color: var(--teal); background: var(--paper); }
 }
 
 /* =========================================================================
-   ファーストビュー
-   写真をトップ全体に敷き、左から右へ白を薄く抜いていく。
+   写真の帯（ファーストビューと「HVOとは？」で共用）
+   写真を全幅に敷き、左から右へ白を薄く抜いていく。
    左端でも白は 95% までで、文字の背面にも写真がうっすら残る。
    ========================================================================= */
-.hero-full {
+.photo-band {
   position: relative;
   isolation: isolate;
   background: var(--surface);
   border-bottom: 1px solid var(--line);
   overflow: hidden;
 }
-.hero-full__photo {
+.photo-band__media {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 74% 50%;
   z-index: -2;
 }
-.hero-full__veil {
+.photo-band__veil {
   position: absolute;
   inset: 0;
   z-index: -1;
@@ -1804,12 +1803,19 @@ a.post-card:hover { border-color: var(--teal); background: var(--paper); }
       rgba(255,255,255,.04) 90%,
       rgba(255,255,255,0) 100%);
 }
-.hero-full__inner { position: relative; padding-block: 56px; }
-.hero-full__text { max-width: 33rem; }
-.hero-full__text .prose { max-width: 31rem; }
+.photo-band__inner { position: relative; padding-block: 56px; }
+.photo-band__text { max-width: 33rem; }
+.photo-band__text .prose { max-width: 31rem; }
+/* 写真の上に乗るため、補助色(#718078)ではなく本文色(#26332F)を使う */
+.photo-band__text .prose p { color: var(--ink); }
+.photo-band .btn--line { background: rgba(255,255,255,.92); }
+
+.hero-full .photo-band__media { object-position: 74% 50%; }
+.feature-photo .photo-band__media { object-position: 72% 44%; }
+.feature-photo .photo-band__inner { padding-block: 72px; }
 
 @media (min-width: 1500px) {
-  .hero-full__veil {
+  .photo-band__veil {
     background:
       linear-gradient(90deg,
         rgba(255,255,255,.95) 0%,
@@ -1825,8 +1831,9 @@ a.post-card:hover { border-color: var(--teal); background: var(--paper); }
 
 /* 中くらいの幅では文字が右へ寄るぶん、白を少し厚くする */
 @media (max-width: 1100px) {
-  .hero-full__photo { object-position: 80% 50%; }
-  .hero-full__veil {
+  .hero-full .photo-band__media { object-position: 80% 50%; }
+  .feature-photo .photo-band__media { object-position: 78% 44%; }
+  .photo-band__veil {
     background:
       linear-gradient(90deg,
         rgba(255,255,255,.96) 0%,
@@ -1837,13 +1844,14 @@ a.post-card:hover { border-color: var(--teal); background: var(--paper); }
         rgba(255,255,255,.18) 88%,
         rgba(255,255,255,.04) 100%);
   }
-  .hero-full__text { max-width: 30rem; }
+  .photo-band__text { max-width: 30rem; }
 }
 
 /* 狭い画面：文字が横いっぱいになるので、白を上から下へ抜く */
 @media (max-width: 820px) {
-  .hero-full__photo { object-position: 64% 62%; }
-  .hero-full__veil {
+  .hero-full .photo-band__media { object-position: 64% 62%; }
+  .feature-photo .photo-band__media { object-position: 66% 50%; }
+  .photo-band__veil {
     background:
       linear-gradient(180deg,
         rgba(255,255,255,.96) 0%,
@@ -1853,15 +1861,10 @@ a.post-card:hover { border-color: var(--teal); background: var(--paper); }
         rgba(255,255,255,.26) 84%,
         rgba(255,255,255,0) 100%);
   }
-  .hero-full__inner { padding-block: 40px 232px; }
-  .hero-full__text, .hero-full__text .prose { max-width: none; }
+  .hero-full .photo-band__inner { padding-block: 40px 232px; }
+  .feature-photo .photo-band__inner { padding-block: 44px 210px; }
+  .photo-band__text, .photo-band__text .prose { max-width: none; }
 }
 
 /* ラベルの色は小さい文字に足りる濃さにする（#009E8A は白地で 3.4:1） */
 .eyebrow { color: var(--teal-deep); }
-
-/* ヒーローの説明文は写真の上に乗るため、補助色(#718078)ではなく本文色(#26332F)を使う */
-.hero-full__text .prose p { color: var(--ink); }
-
-/* 枠線ボタンは写真の上に来るので、白で塗って輪郭を保つ */
-.hero-full .btn--line { background: rgba(255,255,255,.92); }
