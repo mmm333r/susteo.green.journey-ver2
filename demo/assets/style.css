@@ -1010,13 +1010,14 @@ details.qa[open] > summary { border-bottom: 1px solid var(--line-soft); }
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  background: var(--ink);
-  color: #cfdbd7;
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+  color: var(--ink);
   padding-block: 56px 28px;
   font-size: 0.875rem;
 }
-/* サステオのドット模様を地紋として敷く。
-   文字のコントラストを落とさないよう、濃度は抑え、
+/* サステオのドット模様を白地の地紋として敷く。
+   文字のコントラストを落とさないよう濃度は抑え、
    下へ向かって消えるようにしている。 */
 .site-footer::before {
   content: "";
@@ -1026,34 +1027,34 @@ details.qa[open] > summary { border-bottom: 1px solid var(--line-soft); }
   background-image: url("img/dot-pattern.svg");
   background-repeat: repeat;
   background-size: 170px 170px;
-  opacity: .2;
+  opacity: .32;
   -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 48%, rgba(0,0,0,.35) 82%, rgba(0,0,0,0) 100%);
   mask-image: linear-gradient(180deg, #000 0%, #000 48%, rgba(0,0,0,.35) 82%, rgba(0,0,0,0) 100%);
 }
 /* 狭い画面ではフッターが縦に長く、模様の繰り返しが目立つので弱める */
 @media (max-width: 820px) {
-  .site-footer::before { opacity: .13; }
+  .site-footer::before { opacity: .22; }
 }
-.site-footer a { color: #cfdbd7; text-decoration: none; }
-.site-footer a:hover { color: #fff; text-decoration: underline; }
+.site-footer a { color: var(--ink); text-decoration: none; }
+.site-footer a:hover { color: var(--teal-deep); text-decoration: underline; }
 .footer-grid { display: grid; gap: 32px; }
 @media (min-width: 760px) { .footer-grid { grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; } }
-.footer-grid h2 { font-family: var(--display); font-size: 1.0625rem; font-weight: 900; margin: 0 0 10px; color: #fff; }
+.footer-grid h2 { font-family: var(--display); font-size: 1.0625rem; font-weight: 900; margin: 0 0 10px; color: var(--ink); }
 .footer-grid h3 {
   font-family: var(--mono);
   font-size: 0.75rem;
   letter-spacing: .16em;
   text-transform: uppercase;
-  color: #a9bcb7;
+  color: #44534E;
   margin: 0 0 12px;
 }
-.footer-grid p { margin: 0; color: #aec0bb; line-height: 1.85; font-size: 0.875rem; max-width: 34ch; }
+.footer-grid p { margin: 0; color: #44534E; line-height: 1.85; font-size: 0.875rem; max-width: 34ch; }
 .footer-grid ul { list-style: none; margin: 0; padding: 0; }
 .footer-grid li { padding: 4px 0; }
 .footer-bottom {
   margin-top: 40px;
   padding-top: 18px;
-  border-top: 1px solid rgba(255,255,255,.14);
+  border-top: 1px solid var(--line);
   display: flex;
   flex-wrap: wrap;
   gap: 8px 20px;
@@ -1061,7 +1062,7 @@ details.qa[open] > summary { border-bottom: 1px solid var(--line-soft); }
   font-family: var(--mono);
   font-size: 0.75rem;
   letter-spacing: .06em;
-  color: #a9bcb7;
+  color: #44534E;
 }
 
 /* ---------- misc ---------- */
